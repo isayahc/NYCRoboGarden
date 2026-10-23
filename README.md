@@ -74,6 +74,26 @@ Teams have 2–5 members; robot-arm teams have 3–5. No solo projects. Arms rem
 
 Awards include a robot-arm kit, best overall, fellows-only cash and recruiter session, People's Choice, costume contest and Miss Congeniality. The event page does not specify the cash amount or scoring rubric.
 
+## Sponsor configuration
+
+Copy the template without overwriting an existing local configuration:
+
+```bash
+cp -n example.env .env
+```
+
+Fill in only the services you use. See [example.env](example.env) for credential sources and optional fields.
+
+| Sponsor | Configuration |
+| --- | --- |
+| Viam | Machine address, API key and key ID from the machine's CONNECT tab. Component names are optional and must match the configured hardware. |
+| Tavily | API key from the Tavily dashboard for authenticated API requests. |
+| Vonage | API key/secret or application ID/private key, depending on the API. Signature secret is only for applicable signed webhook/message verification. |
+
+Keep the Vonage private key in `secrets/` and set `VONAGE_PRIVATE_KEY_PATH` to its local file path. Local `.env` files and `secrets/` are ignored by Git; commit only blank templates.
+
+This is configuration scaffolding. Application code must load the environment and pass these values to the sponsor SDKs; copying the file alone does not enable an integration. Keep credentials server-side. Channel-specific sender numbers, recipients and callback URLs can be added once the Vonage feature is selected.
+
 ## Sponsors and project use
 
 The event lists **Viam, Vonage and Tavily** as official partners. Their event contributions are distinct from our project's integrations.
