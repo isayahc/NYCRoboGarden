@@ -142,7 +142,32 @@ The event lists **Viam, Vonage and Tavily** as official partners. Their event co
 
 **How we use it in the project:**
 
-<!-- Reserved for the team's Viam integration details. -->
+Connect to the hackathon machine and inspect its configured arms and grippers:
+
+```bash
+python3 -m venv venv
+venv/bin/python -m pip install -r requirements-viam.txt
+# Set VIAM_MACHINE_ADDRESS, VIAM_API_KEY and VIAM_API_KEY_ID in .env.
+venv/bin/python -m viam_integration --list
+venv/bin/python -m viam_integration
+```
+
+Use the **hostname from the machine's CONNECT tab** (ending in `.viam.cloud`),
+not its machine ID or machine-part ID. The CLI loads the repository's `.env`;
+existing shell environment variables take precedence.
+
+Reusable connection and inspection logic lives in `viam_integration` (exports
+`connect` and `inspect_machine`). Importing it does not load environment files;
+only the CLI does. `viam_example.py` and `viam_sample.py` are thin entry points.
+Keep credential values in the ignored local `.env` file, never in source code.
+
+`--list` verifies authentication/connectivity and lists configured resources.
+The default command also reads arm joint positions and gripper movement status;
+it does not command movement. Components are discovered automatically, and each
+hardware failure is reported separately with a nonzero exit status. A servo
+`sync_read` or serial `input/output error` after connecting is a machine-side
+hardware issue: check the affected arm's power, USB/serial connection and Viam
+component configuration.
 
 ### Vonage
 
