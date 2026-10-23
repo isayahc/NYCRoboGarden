@@ -1,0 +1,9 @@
+# Local environment files and overrides
+.env
+.env.*
+!.env.example
+!.env.template
+
+# Local private keys; keep sponsor credentials out of version control
+/secrets/
+private.key
