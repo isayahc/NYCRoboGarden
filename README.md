@@ -57,6 +57,17 @@ python3 -m unittest discover -s tests -v
 
 The [evidence research contract and importer](docs/garden-evidence.md) attach dated, cited claims to registry sites while keeping ambiguous matches and unknowns separate. The initial sample includes a historical bed-addition report; it does not establish current layouts or utility availability.
 
+### Generate an Open-Industries scene
+
+The [garden scene adapter](docs/garden-scene-adapter.md) converts an explicit garden manifest into OI-native LOD0/LOD1 geometry, preserves evidence and WGS84 georeferencing, and supports OI 3D Tiles export plus MCP asset bindings. Start with the clearly fictional fixture:
+
+```bash
+python3 -m garden_registry.scene_adapter build data/scenes/fictional-garden.json --output data/generated/garden-demo
+python3 -m garden_registry.scene_adapter reload data/generated/garden-demo
+```
+
+A real registry record needs an explicitly sourced footprint before generation. Procedural surfaces and envelopes remain labeled inferred.
+
 ### Proposed pilot-site screening
 
 Start with **Brooklyn** and expand across the five boroughs. Evaluate candidate locations using information confirmed by the site operator:
