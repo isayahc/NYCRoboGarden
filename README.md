@@ -158,7 +158,7 @@ existing shell environment variables take precedence.
 
 Reusable connection and inspection logic lives in `viam_integration` (exports
 `connect` and `inspect_machine`). Importing it does not load environment files;
-only the CLI does. `viam_example.py` and `viam_sample.py` are thin entry points.
+only the CLI does. Run it with `python -m viam_integration`.
 Keep credential values in the ignored local `.env` file, never in source code.
 
 `--list` verifies authentication/connectivity and lists configured resources.
