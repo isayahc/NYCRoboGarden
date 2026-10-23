@@ -1,5 +1,7 @@
 # Garden → Open-Industries MCP scene handoff
 
+For procedural garden geometry, use the [garden scene adapter](garden-scene-adapter.md). It generates native portable assets and georeferencing, verifies export/reload, and prepares multi-asset MCP requests after upload. The single-asset bridge below remains available for an existing surveyed model.
+
 This bridge calls **the real** local `astra.create_scene` MCP tool. It requires a ready OI cloud asset with garden geometry. Public GreenThumb coordinates locate a garden but **do not** reconstruct its beds, plants, paths, structures, or terrain.
 
 ## Prerequisites

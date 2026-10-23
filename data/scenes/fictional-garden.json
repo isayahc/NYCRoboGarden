@@ -1,0 +1,149 @@
+{
+  "schema_version": "2.0",
+  "source": {
+    "record_id": "fixture:brooklyn-concept",
+    "url": "https://example.org/fictional-garden-layout",
+    "coordinate_system": "EPSG:4326"
+  },
+  "anchor": {
+    "longitude": -73.95,
+    "latitude": 40.68,
+    "height_m": null
+  },
+  "footprint": {
+    "status": "inferred",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -73.9501,
+            40.6799
+          ],
+          [
+            -73.9499,
+            40.6799
+          ],
+          [
+            -73.9499,
+            40.6801
+          ],
+          [
+            -73.9501,
+            40.6801
+          ],
+          [
+            -73.9501,
+            40.6799
+          ]
+        ]
+      ]
+    },
+    "provenance": {
+      "source_url": "https://example.org/fictional-garden-layout",
+      "observed_at": null,
+      "confidence": "unknown",
+      "rights": {
+        "status": "owned",
+        "reference": "Original synthetic fixture authored for this repository; no third-party imagery."
+      },
+      "note": "Fictional test layout at illustrative Brooklyn coordinates; not a real garden survey."
+    }
+  },
+  "features": [
+    {
+      "id": "bed-1",
+      "category": "bed",
+      "status": "inferred",
+      "geometry": {
+        "type": "box",
+        "position_m": [
+          -4,
+          0,
+          -4
+        ],
+        "dimensions_m": [
+          2,
+          0.6,
+          3
+        ],
+        "yaw_degrees": 15
+      },
+      "provenance": {
+        "source_url": "https://example.org/fictional-garden-layout",
+        "observed_at": null,
+        "confidence": "unknown",
+        "rights": {
+          "status": "owned",
+          "reference": "Original synthetic fixture authored for this repository; no third-party imagery."
+        },
+        "note": "Fictional test layout at illustrative Brooklyn coordinates; not a real garden survey."
+      }
+    },
+    {
+      "id": "path-1",
+      "category": "path",
+      "status": "inferred",
+      "geometry": {
+        "type": "box",
+        "position_m": [
+          0,
+          0,
+          0
+        ],
+        "dimensions_m": [
+          1.5,
+          0.05,
+          18
+        ],
+        "yaw_degrees": 0
+      },
+      "provenance": {
+        "source_url": "https://example.org/fictional-garden-layout",
+        "observed_at": null,
+        "confidence": "unknown",
+        "rights": {
+          "status": "owned",
+          "reference": "Original synthetic fixture authored for this repository; no third-party imagery."
+        },
+        "note": "Fictional test layout at illustrative Brooklyn coordinates; not a real garden survey."
+      }
+    },
+    {
+      "id": "greenhouse-1",
+      "category": "greenhouse",
+      "status": "inferred",
+      "geometry": {
+        "type": "box",
+        "position_m": [
+          4,
+          0,
+          4
+        ],
+        "dimensions_m": [
+          4,
+          3,
+          5
+        ],
+        "yaw_degrees": 0
+      },
+      "provenance": {
+        "source_url": "https://example.org/fictional-garden-layout",
+        "observed_at": null,
+        "confidence": "unknown",
+        "rights": {
+          "status": "owned",
+          "reference": "Original synthetic fixture authored for this repository; no third-party imagery."
+        },
+        "note": "Fictional test layout at illustrative Brooklyn coordinates; not a real garden survey."
+      }
+    },
+    {
+      "id": "water-unknown",
+      "category": "water",
+      "status": "unknown",
+      "geometry": null,
+      "reason": "No evidence of a water connection; do not render one."
+    }
+  ]
+}
