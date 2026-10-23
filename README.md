@@ -53,6 +53,10 @@ python3 -m garden_registry --output data/generated
 python3 -m unittest discover -s tests -v
 ```
 
+### Layout, infrastructure and produce evidence
+
+The [evidence research contract and importer](docs/garden-evidence.md) attach dated, cited claims to registry sites while keeping ambiguous matches and unknowns separate. The initial sample includes a historical bed-addition report; it does not establish current layouts or utility availability.
+
 ### Proposed pilot-site screening
 
 Start with **Brooklyn** and expand across the five boroughs. Evaluate candidate locations using information confirmed by the site operator:
