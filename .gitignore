@@ -13,3 +13,7 @@ private.key
 /data/replay/
 __pycache__/
 *.py[cod]
+
+# Local Python environments
+/venv/
+/.venv/

@@ -15,7 +15,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
+      - name: Install Viam test dependencies
+        run: python -m pip install -r requirements-viam.txt
       - run: python -m unittest discover -s tests -v
+      - name: Hardware-free Viam and camera CLI checks
+        run: |
+          python -m viam_integration --help
+          python pi-arm4-camera/server.py --help
+          python -m py_compile pi-arm4-camera/server.py
+          bash -n pi-arm4-camera/tunnel.sh
       - name: Offline CLI smoke test
         run: >-
           python -m garden_registry
