@@ -80,7 +80,13 @@ The event lists **Viam, Vonage and Tavily** as official partners. Their event co
 
 ### Viam
 
-<a href="https://www.viam.com/"><img src="docs/sponsors/viam.svg" alt="Viam logo" width="180"></a>
+<a href="https://www.viam.com/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/sponsors/viam-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="docs/sponsors/viam-light.svg">
+    <img src="docs/sponsors/viam-light.svg" alt="Viam logo" width="180">
+  </picture>
+</a>
 
 **What they do:** Software for connecting hardware, collecting machine data, and developing, deploying and managing robotics applications.
 
@@ -92,7 +98,13 @@ The event lists **Viam, Vonage and Tavily** as official partners. Their event co
 
 ### Vonage
 
-<a href="https://www.vonage.com/"><img src="docs/sponsors/vonage.svg" alt="Vonage logo" width="180"></a>
+<a href="https://www.vonage.com/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/sponsors/vonage-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="docs/sponsors/vonage-light.svg">
+    <img src="docs/sponsors/vonage-light.svg" alt="Vonage logo" width="180">
+  </picture>
+</a>
 
 **What they do:** Communications APIs for voice, video, messaging and identity verification, plus business communications and contact-center products.
 
@@ -104,7 +116,13 @@ The event lists **Viam, Vonage and Tavily** as official partners. Their event co
 
 ### Tavily
 
-<a href="https://www.tavily.com/"><img src="docs/sponsors/tavily.svg" alt="Tavily logo" width="180"></a>
+<a href="https://www.tavily.com/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/sponsors/tavily-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="docs/sponsors/tavily-light.svg">
+    <img src="docs/sponsors/tavily-light.svg" alt="Tavily logo" width="180">
+  </picture>
+</a>
 
 **What they do:** APIs for AI agents to search the web, extract content, crawl websites and conduct research.
 
