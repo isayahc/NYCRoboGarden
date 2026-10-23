@@ -10,6 +10,8 @@ import asyncio
 import hashlib
 import json
 import math
+import os
+import tempfile
 import re
 import uuid
 import subprocess
@@ -333,25 +335,51 @@ def reload_package(directory: Path) -> tuple[Json, Json]:
     return scene, meta
 
 
-def build_mcp_request(directory: Path, versions: dict[str, str]) -> Json:
-    """Bind verified portable geometry to ready OI cloud versions for MCP.
+def build_mcp_request(directory: Path, versions: dict[str, str], backend: str = 'cloud') -> Json:
+    """Bind verified portable geometry to immutable OI versions for MCP.
 
     The caller must upload/inspect these exact generated assets first. Asset
     readiness and ownership are enforced by OI, not guessed by this adapter.
     """
+    if backend not in ('cloud', 'local'):
+        raise ValueError('Expected cloud or local asset backend')
     scene, meta = reload_package(directory)
     if set(versions) != {asset['id'] for asset in scene['assets']}:
-        raise ValueError('Provide exactly one cloud version for each portable asset ID')
+        raise ValueError('Provide exactly one version for each portable asset ID')
     for version in versions.values():
         if str(uuid.UUID(version)) != version.lower():
-            raise ValueError('Expected canonical cloud version UUID')
+            raise ValueError('Expected canonical version UUID')
     payload = {'name': ('Garden | ' + meta['source']['record_id'])[:200],
                'room': dict(zip(('width', 'depth', 'height'), scene['room'])),
                'instances': [{k: item[k] for k in ('id', 'name', 'position', 'rotation', 'visible')} |
-                             {'asset': {'kind': 'cloud', 'version_id': versions[item['assetId']]}}
+                              {'asset': {'kind': backend, 'version_id': versions[item['assetId']]}}
                              for item in scene['instances']]}
     return {'version': 1, 'request_id': str(uuid.uuid5(uuid.NAMESPACE_URL, digest(payload))),
             'agent': 'nyc-robo-garden', 'scene': payload}
+
+
+def import_local_assets(directory: Path, oi_root: Path, data_dir: Path) -> dict[str, str]:
+    """Import verified bundled geometry through OI's validating local CLI."""
+    scene, _ = reload_package(directory)
+    oi_root = oi_root.resolve()
+    cli = oi_root / 'cli/local-scenes.ts'
+    if not cli.is_file():
+        raise ValueError('OI checkout lacks the local scene backend')
+    env = dict(os.environ, ASTRA_SCENE_BACKEND='local',
+               ASTRA_SCENE_DATA_DIR=str(data_dir.resolve()), ASTRA_ROOT=str(oi_root))
+    versions = {}
+    with tempfile.TemporaryDirectory() as tmp:
+        bundle = Path(tmp) / 'asset.json'
+        for asset in scene['bundledAssets']:
+            write_json(bundle, {'schemaVersion': 1, 'asset': asset})
+            result = subprocess.run(['node', '--import', 'tsx', str(cli), 'import-asset', str(bundle)],
+                                    cwd=oi_root, env=env, check=True, capture_output=True, text=True)
+            reference = json.loads(result.stdout)
+            if reference.get('kind') != 'local':
+                raise ValueError('OI returned a non-local asset reference')
+            versions[asset['id']] = reference['version_id']
+    build_mcp_request(directory, versions, 'local')
+    return versions
 
 
 def export_package(manifest: Json, output: Path, oi_root: Path | None = None) -> Json:
@@ -392,6 +420,13 @@ def main() -> None:
     mcp.add_argument('--asset-versions', type=Path, required=True)
     mcp.add_argument('--send', action='store_true')
     mcp.add_argument('--oi-root', type=Path)
+    mcp.add_argument('--backend', choices=('cloud', 'local'), default='cloud')
+    mcp.add_argument('--data-dir', type=Path, help='Local SQLite/assets directory; required for local --send')
+    local = commands.add_parser('import-local')
+    local.add_argument('directory', type=Path)
+    local.add_argument('--oi-root', type=Path, required=True)
+    local.add_argument('--data-dir', type=Path, required=True)
+    local.add_argument('--output', type=Path, required=True, help='Write local asset-version bindings')
     prepare = commands.add_parser('prepare')
     prepare.add_argument('--registry', type=Path, required=True)
     prepare.add_argument('--garden-id', required=True)
@@ -403,14 +438,26 @@ def main() -> None:
     try:
         if args.command == 'build':
             result = export_package(json.loads(args.manifest.read_text()), args.output, args.oi_root)
+        elif args.command == 'import-local':
+            if args.output.exists():
+                raise ValueError('Asset bindings output already exists')
+            versions = import_local_assets(args.directory, args.oi_root, args.data_dir)
+            args.output.parent.mkdir(parents=True, exist_ok=True)
+            write_json(args.output, versions)
+            result = {'assets': len(versions), 'bindings': str(args.output), 'backend': 'local'}
         elif args.command == 'mcp-request':
-            request = build_mcp_request(args.directory, json.loads(args.asset_versions.read_text()))
+            request = build_mcp_request(args.directory, json.loads(args.asset_versions.read_text()), args.backend)
             result = {'tool': 'astra.create_scene', 'arguments': request}
             if args.send:
                 from scripts.garden_to_oi_mcp import send_request
                 if args.oi_root is None or not (args.oi_root/'server/astra-mcp.mjs').is_file():
                     raise ValueError('--send requires --oi-root with the real MCP server')
-                result = asyncio.run(send_request(request, args.oi_root/'server/astra-mcp.mjs', args.oi_root))
+                env = {'ASTRA_SCENE_BACKEND': 'local' if args.backend == 'local' else 'supabase'}
+                if args.backend == 'local':
+                    if args.data_dir is None:
+                        raise ValueError('Local --send requires --data-dir matching import-local')
+                    env['ASTRA_SCENE_DATA_DIR'] = str(args.data_dir.resolve())
+                result = asyncio.run(send_request(request, args.oi_root/'server/astra-mcp.mjs', args.oi_root, env))
         elif args.command == 'prepare':
             draft = prepare_manifest(json.loads(args.registry.read_text()), args.garden_id,
                                      json.loads(args.evidence.read_text()) if args.evidence else None)

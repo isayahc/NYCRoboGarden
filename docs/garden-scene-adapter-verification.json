@@ -1,17 +1,21 @@
 {
   "verified_on": "2026-10-23",
-  "python": "3.12.14",
-  "oi_commit": "918f3262cb5b3a988bd55f0022560e25724e157d",
+  "python": "3.12.3",
+  "node": "24.22.1",
+  "mcp_sdk": "1.30.0",
+  "oi_commit": "acfcdf7f10813639d9036ae2a00466209f32389d",
   "fixture": "data/scenes/fictional-garden.json",
   "fixture_sha256": "0c311fe2b8fb4194251166764155db2e182bda57bddabb5108ef93037d656695",
   "scene_semantic_sha256": "16d7e9f493203be137d9ec22efdeb6451169c653013fb0bb2dbadc56f7a6f37b",
   "tests": {
     "command": "OI_ROOT=/path/to/Open-Industries python3 -m unittest discover -s tests -v",
-    "passed": 33,
+    "passed": 34,
     "skipped": 0
   },
   "native_oi_import_export_reopen": "passed",
   "native_oi_mcp_schema": "passed",
+  "local_sqlite_mcp_save_restart_retry_export": "passed",
+  "local_export_geometry_poses_provenance": "preserved",
   "native_oi_tiles_export": {
     "instances": 4,
     "glbs": 4

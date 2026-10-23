@@ -32,7 +32,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: Mapped-Assembly/Open-Industries
-          ref: 918f3262cb5b3a988bd55f0022560e25724e157d
+          ref: acfcdf7f10813639d9036ae2a00466209f32389d
           path: oi
       - uses: actions/setup-python@v5
         with:
@@ -44,7 +44,8 @@ jobs:
           cache-dependency-path: oi/package-lock.json
       - run: npm ci --ignore-scripts
         working-directory: oi
-      - name: Native OI import/export/reopen and 3D Tiles export
+      - run: python -m pip install mcp==1.30.0
+      - name: Native OI roundtrip, Tiles, and SQLite MCP restart/export
         working-directory: garden
         env:
           OI_ROOT: ${{ github.workspace }}/oi

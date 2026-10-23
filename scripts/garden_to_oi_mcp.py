@@ -57,15 +57,17 @@ def build_request(
 
 
 async def send_request(
-    request: dict[str, Any], server_path: Path, root: Path
+    request: dict[str, Any], server_path: Path, root: Path,
+    environment: dict[str, str] | None = None
 ) -> dict[str, Any]:
     """Invoke the local OI MCP stdio tool with the Python MCP SDK."""
     try:
         from mcp import ClientSession, StdioServerParameters  # type: ignore[import-not-found]
         from mcp.client.stdio import stdio_client  # type: ignore[import-not-found]
     except ImportError as exc:
-        raise RuntimeError("Install the MCP client SDK: pip install mcp") from exc
+        raise RuntimeError("Install the MCP client SDK: pip install 'mcp>=1.12,<2'") from exc
     env = dict(os.environ)
+    env.update(environment or {})
     env["ASTRA_ROOT"] = str(root.resolve())
     env["ASTRA_SCENE_TOOLS_ENABLED"] = "true"
     server = StdioServerParameters(

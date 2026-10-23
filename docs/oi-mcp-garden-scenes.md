@@ -1,6 +1,6 @@
 # Garden → Open-Industries MCP scene handoff
 
-For procedural garden geometry, use the [garden scene adapter](garden-scene-adapter.md). It generates native portable assets and georeferencing, verifies export/reload, and prepares multi-asset MCP requests after upload. The single-asset bridge below remains available for an existing surveyed model.
+For procedural garden geometry, use the [garden scene adapter](garden-scene-adapter.md). It supports credential-free local SQLite persistence, native portable assets and georeferencing, and multi-asset MCP requests. The single-asset cloud bridge below remains available for an existing surveyed model.
 
 This bridge calls **the real** local `astra.create_scene` MCP tool. It requires a ready OI cloud asset with garden geometry. Public GreenThumb coordinates locate a garden but **do not** reconstruct its beds, plants, paths, structures, or terrain.
 
@@ -9,7 +9,7 @@ This bridge calls **the real** local `astra.create_scene` MCP tool. It requires 
 1. Clone [Mapped-Assembly/Open-Industries](https://github.com/Mapped-Assembly/Open-Industries), run `npm ci`, configure Supabase migrations and local CLI login, and enable `ASTRA_SCENE_TOOLS_ENABLED=true` as documented in [OI MCP scenes](https://github.com/Mapped-Assembly/Open-Industries/blob/main/docs/mcp-scenes.md).
 2. Import your surveyed garden model into OI, upload its geometry to private cloud Storage, then call `astra.list_scene_assets` to obtain a **ready** `version_id`.
 3. Create `garden.json` with `gardenname`, `lat`, and `lon` from a GreenThumb record. For example `{"gardenname":"Sample garden","lat":40.68,"lon":-73.95}` (illustrative, not a verified garden).
-4. `python -m pip install mcp` (Python 3.11+).
+4. `python -m pip install 'mcp>=1.12,<2'` (Python 3.11+).
 
 ## Preview the MCP request
 

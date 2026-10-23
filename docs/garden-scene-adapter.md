@@ -26,19 +26,20 @@ Import `garden.oi.json` using OI's **Drop files or browse** workflow. OI's nativ
 
 ### Real Open-Industries export and verification
 
-The integration is pinned in CI to OI commit `918f3262cb5b3a988bd55f0022560e25724e157d`:
+The integration is pinned in CI to OI commit `acfcdf7f10813639d9036ae2a00466209f32389d` (including local SQLite persistence):
 
 ```bash
 git clone https://github.com/Mapped-Assembly/Open-Industries.git ../Open-Industries
-git -C ../Open-Industries checkout 918f3262cb5b3a988bd55f0022560e25724e157d
+git -C ../Open-Industries checkout acfcdf7f10813639d9036ae2a00466209f32389d
 npm --prefix ../Open-Industries ci --ignore-scripts
+python3 -m pip install 'mcp>=1.12,<2'
 python3 -m garden_registry.scene_adapter build data/scenes/fictional-garden.json --output data/generated/garden-tiles --oi-root ../Open-Industries
 OI_ROOT="$(realpath ../Open-Industries)" python3 -m unittest discover -s tests -p test_scene_adapter.py -v
 ```
 
 Use Node 24 for the pinned OI integration. The adapter invokes OI's `tools/geospatial/export_scene.py`, producing `tiles/tileset.json`, four GLBs for this fixture, and upstream provenance/export reports. `tiles/garden-evidence.json` retains the garden-specific evidence keyed by the same instance IDs found in tile metadata. The upstream exporter deliberately allowlists fields, so consumers must join this companion file for full observations/rights/unknowns.
 
-The optional integration test exercises OI's **actual** `readManifest → hydrateManifest → makeManifest → readManifest → hydrateManifest` functions. It rejects missing-asset placeholders and checks geometry, poses, metadata and provenance equality after JSON serialization. It also invokes OI's actual MCP schema validator and geospatial exporter. Without `OI_ROOT`, this one integration test is explicitly skipped; ordinary Python tests still run. CI includes a separate pinned OI job so this check is not silently omitted there.
+The optional integration tests exercise OI's **actual** `readManifest → hydrateManifest → makeManifest → readManifest → hydrateManifest` functions and the local SQLite MCP workflow described below. They reject missing-asset placeholders and check geometry, poses, metadata and provenance equality after JSON serialization. They also invoke OI's actual MCP schema validator and geospatial exporter. Without `OI_ROOT`, both integration tests are explicitly skipped; ordinary Python tests still run. CI includes a separate pinned OI job so these checks are not silently omitted there.
 
 ## Prepare a real site from #5 and #6
 
@@ -80,6 +81,36 @@ Geometry with unknown reuse rights is rejected; use the #6 link-only research wo
 - Room dimensions are derived from extents around the declared anchor and must remain within OI's 1–100 m limits. Features must fit within the supplied footprint, including rotated envelope edges. Large gardens need explicit subdivision in future work; this adapter does not silently rescale them.
 - Sidecar transforms are column-major local Y-up→ECEF. OI's Tiles root is ENU/Z-up→ECEF with the prescribed Y-up conversion applied to content. The tests check those conventions agree.
 
+## Local SQLite save, restart and export
+
+No Supabase account, credentials or `.env` is required. Use Node 24 and Python 3.11+ with `pip install 'mcp>=1.12,<2'` for MCP sending. CI verifies with MCP SDK 1.30.0; SDK 2 changes the client API.
+
+After building `data/generated/garden-demo` above:
+
+```bash
+python3 -m garden_registry.scene_adapter import-local data/generated/garden-demo \
+  --oi-root ../Open-Industries --data-dir data/generated/oi-local \
+  --output data/generated/local-asset-versions.json
+python3 -m garden_registry.scene_adapter mcp-request data/generated/garden-demo \
+  --asset-versions data/generated/local-asset-versions.json --backend local \
+  --data-dir data/generated/oi-local --oi-root ../Open-Industries --send
+```
+
+The importer validates the package, imports every bundled geometry asset through OI's CLI, and records its immutable local version. Reimports deduplicate in OI; use a new bindings output filename. `--send` selects the backend explicitly and resolves the data directory to an absolute path. Use the same data directory for import, MCP and export. The default request backend remains `cloud` for existing callers.
+
+The result supplies `scene_id` and `revision_id`. To export that saved revision, substitute those returned values:
+
+```bash
+ASTRA_SCENE_DATA_DIR="$(realpath data/generated/oi-local)" \
+  node --import ../Open-Industries/node_modules/tsx/dist/loader.mjs \
+  ../Open-Industries/cli/local-scenes.ts export SCENE_UUID \
+  data/generated/garden-saved.scene.json REVISION_NUMBER
+```
+
+Open `garden-saved.scene.json` in the workbench via **Drop files or browse**. Keep the original `garden-georeference.json` beside the export. Local `oi-local://` identifiers are MCP identifiers, not browser URLs; browser cloud-save controls are not connected to SQLite.
+
+The integration test imports actual generated geometry, saves through MCP, stops the server, reads from a fresh server, checks idempotent retry, exports the persisted revision, and hydrates it with OI's native scene code. Geometry, poses and evidence are compared against the original package.
+
 ## Authenticated MCP handoff
 
 Portable scene generation and Tiles export require no account. Cloud persistence uses the existing local OI MCP server and [its setup instructions](oi-mcp-garden-scenes.md).
@@ -88,7 +119,7 @@ Import the portable scene in OI, upload its generated assets using the workbench
 
 ```bash
 python3 -m garden_registry.scene_adapter mcp-request data/generated/garden-demo --asset-versions data/generated/asset-versions.json
-# Python 3.11+ and pip install mcp are required only for --send:
+# Python 3.11+ and pip install 'mcp>=1.12,<2' are required only for --send:
 python3 -m garden_registry.scene_adapter mcp-request data/generated/garden-demo --asset-versions data/generated/asset-versions.json --send --oi-root ../Open-Industries
 ```
 

@@ -24,6 +24,21 @@ for (const item of reopened.items) {
 }
 console.log(JSON.stringify({ oiNativeRoundtrip: 'passed', instances: reopened.items.length, provenance: 'preserved' }));
 
+if (process.argv[3]) {
+  const saved = JSON.parse(readFileSync(resolve(process.argv[3]), 'utf8'));
+  const persisted = hydrateManifest(readManifest(saved), []);
+  assert.equal(saved.authoring.agent, 'nyc-robo-garden');
+  assert.equal(persisted.items.length, imported.items.length);
+  for (const item of persisted.items) {
+    const before = imported.items.find(original => original.id === item.id);
+    assert.ok(before && !item.missing);
+    for (const key of ['name', 'position', 'rotation', 'visible']) assert.deepEqual(item[key], before[key]);
+    assert.deepEqual(item.asset.parts, before.asset.parts);
+    assert.deepEqual(item.asset.source, before.asset.source);
+  }
+  console.log(JSON.stringify({ sqlitePortableReopen: 'passed', instances: persisted.items.length }));
+}
+
 const requestPath = resolve(directory, 'mcp-request.json');
 if (existsSync(requestPath)) {
   const { validateSceneRequest } = await import(pathToFileURL(resolve('server/mcp-scene-contract.mjs')).href);
