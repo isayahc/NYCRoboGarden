@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "id": "grownyc-2019",
+      "url": "https://www.grownyc.org/files/gmkt/Press/hattie_carthan_renovation_with_tracy_morgan.pdf",
+      "publisher": "GrowNYC",
+      "title": "GrowNYC and TBS Partner to Renovate Hattie Carthan Community Garden in Bed-Stuy",
+      "published_at": "2019-03-29",
+      "retrieved_at": "2026-10-23",
+      "rights": {
+        "status": "unknown",
+        "license_url": null,
+        "asset_use": "link_only"
+      }
+    },
+    {
+      "id": "herban-operator",
+      "url": "https://yonnette.wixsite.com/hcherbanfarm/about_us",
+      "publisher": "Hattie Carthan Herban Farm",
+      "title": "Mission - Vision",
+      "published_at": null,
+      "retrieved_at": "2026-10-23",
+      "rights": {
+        "status": "unknown",
+        "license_url": null,
+        "asset_use": "link_only"
+      }
+    }
+  ],
+  "records": [
+    {
+      "id": "hattie-beds-added-2019",
+      "site_match": {
+        "status": "confirmed",
+        "garden_id": "nyc-greenthumb:B400-GT001",
+        "candidates": [
+          "nyc-greenthumb:B400-GT001"
+        ],
+        "rationale": "Exact Community Garden name and Bed-Stuy, Brooklyn locality match the GreenThumb record. Source explicitly names GreenThumb; no footprint match is asserted."
+      },
+      "category": "bed",
+      "state": "reported",
+      "claim": "GrowNYC reported adding 30 garden beds during the March 28, 2019 renovation. This is an addition count, not a total or a current inventory.",
+      "value": 30,
+      "unit": "beds_added",
+      "observed_at": "2019-03-28",
+      "time_basis": "Event date stated in the press release; not a direct field observation.",
+      "confidence": {
+        "level": "high",
+        "rationale": "First-party renovation report; confidence applies only to the historical report."
+      },
+      "citations": [
+        {
+          "source_id": "grownyc-2019",
+          "locator": "PDF page 1, renovation paragraph",
+          "support": "The renovation list reports 30 new beds."
+        }
+      ],
+      "layout": null,
+      "season": null,
+      "limitations": [
+        "No bed dimensions, positions, materials or present-day condition supplied."
+      ]
+    },
+    {
+      "id": "herban-herbs-unresolved",
+      "site_match": {
+        "status": "ambiguous",
+        "garden_id": null,
+        "candidates": [
+          "nyc-greenthumb:B400-GT001"
+        ],
+        "rationale": "Name search suggests this garden, but the operator identifies Herban Farm at 49 Van Buren Street. Do not attach its crop claims to the Community Garden at 719 Marcy Avenue without resolving the distinct site."
+      },
+      "category": "crop",
+      "state": "reported",
+      "claim": "The operator describes an herb farm; individual crops and current production are not established by this record.",
+      "value": "herbs",
+      "unit": null,
+      "observed_at": null,
+      "time_basis": "Undated operator description; retrieval is not observation.",
+      "confidence": {
+        "level": "low",
+        "rationale": "Site identity remains unresolved against the supplied registry candidate."
+      },
+      "citations": [
+        {
+          "source_id": "herban-operator",
+          "locator": "About us paragraph 1 and page address",
+          "support": "Operator describes an educational herb farm and gives 49 Van Buren Street."
+        }
+      ],
+      "layout": null,
+      "season": null,
+      "limitations": [
+        "Unresolved site match; excluded from imported evidence."
+      ]
+    },
+    {
+      "id": "hattie-unknown-growing_area",
+      "site_match": {
+        "status": "confirmed",
+        "garden_id": "nyc-greenthumb:B400-GT001",
+        "candidates": [
+          "nyc-greenthumb:B400-GT001"
+        ],
+        "rationale": "Exact Community Garden name and Bed-Stuy, Brooklyn locality match the GreenThumb record. Source explicitly names GreenThumb; no footprint match is asserted."
+      },
+      "category": "growing_area",
+      "state": "unknown",
+      "claim": null,
+      "value": null,
+      "unit": null,
+      "observed_at": null,
+      "time_basis": "No dated evidence captured for this category in this research sample.",
+      "confidence": {
+        "level": "unknown",
+        "rationale": "Not assessed; does not imply absence."
+      },
+      "citations": [],
+      "layout": null,
+      "season": null,
+      "limitations": [
+        "Requires dated operator confirmation or appropriately licensed survey evidence."
+      ]
+    },
+    {
+      "id": "hattie-unknown-path",
+      "site_match": {
+        "status": "confirmed",
+        "garden_id": "nyc-greenthumb:B400-GT001",
+        "candidates": [
+          "nyc-greenthumb:B400-GT001"
+        ],
+        "rationale": "Exact Community Garden name and Bed-Stuy, Brooklyn locality match the GreenThumb record. Source explicitly names GreenThumb; no footprint match is asserted."
+      },
+      "category": "path",
+      "state": "unknown",
+      "claim": null,
+      "value": null,
+      "unit": null,
+      "observed_at": null,
+      "time_basis": "No dated evidence captured for this category in this research sample.",
+      "confidence": {
+        "level": "unknown",
+        "rationale": "Not assessed; does not imply absence."
+      },
+      "citations": [],
+      "layout": null,
+      "season": null,
+      "limitations": [
+        "Requires dated operator confirmation or appropriately licensed survey evidence."
+      ]
+    },
+    {
+      "id": "hattie-unknown-greenhouse",
+      "site_match": {
+        "status": "confirmed",
+        "garden_id": "nyc-greenthumb:B400-GT001",
+        "candidates": [
+          "nyc-greenthumb:B400-GT001"
+        ],
+        "rationale": "Exact Community Garden name and Bed-Stuy, Brooklyn locality match the GreenThumb record. Source explicitly names GreenThumb; no footprint match is asserted."
+      },
+      "category": "greenhouse",
+      "state": "unknown",
+      "claim": null,
+      "value": null,
+      "unit": null,
+      "observed_at": null,
+      "time_basis": "No dated evidence captured for this category in this research sample.",
+      "confidence": {
+        "level": "unknown",
+        "rationale": "Not assessed; does not imply absence."
+      },
+      "citations": [],
+      "layout": null,
+      "season": null,
+      "limitations": [
+        "Requires dated operator confirmation or appropriately licensed survey evidence."
+      ]
+    },
+    {
+      "id": "hattie-unknown-building",
+      "site_match": {
+        "status": "confirmed",
+        "garden_id": "nyc-greenthumb:B400-GT001",
+        "candidates": [
+          "nyc-greenthumb:B400-GT001"
+        ],
+        "rationale": "Exact Community Garden name and Bed-Stuy, Brooklyn locality match the GreenThumb record. Source explicitly names GreenThumb; no footprint match is asserted."
+      },
+      "category": "building",
+      "state": "unknown",
+      "claim": null,
+      "value": null,
+      "unit": null,
+      "observed_at": null,
+      "time_basis": "No dated evidence captured for this category in this research sample.",
+      "confidence": {
+        "level": "unknown",
+        "rationale": "Not assessed; does not imply absence."
+      },
+      "citations": [],
+      "layout": null,
+      "season": null,
+      "limitations": [
+        "Requires dated operator confirmation or appropriately licensed survey evidence."
+      ]
+    },
+    {
+      "id": "hattie-unknown-water",
+      "site_match": {
+        "status": "confirmed",
+        "garden_id": "nyc-greenthumb:B400-GT001",
+        "candidates": [
+          "nyc-greenthumb:B400-GT001"
+        ],
+        "rationale": "Exact Community Garden name and Bed-Stuy, Brooklyn locality match the GreenThumb record. Source explicitly names GreenThumb; no footprint match is asserted."
+      },
+      "category": "water",
+      "state": "unknown",
+      "claim": null,
+      "value": null,
+      "unit": null,
+      "observed_at": null,
+      "time_basis": "No dated evidence captured for this category in this research sample.",
+      "confidence": {
+        "level": "unknown",
+        "rationale": "Not assessed; does not imply absence."
+      },
+      "citations": [],
+      "layout": null,
+      "season": null,
+      "limitations": [
+        "Requires dated operator confirmation or appropriately licensed survey evidence."
+      ]
+    },
+    {
+      "id": "hattie-unknown-power",
+      "site_match": {
+        "status": "confirmed",
+        "garden_id": "nyc-greenthumb:B400-GT001",
+        "candidates": [
+          "nyc-greenthumb:B400-GT001"
+        ],
+        "rationale": "Exact Community Garden name and Bed-Stuy, Brooklyn locality match the GreenThumb record. Source explicitly names GreenThumb; no footprint match is asserted."
+      },
+      "category": "power",
+      "state": "unknown",
+      "claim": null,
+      "value": null,
+      "unit": null,
+      "observed_at": null,
+      "time_basis": "No dated evidence captured for this category in this research sample.",
+      "confidence": {
+        "level": "unknown",
+        "rationale": "Not assessed; does not imply absence."
+      },
+      "citations": [],
+      "layout": null,
+      "season": null,
+      "limitations": [
+        "Requires dated operator confirmation or appropriately licensed survey evidence."
+      ]
+    },
+    {
+      "id": "hattie-unknown-crop",
+      "site_match": {
+        "status": "confirmed",
+        "garden_id": "nyc-greenthumb:B400-GT001",
+        "candidates": [
+          "nyc-greenthumb:B400-GT001"
+        ],
+        "rationale": "Exact Community Garden name and Bed-Stuy, Brooklyn locality match the GreenThumb record. Source explicitly names GreenThumb; no footprint match is asserted."
+      },
+      "category": "crop",
+      "state": "unknown",
+      "claim": null,
+      "value": null,
+      "unit": null,
+      "observed_at": null,
+      "time_basis": "No dated evidence captured for this category in this research sample.",
+      "confidence": {
+        "level": "unknown",
+        "rationale": "Not assessed; does not imply absence."
+      },
+      "citations": [],
+      "layout": null,
+      "season": null,
+      "limitations": [
+        "Requires dated operator confirmation or appropriately licensed survey evidence."
+      ]
+    },
+    {
+      "id": "hattie-unknown-seasonal_product",
+      "site_match": {
+        "status": "confirmed",
+        "garden_id": "nyc-greenthumb:B400-GT001",
+        "candidates": [
+          "nyc-greenthumb:B400-GT001"
+        ],
+        "rationale": "Exact Community Garden name and Bed-Stuy, Brooklyn locality match the GreenThumb record. Source explicitly names GreenThumb; no footprint match is asserted."
+      },
+      "category": "seasonal_product",
+      "state": "unknown",
+      "claim": null,
+      "value": null,
+      "unit": null,
+      "observed_at": null,
+      "time_basis": "No dated evidence captured for this category in this research sample.",
+      "confidence": {
+        "level": "unknown",
+        "rationale": "Not assessed; does not imply absence."
+      },
+      "citations": [],
+      "layout": null,
+      "season": null,
+      "limitations": [
+        "Requires dated operator confirmation or appropriately licensed survey evidence."
+      ]
+    }
+  ]
+}
