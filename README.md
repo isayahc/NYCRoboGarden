@@ -38,7 +38,11 @@ NYC Robo Garden explores how community-oriented agricultural robotics could supp
 | [NYC Mayor's Office of Urban Agriculture](https://www.nyc.gov/site/agriculture/) | Citywide urban-agriculture programs and resources | Discover urban farming partners and additional site information |
 | [New York Restoration Project — Community Gardens](https://www.nyrp.org/en/get-involved/community-gardens/) | Community gardens supported by NYRP | Identify potential organizational partners |
 
-**Map integration:** GitHub READMEs can link to a map, but cannot run an interactive Leaflet/Folium map inline. A future GitHub Pages site could render the GreenThumb data as an interactive map and link back here.
+### Interactive NYC garden map
+
+**[Open the NYC Garden Explorer](docs/gardens-map/index.html)** — Leaflet-based map using the live NYC GreenThumb dataset with borough, status, and name/address filters. The interactive page is stored at `docs/gardens-map/index.html`. To serve it publicly, enable **GitHub Pages → Deploy from branch → main → /docs** after merging. The published URL will be `https://isayahc.github.io/Spooky-Civic-AI-Hackathon/gardens-map/` once Pages is configured.
+
+The application fetches the NYC Open Data records when opened, so it requires internet access to the Socrata endpoint and OpenStreetMap tile provider. Garden markers are public dataset records, not verified greenhouse sites or deployment permissions. This first version is a **2D site-discovery map**; 3D Open-Industries generation is tracked separately in [epic #4](https://github.com/isayahc/Spooky-Civic-AI-Hackathon/issues/4).
 
 ### Proposed pilot-site screening
 

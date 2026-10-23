@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NYC Robo Garden | Garden Explorer</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyo1zZiS2w3sCE=" crossorigin="">
+<style>
+:root{color-scheme:dark;font-family:system-ui,Arial,sans-serif;background:#101922;color:#e8eef4}
+*{box-sizing:border-box}body{margin:0}header{padding:16px 20px;background:#152330;border-bottom:1px solid #354759}h1{font-size:1.25rem;margin:0 0 4px}header p{font-size:.88rem;color:#b5c6d5;margin:0}
+main{display:grid;grid-template-columns:minmax(230px,310px) 1fr;height:calc(100vh - 83px);min-height:540px}aside{padding:18px;overflow:auto;border-right:1px solid #354759;background:#172632}label{font-weight:600;font-size:.85rem;display:block;margin:16px 0 6px}input,select{width:100%;border:1px solid #64788b;border-radius:6px;background:#10202d;color:white;padding:10px}#map{min-height:480px}#count{margin:16px 0;font-weight:700}#status{font-size:.82rem;line-height:1.5;color:#c1d0de}.hint{font-size:.78rem;color:#b5c6d5;line-height:1.5}a{color:#8ccef9}button{border:1px solid #88bfae;color:#fff;background:#295c50;border-radius:6px;padding:9px 12px;cursor:pointer}.leaflet-popup-content{color:#1e2c37;line-height:1.5}.leaflet-popup-content a{color:#105d93}@media(max-width:690px){main{display:flex;flex-direction:column;height:auto}aside{border:0;padding:14px}#map{height:65vh;min-height:480px}}
+</style>
+</head>
+<body>
+<header><h1>NYC Robo Garden — Community Garden Explorer</h1><p>Official GreenThumb garden records • Five boroughs • Candidate discovery for Open-Industries 3D scenes</p></header>
+<main>
+<aside>
+<label for="borough">Borough</label><select id="borough"><option value="">All boroughs</option><option value="Brooklyn">Brooklyn</option><option value="Bronx">Bronx</option><option value="Manhattan">Manhattan</option><option value="Queens">Queens</option><option value="Staten Island">Staten Island</option></select>
+<label for="statusFilter">Garden status</label><select id="statusFilter"><option value="">All statuses</option><option value="Active">Active only</option></select>
+<label for="search">Find a garden</label><input id="search" type="search" placeholder="Garden name or address" autocomplete="off">
+<div id="count" aria-live="polite">Loading gardens…</div>
+<button id="reset" type="button">Reset filters</button>
+<p id="status" role="status">Fetching NYC Open Data…</p>
+<p class="hint">Markers represent recorded garden coordinates, not entrances. If the record contains garden polygons, they are displayed as outlines. This dataset does not guarantee that every location produces food or has a greenhouse.</p>
+<p class="hint">Source: <a href="https://data.cityofnewyork.us/dataset/GreenThumb-Garden-Info/p78i-pat6" target="_blank" rel="noopener noreferrer">NYC Parks GreenThumb Garden Info</a>. Data refreshes when the page opens. This map is not an approved robot deployment registry.</p>
+</aside>
+<div id="map" role="region" aria-label="NYC garden locations map"></div>
+</main>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+"use strict";
+const SOURCE="https://data.cityofnewyork.us/resource/p78i-pat6.json?$limit=5000";
+const map=L.map("map",{preferCanvas:true}).setView([40.7306,-73.9352],11);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
+const markers=L.layerGroup().addTo(map);
+const outlines=L.geoJSON(null,{style:{color:"#297d60",weight:2,fillOpacity:.10}}).addTo(map);
+const borough=document.getElementById("borough"),statusFilter=document.getElementById("statusFilter"),search=document.getElementById("search"),count=document.getElementById("count"),status=document.getElementById("status");
+let rows=[];
+const escapeHtml=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function normalizeBorough(v){const k=String(v??"").trim().toLowerCase();return ({b:"Brooklyn",bk:"Brooklyn",brooklyn:"Brooklyn",x:"Bronx",bx:"Bronx",bronx:"Bronx",m:"Manhattan",mn:"Manhattan",manhattan:"Manhattan",q:"Queens",qn:"Queens",queens:"Queens",r:"Staten Island",si:"Staten Island","staten island":"Staten Island"})[k]||String(v??"");}
+function geometryOf(v){if(!v)return null;if(typeof v==="object"&&v.type&&v.coordinates)return v;if(typeof v==="string"){try{const parsed=JSON.parse(v);if(parsed?.coordinates)return parsed;}catch{}}return null;}
+function popup(row){const name=escapeHtml(row.gardenname||"Unnamed garden"),addr=escapeHtml(row.address||"Address unavailable"),b=escapeHtml(normalizeBorough(row.borough)),st=escapeHtml(row.status||"Unknown");return '<strong>'+name+'</strong><div>'+addr+'</div><div>'+b+' · '+st+'</div><a href="https://data.cityofnewyork.us/dataset/GreenThumb-Garden-Info/p78i-pat6" target="_blank" rel="noopener noreferrer">Official dataset</a><div><small>3D scene generation: planned</small></div>';}
+function matches(r){const q=search.value.trim().toLowerCase();return (!borough.value||normalizeBorough(r.borough)===borough.value)&&(!statusFilter.value||String(r.status||"").trim().toLowerCase()===statusFilter.value.toLowerCase())&&(!q||String(r.gardenname||"").toLowerCase().includes(q)||String(r.address||"").toLowerCase().includes(q));}
+function draw(){markers.clearLayers();outlines.clearLayers();let shown=0,poly=0;const bounds=[];for(const r of rows){if(!matches(r))continue;let lat=Number(r.lat),lon=Number(r.lon);if(Number.isFinite(lat)&&Number.isFinite(lon)&&lat>40&&lat<41.1&&lon>-74.4&&lon<-73.6){L.circleMarker([lat,lon],{radius:5,color:"#165c48",fillColor:"#49b894",fillOpacity:.85,weight:1}).bindPopup(popup(r)).addTo(markers);bounds.push([lat,lon]);shown++;}const g=geometryOf(r.multipolygon);if(g&&(g.type==="Polygon"||g.type==="MultiPolygon")){try{L.geoJSON(g,{style:{color:"#297d60",weight:2,fillOpacity:.09},interactive:false}).addTo(outlines);poly++;}catch{}}}
+count.textContent=shown.toLocaleString()+" locations shown / "+rows.length.toLocaleString()+" records";
+status.textContent="Source: live NYC Open Data; "+poly+" garden outlines shown. Data may include non-active gardens.";
+if(bounds.length&& (borough.value||search.value.trim()))map.fitBounds(bounds,{padding:[25,25],maxZoom:15});
+}
+[borough,statusFilter,search].forEach(el=>el.addEventListener(el===search?"input":"change",draw));
+document.getElementById("reset").addEventListener("click",()=>{borough.value="";statusFilter.value="";search.value="";draw();map.setView([40.7306,-73.9352],11);});
+async function load(){try{const res=await fetch(SOURCE,{headers:{"Accept":"application/json"}});if(!res.ok)throw new Error("NYC Open Data HTTP "+res.status);const data=await res.json();if(!Array.isArray(data))throw new Error("Unexpected data format");rows=data;draw();if(rows.length===5000)status.textContent+=" Warning: API row limit reached; pagination required.";}catch(err){count.textContent="Garden records unavailable";status.textContent="Unable to load NYC Open Data: "+err.message+". Check network access or retry later.";}}
+load();
+</script>
+</body>
+</html>
