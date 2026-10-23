@@ -1,0 +1,38 @@
+{
+  "source": {
+    "dataset_id": "p78i-pat6",
+    "catalog_url": "https://data.cityofnewyork.us/dataset/p78i-pat6",
+    "api_url": "https://data.cityofnewyork.us/resource/p78i-pat6.json",
+    "attribution": "Department of Parks and Recreation (DPR)",
+    "retrieved_at": "2026-10-23T17:35:07.647661+00:00",
+    "source_updated_at": 1792595170,
+    "refresh_frequency": "Monthly",
+    "license_id": null,
+    "license_status": "unspecified",
+    "terms_url": "https://opendata.cityofnewyork.us/overview/#termsofuse",
+    "metadata_sha256": "7f55369f91b3119e703ec0eb7a959df26b3fb417f6bd039bc534ea3051b81964",
+    "raw_rows_sha256": "33db25bab786a4bc9f62f06d94964789f66378138610e144fd256e15b5df1dd1"
+  },
+  "schema_version": "1.0.0",
+  "snapshot_version": "d198d879da12e26479196ceff9ddfa94b779a1492447f363118bdaca480c90a9",
+  "summary": {
+    "input_rows": 635,
+    "gardens": 634,
+    "duplicate_rows_collapsed": 1,
+    "missing_locations": 56,
+    "gardens_with_boundaries": 634,
+    "gardens_with_parcels": 0,
+    "conflicting_ids": 0
+  },
+  "verification": {
+    "offline_tests": 9,
+    "full_snapshot_replay": "byte-identical for four outputs",
+    "parcel_matching": "offline synthetic feature test only; no live parcel snapshot supplied"
+  },
+  "limitations": [
+    "Publisher-mapped boundaries are not surveyed footprints.",
+    "56 gardens have no usable source location; no centroids were invented.",
+    "Source license ID is unspecified.",
+    "Live source can change; raw snapshots are saved locally, not committed."
+  ]
+}

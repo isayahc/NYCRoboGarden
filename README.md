@@ -44,6 +44,15 @@ NYC Robo Garden explores how community-oriented agricultural robotics could supp
 
 The application fetches the NYC Open Data records when opened, so it requires internet access to the Socrata endpoint and OpenStreetMap tile provider. Garden markers are public dataset records, not verified greenhouse sites or deployment permissions. This first version is a **2D site-discovery map**; 3D Open-Industries generation is tracked separately in [epic #4](https://github.com/isayahc/Spooky-Civic-AI-Hackathon/issues/4).
 
+### Versioned garden data
+
+The [garden registry pipeline](docs/garden-registry.md) ingests GreenThumb records into typed, versioned data with stable Parks IDs, source metadata and deduplication. It keeps location points, source polygons and optional BBL-matched tax lots distinct.
+
+```bash
+python3 -m garden_registry --output data/generated
+python3 -m unittest discover -s tests -v
+```
+
 ### Proposed pilot-site screening
 
 Start with **Brooklyn** and expand across the five boroughs. Evaluate candidate locations using information confirmed by the site operator:

@@ -1,0 +1,30 @@
+{
+  "id": "p78i-pat6",
+  "name": "GreenThumb Garden Info",
+  "rowsUpdatedAt": 1792595170,
+  "licenseId": null,
+  "attribution": "Department of Parks and Recreation (DPR)",
+  "metadata": {
+    "rdfSubject": "0",
+    "rdfClass": "",
+    "custom_fields": {
+      "Data Collection": {
+        "Data Collection": "GreenThumb Gardens"
+      },
+      "Update": {
+        "Automation": "Yes",
+        "Date Made Public": "12/1/2020",
+        "Update Frequency": "Monthly"
+      },
+      "Dataset Information": {
+        "Agency": "Department of Parks and Recreation (DPR)"
+      }
+    },
+    "rowLabel": "A GreenThumb garden",
+    "availableDisplayTypes": [
+      "table",
+      "fatrow",
+      "page"
+    ]
+  }
+}
