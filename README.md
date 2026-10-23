@@ -40,6 +40,15 @@ NYC Robo Garden explores how community-oriented agricultural robotics could supp
 
 **Map integration:** GitHub READMEs can link to a map, but cannot run an interactive Leaflet/Folium map inline. A future GitHub Pages site could render the GreenThumb data as an interactive map and link back here.
 
+### Versioned garden data
+
+The [garden registry pipeline](docs/garden-registry.md) ingests GreenThumb records into typed, versioned data with stable Parks IDs, source metadata and deduplication. It keeps location points, source polygons and optional BBL-matched tax lots distinct.
+
+```bash
+python3 -m garden_registry --output data/generated
+python3 -m unittest discover -s tests -v
+```
+
 ### Proposed pilot-site screening
 
 Start with **Brooklyn** and expand across the five boroughs. Evaluate candidate locations using information confirmed by the site operator:

@@ -1,0 +1,25 @@
+name: Garden registry
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  offline-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: python -m unittest discover -s tests -v
+      - name: Offline CLI smoke test
+        run: >-
+          python -m garden_registry
+          --raw tests/fixtures/greenthumb.json
+          --metadata tests/fixtures/metadata.json
+          --retrieved-at 2026-10-23T00:00:00Z
+          --output data/generated/ci

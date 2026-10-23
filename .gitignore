@@ -7,3 +7,9 @@
 # Local private keys; keep sponsor credentials out of version control
 /secrets/
 private.key
+
+# Reproducible local data exports and Python caches
+/data/generated/
+/data/replay/
+__pycache__/
+*.py[cod]
