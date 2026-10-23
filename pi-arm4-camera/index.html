@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>pi-arm4 · Live cameras</title>
+<style>
+body{margin:0;background:#10151e;color:#e8edf5;font:16px system-ui,sans-serif}main{max-width:1200px;margin:40px auto;padding:0 24px}header{display:flex;align-items:center;justify-content:space-between;gap:20px}h1{font-size:28px}p{color:#aebed1}img{display:block;width:100%;min-height:200px;background:#080c12;border-radius:16px;border:1px solid #2b3748}button,a{background:#253449;color:white;border:0;border-radius:8px;padding:12px 18px;text-decoration:none;cursor:pointer}.actions{display:flex;gap:12px;margin-top:20px}
+</style>
+<style>
+main{max-width:1600px}.feeds{display:grid;grid-template-columns:1fr 1fr;gap:24px}img{aspect-ratio:16/9;object-fit:contain}h2{font-size:20px}@media(max-width:800px){.feeds{grid-template-columns:1fr}header{display:block}}
+</style>
+<main>
+<header><h1>pi-arm4 / Both cameras</h1><span>Live · 10 fps per camera</span></header>
+<p>Live views through your authenticated Viam tunnel.</p>
+<div class="feeds">
+<section><h2>EMEET C950 4K · 720p</h2>
+<img id="emeet" src="/emeet/stream.mjpg" alt="Live EMEET camera feed">
+<div class="actions"><button onclick="reconnect('emeet')">Reconnect</button><a href="/emeet/snapshot.jpg" target="_blank" rel="noopener">Snapshot</a></div></section>
+<section><h2>icSpring · 640 × 480</h2>
+<img id="icspring" src="/icspring/stream.mjpg" alt="Live icSpring camera feed">
+<div class="actions"><button onclick="reconnect('icspring')">Reconnect</button><a href="/icspring/snapshot.jpg" target="_blank" rel="noopener">Snapshot</a></div></section>
+</div>
+</main>
+<script>function reconnect(id){document.getElementById(id).src='/'+id+'/stream.mjpg?t='+Date.now()}</script>
+</html>
