@@ -3,3 +3,4 @@ numpy>=1.26,<3
 imageio>=2.34,<3
 imageio-ffmpeg>=0.5,<1
 Pillow>=10.1,<13
+fast-simplification>=0.1.13,<0.2

@@ -44,7 +44,7 @@ The ASTRA downloader previously resolved its destination one directory too high.
 
 The empty `lower_arm_link_collision.stl` is restored byte-for-byte from `viam-devrel/so-101` commit `859e510f44af6d34b767423363462120fada193c`, path `assets/urdf/meshes/lower_arm_link_collision.stl`. Other arm files remain unchanged. Existing Apache-2.0 attribution is retained.
 
-## Server-driven farm mission
+## Server-driven harvesting mission
 
 From the repository root, after installing `requirements-simulation.txt`:
 
@@ -52,34 +52,68 @@ From the repository root, after installing `requirements-simulation.txt`:
 python -m simulation.server
 ```
 
-Open http://127.0.0.1:8080. On Linux/WSL2 the server defaults to EGL for offscreen
-rendering. Working EGL drivers are required; `MUJOCO_GL` can override the backend.
-The dashboard shows the farm and a close-up of the mounted arm, plus task progress.
+Open http://127.0.0.1:8080 in a WebGL-capable browser. Three.js renders the actual
+compiled robot meshes and garden geometry locally; the server performs only
+kinematics and pose updates. The server does not require EGL or an OpenGL context.
+The dashboard shows task progress, the collection-box count, measured render FPS
+and incoming pose-update rate. **Follow action** moves the camera in for harvesting;
+**Farm overview** pulls out. Drag to orbit, scroll to zoom and right-drag to pan.
+Manually orbiting turns off automatic following.
 
-A single shared mission begins when the renderer starts. The dog follows the existing
-ellipse, stops at patrol seconds 6, 9 and 12, and scans beds 3, 2 and 1 respectively.
-Each scan lasts four seconds and moves the arm smoothly out and back within joint
-limits while the leg and base poses stay fixed. After 48 seconds it reaches home
-and holds its final pose. Refreshing or opening multiple browsers does not reset
-progress. Restart the process to replay; Ctrl-C stops the server.
+Geometry is fetched once, using compact binary mesh buffers.
+Browser-only copies of CAD meshes are simplified with targets of 800–4,000 triangles
+per mesh (topology and shape preservation can prevent reaching the exact target;
+fewer than 100,000 triangles total, down from about 580,000);
+the authoritative MuJoCo geometry and arm kinematics are unchanged. Server-sent events
+deliver 30 Hz world poses; the browser interpolates position and quaternion with
+a 100 ms buffer and renders with `requestAnimationFrame`. Browser refresh rate,
+GPU and scene complexity determine actual FPS. Three.js 0.169.0 and OrbitControls
+are vendored with their MIT license, so there is no runtime CDN dependency.
+Stationary geometry is batched by material. If rendering stays below 25 FPS,
+the browser reduces internal render resolution, down to 50%; the current scale
+is displayed alongside FPS. Software WebGL renderers such as SwiftShader can
+remain slow even with reduced geometry; use hardware-accelerated WebGL for smooth playback.
 
-`GET /api/status` provides the phase, active bed, completed tasks and elapsed time.
-`GET /frame.jpg` returns the latest shared JPEG. Simulated inspection results are
-written to `data/generated/farm-mission/mission.json` after each scan. This file is
-reset on each server start. Use `--output PATH`, `--port 8081`, or `--host 0.0.0.0`
+A shared, continuously repeating mission begins when the backend starts. The dog
+approaches beds 3, 2 and 1 in order, collecting a carrot, lettuce and tomato.
+Each 12-second stop visibly reaches, closes the fingers, lifts the vegetable,
+carries it over the mounted collection box, releases it and retracts the arm.
+The base and legs hold their pose during each stop. After 72 seconds it reaches home
+and immediately starts the next cycle. Refreshing or opening multiple browsers does not reset
+progress. The dashboard shows the current cycle; Ctrl-C stops the server.
+
+`GET /api/status` provides the phase, active bed, carried item, deposited items,
+collection-box count, completed tasks, cycle number,
+within-cycle elapsed time, total elapsed time and `looping: true`.
+`GET /api/scene` returns geometry metadata, `/assets/mesh/<id>.bin` supplies mesh
+buffers, `/api/state` returns a pose snapshot, and `/api/events` continuously streams
+poses and status over SSE. `/frame.jpg` has been removed: no JPEG polling or encoding
+is used by this dashboard. Simulated harvesting results are
+written to `data/generated/farm-mission/mission.json` after each harvest. This file is
+reset at the start of each cycle; each result includes its cycle number.
+Use `--fps 30` to set pose-update rate, `--output PATH`, `--port 8081`, or `--host 0.0.0.0`
 to change the output directory, port, or expose the read-only demo on your LAN.
 
-These tasks demonstrate inspection motions, not crop diagnosis, harvesting or
-watering. The server has no sensor observations, physical locomotion controller,
+`simulation/harvest_mission.py` solves position-only IK for the actual mounted arm
+and clips all five arm joints to their URDF limits. Visible finger joints open and
+close. One harvestable vegetable at each bed edge is represented by a mocap body:
+it stays on the bed until pickup, follows the tool during carry, then interpolates
+into a box slot and remains there during transit. Produce resets each cycle.
+
+Attachment, release and locomotion are scripted kinematics, not validated grasp,
+contact, load-bearing or crop-health physics. The server has no sensor observations
 or Viam hardware execution. It runs independently of Open-Industries. The previous
 interactive patrol and video export commands remain available unchanged.
 
 Validation: `python -m unittest discover -s tests -p test_farm_mission.py -v`.
+Harvest geometry checks: `python -m unittest discover -s tests -p test_harvest_mission.py -v`.
+Browser scene/stream checks: `python -m unittest discover -s tests -p test_browser_scene.py -v`.
 
 ### Sample crops
 
 Bed 1 contains tomato plants with red fruit, bed 2 contains green lettuce rosettes,
 and bed 3 contains carrots with orange shoulders and leafy tops. Each bed has eight
 stylized plants built from local MuJoCo geometry; no asset downloads are needed.
-The dashboard, status API and saved inspection results identify the crop by name.
-These are static visual samples, not growth, crop-health or harvest simulations.
+The dashboard, status API and saved harvest results identify the crop by name.
+The eight background plants remain static; the additional harvestable vegetable
+at each bed edge moves into the collection box. Growth and crop health are not modeled.

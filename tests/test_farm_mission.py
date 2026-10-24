@@ -3,6 +3,7 @@ import json
 import tempfile
 import threading
 import unittest
+from unittest.mock import MagicMock, patch
 from http.server import ThreadingHTTPServer
 from pathlib import Path
 from urllib.request import urlopen
@@ -71,7 +72,35 @@ class MissionTests(unittest.TestCase):
                         with urlopen(url + '/api/status') as response:
                             self.assertEqual(json.load(response), runtime.status)
                     with urlopen(url) as response:
-                        self.assertIn(b'Farm inspection mission', response.read())
+                        self.assertIn(b'Farm harvesting mission', response.read())
                 finally:
                     server.shutdown()
                     thread.join()
+
+    def test_runtime_repeats_and_resets_cycle_results(self) -> None:
+        """The pose loop crosses mission boundaries and starts fresh tasks."""
+        from simulation.server import MissionRuntime, DURATION as LOOP_DURATION
+        with tempfile.TemporaryDirectory() as temporary:
+            runtime = MissionRuntime(Path(temporary))
+            snapshots = []
+            runtime.stop = MagicMock()
+            runtime.stop.is_set.side_effect = [False, False, False, False, True]
+            runtime.stop.wait.side_effect = lambda _: snapshots.append(runtime.snapshot()[1])
+            times = [100, 100+LOOP_DURATION-.1, 100+LOOP_DURATION+.1, 101+LOOP_DURATION]
+            with patch('simulation.server.mujoco.Renderer', side_effect=AssertionError('Backend must not render')), patch(
+                'simulation.server.time.monotonic', side_effect=[100, *[t for instant in times for t in (instant, instant)]]
+            ):
+                runtime.run()
+            self.assertIsNone(runtime.error)
+            self.assertEqual([s['cycle'] for s in snapshots], [1, 1, 2, 2])
+            self.assertEqual(snapshots[1]['completed'], (2, 1, 0))
+            self.assertEqual(len(snapshots[1]['results']), 3)
+            self.assertTrue(all(r['cycle'] == 1 for r in snapshots[1]['results']))
+            self.assertEqual(snapshots[2]['completed'], ())
+            self.assertEqual(snapshots[2]['results'], [])
+            self.assertEqual(snapshots[3]['phase'], 'walking')
+            self.assertGreater(snapshots[3]['elapsed'], snapshots[2]['elapsed'])
+            self.assertTrue(snapshots[3]['looping'])
+            self.assertEqual(json.loads((Path(temporary) / 'mission.json').read_text()), [])
+            self.assertTrue(runtime.transforms)
+            self.assertTrue(runtime.scene['geometries'])
