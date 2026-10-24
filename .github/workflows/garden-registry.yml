@@ -58,6 +58,11 @@ jobs:
         env:
           OI_ROOT: ${{ github.workspace }}/oi
         run: python -m unittest discover -s tests -p test_scene_adapter.py -v
+      - name: OpenCode space authoring backend integration
+        working-directory: garden
+        env:
+          OI_ROOT: ${{ github.workspace }}/oi
+        run: python -m unittest discover -s tests -p test_author_space.py -v
   mounted-arm-patrol:
     runs-on: ubuntu-latest
     steps:
