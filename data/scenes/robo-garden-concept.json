@@ -1,0 +1,236 @@
+{
+  "schema_version": "2.0",
+  "source": {
+    "record_id": "concept:robo-garden",
+    "url": "https://github.com/isayahc/Spooky-Civic-AI-Hackathon",
+    "coordinate_system": "EPSG:4326"
+  },
+  "anchor": {
+    "longitude": -73.95,
+    "latitude": 40.68,
+    "height_m": null
+  },
+  "footprint": {
+    "status": "inferred",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -73.9501,
+            40.6799
+          ],
+          [
+            -73.9499,
+            40.6799
+          ],
+          [
+            -73.9499,
+            40.6801
+          ],
+          [
+            -73.9501,
+            40.6801
+          ],
+          [
+            -73.9501,
+            40.6799
+          ]
+        ]
+      ]
+    },
+    "provenance": {
+      "source_url": "https://github.com/isayahc/Spooky-Civic-AI-Hackathon",
+      "observed_at": null,
+      "confidence": "unknown",
+      "rights": {
+        "status": "owned",
+        "reference": "Original synthetic fixture authored for this repository; no third-party imagery."
+      },
+      "note": "Original conceptual demo layout at illustrative Brooklyn coordinates; not a survey or claim about an existing garden."
+    }
+  },
+  "features": [
+    {
+      "id": "tomato-bed",
+      "category": "bed",
+      "status": "inferred",
+      "geometry": {
+        "type": "box",
+        "position_m": [
+          -4,
+          0,
+          -3
+        ],
+        "dimensions_m": [
+          2,
+          0.6,
+          3
+        ],
+        "yaw_degrees": 0
+      },
+      "provenance": {
+        "source_url": "https://github.com/isayahc/Spooky-Civic-AI-Hackathon",
+        "observed_at": null,
+        "confidence": "unknown",
+        "rights": {
+          "status": "owned",
+          "reference": "Original synthetic fixture authored for this repository; no third-party imagery."
+        },
+        "note": "Original conceptual demo layout at illustrative Brooklyn coordinates; not a survey or claim about an existing garden."
+      }
+    },
+    {
+      "id": "lettuce-bed",
+      "category": "bed",
+      "status": "inferred",
+      "geometry": {
+        "type": "box",
+        "position_m": [
+          0,
+          0,
+          -3
+        ],
+        "dimensions_m": [
+          2,
+          0.6,
+          3
+        ],
+        "yaw_degrees": 0
+      },
+      "provenance": {
+        "source_url": "https://github.com/isayahc/Spooky-Civic-AI-Hackathon",
+        "observed_at": null,
+        "confidence": "unknown",
+        "rights": {
+          "status": "owned",
+          "reference": "Original synthetic fixture authored for this repository; no third-party imagery."
+        },
+        "note": "Original conceptual demo layout at illustrative Brooklyn coordinates; not a survey or claim about an existing garden."
+      }
+    },
+    {
+      "id": "carrot-bed",
+      "category": "bed",
+      "status": "inferred",
+      "geometry": {
+        "type": "box",
+        "position_m": [
+          4,
+          0,
+          -3
+        ],
+        "dimensions_m": [
+          2,
+          0.6,
+          3
+        ],
+        "yaw_degrees": 0
+      },
+      "provenance": {
+        "source_url": "https://github.com/isayahc/Spooky-Civic-AI-Hackathon",
+        "observed_at": null,
+        "confidence": "unknown",
+        "rights": {
+          "status": "owned",
+          "reference": "Original synthetic fixture authored for this repository; no third-party imagery."
+        },
+        "note": "Original conceptual demo layout at illustrative Brooklyn coordinates; not a survey or claim about an existing garden."
+      }
+    },
+    {
+      "id": "inspection-aisle",
+      "category": "path",
+      "status": "inferred",
+      "geometry": {
+        "type": "box",
+        "position_m": [
+          0,
+          0,
+          0
+        ],
+        "dimensions_m": [
+          14,
+          0.04,
+          2
+        ],
+        "yaw_degrees": 0
+      },
+      "provenance": {
+        "source_url": "https://github.com/isayahc/Spooky-Civic-AI-Hackathon",
+        "observed_at": null,
+        "confidence": "unknown",
+        "rights": {
+          "status": "owned",
+          "reference": "Original synthetic fixture authored for this repository; no third-party imagery."
+        },
+        "note": "Original conceptual demo layout at illustrative Brooklyn coordinates; not a survey or claim about an existing garden."
+      }
+    },
+    {
+      "id": "greenhouse",
+      "category": "greenhouse",
+      "status": "inferred",
+      "geometry": {
+        "type": "box",
+        "position_m": [
+          4,
+          0,
+          5
+        ],
+        "dimensions_m": [
+          4,
+          3,
+          4
+        ],
+        "yaw_degrees": 0
+      },
+      "provenance": {
+        "source_url": "https://github.com/isayahc/Spooky-Civic-AI-Hackathon",
+        "observed_at": null,
+        "confidence": "unknown",
+        "rights": {
+          "status": "owned",
+          "reference": "Original synthetic fixture authored for this repository; no third-party imagery."
+        },
+        "note": "Original conceptual demo layout at illustrative Brooklyn coordinates; not a survey or claim about an existing garden."
+      }
+    },
+    {
+      "id": "robot-home",
+      "category": "growing_area",
+      "status": "inferred",
+      "geometry": {
+        "type": "box",
+        "position_m": [
+          -5,
+          0,
+          4
+        ],
+        "dimensions_m": [
+          2,
+          0.04,
+          2
+        ],
+        "yaw_degrees": 0
+      },
+      "provenance": {
+        "source_url": "https://github.com/isayahc/Spooky-Civic-AI-Hackathon",
+        "observed_at": null,
+        "confidence": "unknown",
+        "rights": {
+          "status": "owned",
+          "reference": "Original synthetic fixture authored for this repository; no third-party imagery."
+        },
+        "note": "Original conceptual demo layout at illustrative Brooklyn coordinates; not a survey or claim about an existing garden."
+      }
+    },
+    {
+      "id": "water-unknown",
+      "category": "water",
+      "status": "unknown",
+      "geometry": null,
+      "reason": "Water availability and operator permission have not been verified."
+    }
+  ]
+}

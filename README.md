@@ -247,3 +247,10 @@ to arm movement.
 - [Tavily](https://www.tavily.com/)
 
 Sponsor logos are reproduced from the sponsors' official websites for identification; their trademarks remain with their respective owners.
+
+## Author garden spaces with OpenCode
+
+Connect OpenCode to the local Open-Industries MCP server and use `/author-space`
+to generate, validate, save and export conceptual garden layouts. Setup, the
+committed sample, and a model-free MCP replay are in
+[OpenCode space authoring](docs/opencode-authoring.md).

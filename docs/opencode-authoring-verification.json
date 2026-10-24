@@ -1,0 +1,15 @@
+{
+  "opencode_version": "1.19.4",
+  "oi_commit": "14c5f321fb25ca117e79ebb7310719ec6c4ca17b",
+  "opencode_mcp_list": "oi connected",
+  "model_authoring_run": false,
+  "model_authoring_limitation": "No OpenCode model credentials configured in this environment.",
+  "sample_author": "Codex; deterministic Python replay called real OI MCP",
+  "sample_scene_id": "33bee8e2-1425-5d17-a527-c4a2302847fa",
+  "sample_revision": 1,
+  "sample_instances": 7,
+  "mcp_integration": "Passed asset import, create, identical retry, fresh-process read and portable export",
+  "full_suite": {"run": 44, "skipped": 3, "failures": 0},
+  "authoring_suite_with_oi": {"run": 3, "skipped": 0, "failures": 0},
+  "limitations": ["Conceptual geometry only", "No OI browser rendering verification in this change", "Not connected to the MuJoCo mission", "Issue 10 walkthrough recording still pending"]
+}

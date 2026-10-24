@@ -1,0 +1,212 @@
+{
+  "schema": "garden-georeference/1",
+  "manifest_sha256": "8273c62531dcab1ae2e5066b6c5e3d43018ef7739343de53c65985c740a800bd",
+  "scene_sha256": "f149ecd45c2e14e7a8676a7ce311e07364f0af70b3813fd149158d3636126f93",
+  "source": {
+    "record_id": "concept:robo-garden",
+    "url": "https://github.com/isayahc/Spooky-Civic-AI-Hackathon",
+    "coordinate_system": "EPSG:4326"
+  },
+  "anchor": {
+    "longitude": -73.95,
+    "latitude": 40.68,
+    "height_m": null
+  },
+  "height_assumed_zero": true,
+  "local_frame": "meters; +X east, +Y up, -Z north; heading 0",
+  "local_to_ecef_column_major": [
+    0.9610207909775255,
+    0.27647610983398074,
+    0,
+    0,
+    0.20966895218527268,
+    -0.7288015676779986,
+    0.6518337253008788,
+    0,
+    0.1802164526297786,
+    -0.6264257622744775,
+    -0.7583619152887219,
+    0,
+    1339203.243606308,
+    -4655021.2284997245,
+    4135538.6793045076,
+    1
+  ],
+  "features": [
+    {
+      "instance_id": "site-ground",
+      "category": "terrain",
+      "evidence_status": "inferred",
+      "representation": "LOD0 flat surface",
+      "provenance": {
+        "source_url": "https://github.com/isayahc/Spooky-Civic-AI-Hackathon",
+        "observed_at": null,
+        "confidence": "unknown",
+        "rights": {
+          "status": "owned",
+          "reference": "Original synthetic fixture authored for this repository; no third-party imagery."
+        },
+        "note": "Original conceptual demo layout at illustrative Brooklyn coordinates; not a survey or claim about an existing garden."
+      },
+      "record_id": "concept:robo-garden",
+      "anchor": {
+        "longitude": -73.95,
+        "latitude": 40.68,
+        "height_m": null
+      },
+      "adapter": "nyc-robo-garden/2.0"
+    },
+    {
+      "instance_id": "carrot-bed",
+      "category": "bed",
+      "evidence_status": "inferred",
+      "representation": "LOD1 envelope",
+      "provenance": {
+        "source_url": "https://github.com/isayahc/Spooky-Civic-AI-Hackathon",
+        "observed_at": null,
+        "confidence": "unknown",
+        "rights": {
+          "status": "owned",
+          "reference": "Original synthetic fixture authored for this repository; no third-party imagery."
+        },
+        "note": "Original conceptual demo layout at illustrative Brooklyn coordinates; not a survey or claim about an existing garden."
+      },
+      "record_id": "concept:robo-garden",
+      "anchor": {
+        "longitude": -73.95,
+        "latitude": 40.68,
+        "height_m": null
+      },
+      "adapter": "nyc-robo-garden/2.0"
+    },
+    {
+      "instance_id": "greenhouse",
+      "category": "greenhouse",
+      "evidence_status": "inferred",
+      "representation": "LOD1 envelope",
+      "provenance": {
+        "source_url": "https://github.com/isayahc/Spooky-Civic-AI-Hackathon",
+        "observed_at": null,
+        "confidence": "unknown",
+        "rights": {
+          "status": "owned",
+          "reference": "Original synthetic fixture authored for this repository; no third-party imagery."
+        },
+        "note": "Original conceptual demo layout at illustrative Brooklyn coordinates; not a survey or claim about an existing garden."
+      },
+      "record_id": "concept:robo-garden",
+      "anchor": {
+        "longitude": -73.95,
+        "latitude": 40.68,
+        "height_m": null
+      },
+      "adapter": "nyc-robo-garden/2.0"
+    },
+    {
+      "instance_id": "inspection-aisle",
+      "category": "path",
+      "evidence_status": "inferred",
+      "representation": "LOD1 envelope",
+      "provenance": {
+        "source_url": "https://github.com/isayahc/Spooky-Civic-AI-Hackathon",
+        "observed_at": null,
+        "confidence": "unknown",
+        "rights": {
+          "status": "owned",
+          "reference": "Original synthetic fixture authored for this repository; no third-party imagery."
+        },
+        "note": "Original conceptual demo layout at illustrative Brooklyn coordinates; not a survey or claim about an existing garden."
+      },
+      "record_id": "concept:robo-garden",
+      "anchor": {
+        "longitude": -73.95,
+        "latitude": 40.68,
+        "height_m": null
+      },
+      "adapter": "nyc-robo-garden/2.0"
+    },
+    {
+      "instance_id": "lettuce-bed",
+      "category": "bed",
+      "evidence_status": "inferred",
+      "representation": "LOD1 envelope",
+      "provenance": {
+        "source_url": "https://github.com/isayahc/Spooky-Civic-AI-Hackathon",
+        "observed_at": null,
+        "confidence": "unknown",
+        "rights": {
+          "status": "owned",
+          "reference": "Original synthetic fixture authored for this repository; no third-party imagery."
+        },
+        "note": "Original conceptual demo layout at illustrative Brooklyn coordinates; not a survey or claim about an existing garden."
+      },
+      "record_id": "concept:robo-garden",
+      "anchor": {
+        "longitude": -73.95,
+        "latitude": 40.68,
+        "height_m": null
+      },
+      "adapter": "nyc-robo-garden/2.0"
+    },
+    {
+      "instance_id": "robot-home",
+      "category": "growing_area",
+      "evidence_status": "inferred",
+      "representation": "LOD1 envelope",
+      "provenance": {
+        "source_url": "https://github.com/isayahc/Spooky-Civic-AI-Hackathon",
+        "observed_at": null,
+        "confidence": "unknown",
+        "rights": {
+          "status": "owned",
+          "reference": "Original synthetic fixture authored for this repository; no third-party imagery."
+        },
+        "note": "Original conceptual demo layout at illustrative Brooklyn coordinates; not a survey or claim about an existing garden."
+      },
+      "record_id": "concept:robo-garden",
+      "anchor": {
+        "longitude": -73.95,
+        "latitude": 40.68,
+        "height_m": null
+      },
+      "adapter": "nyc-robo-garden/2.0"
+    },
+    {
+      "instance_id": "tomato-bed",
+      "category": "bed",
+      "evidence_status": "inferred",
+      "representation": "LOD1 envelope",
+      "provenance": {
+        "source_url": "https://github.com/isayahc/Spooky-Civic-AI-Hackathon",
+        "observed_at": null,
+        "confidence": "unknown",
+        "rights": {
+          "status": "owned",
+          "reference": "Original synthetic fixture authored for this repository; no third-party imagery."
+        },
+        "note": "Original conceptual demo layout at illustrative Brooklyn coordinates; not a survey or claim about an existing garden."
+      },
+      "record_id": "concept:robo-garden",
+      "anchor": {
+        "longitude": -73.95,
+        "latitude": 40.68,
+        "height_m": null
+      },
+      "adapter": "nyc-robo-garden/2.0"
+    }
+  ],
+  "unknowns": [
+    {
+      "id": "water-unknown",
+      "category": "water",
+      "reason": "Water availability and operator permission have not been verified."
+    }
+  ],
+  "registry_snapshot_version": null,
+  "evidence": [],
+  "limitations": [
+    "All rendered surfaces/envelopes are inferred, including flat terrain.",
+    "Source-backed evidence does not make procedural geometry surveyed.",
+    "No current crops, yields, site access or robot suitability inferred."
+  ]
+}
