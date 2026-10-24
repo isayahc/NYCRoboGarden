@@ -75,3 +75,11 @@ or Viam hardware execution. It runs independently of Open-Industries. The previo
 interactive patrol and video export commands remain available unchanged.
 
 Validation: `python -m unittest discover -s tests -p test_farm_mission.py -v`.
+
+### Sample crops
+
+Bed 1 contains tomato plants with red fruit, bed 2 contains green lettuce rosettes,
+and bed 3 contains carrots with orange shoulders and leafy tops. Each bed has eight
+stylized plants built from local MuJoCo geometry; no asset downloads are needed.
+The dashboard, status API and saved inspection results identify the crop by name.
+These are static visual samples, not growth, crop-health or harvest simulations.

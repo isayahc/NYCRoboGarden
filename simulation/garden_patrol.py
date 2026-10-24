@@ -13,6 +13,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 BEDS = (-1.0, 0.0, 1.0)
 PERIOD = 36.0
+CROPS = ("Tomatoes", "Lettuce", "Carrots")
 
 
 def quaternion(rpy: str) -> str:
@@ -20,6 +21,27 @@ def quaternion(rpy: str) -> str:
     r, p, y = (float(v) / 2 for v in rpy.split())
     cr, sr, cp, sp, cy, sy = math.cos(r), math.sin(r), math.cos(p), math.sin(p), math.cos(y), math.sin(y)
     return ' '.join(map(str, (cr*cp*cy+sr*sp*sy, sr*cp*cy-cr*sp*sy, cr*sp*cy+sr*cp*sy, cr*cp*sy-sr*sp*cy)))
+
+
+def add_crop(world: ET.Element, bed: int, plant: int, x: float, y: float) -> None:
+    """Build a stylized tomato, lettuce or carrot plant from native geometry."""
+    body = ET.SubElement(world, 'body', name=f'crop_{bed}_{plant}', pos=f'{x} {y} .26')
+    if bed == 0:
+        ET.SubElement(body, 'geom', type='capsule', fromto='0 0 0 0 0 .32', size='.009', rgba='.18 .36 .08 1')
+        for z, direction in ((.12, -1), (.23, 1)):
+            ET.SubElement(body, 'geom', type='ellipsoid', pos=f'{direction*.055} 0 {z}', size='.065 .025 .018', rgba='.15 .44 .08 1')
+            ET.SubElement(body, 'geom', type='sphere', pos=f'{-direction*.045} .025 {z}', size='.035', rgba='.88 .08 .025 1')
+    elif bed == 1:
+        for leaf in range(6):
+            angle = leaf * math.pi / 3
+            ET.SubElement(body, 'geom', type='ellipsoid', pos=f'{.035*math.cos(angle)} {.035*math.sin(angle)} .045', size='.055 .045 .035', rgba='.34 .65 .12 1')
+        ET.SubElement(body, 'geom', type='ellipsoid', pos='0 0 .07', size='.042 .042 .045', rgba='.56 .78 .22 1')
+    else:
+        # Orange shoulders at the soil surface with narrow leafy tops.
+        ET.SubElement(body, 'geom', type='ellipsoid', pos='0 0 .005', size='.028 .028 .025', rgba='1 .36 .025 1')
+        for leaf in range(5):
+            angle = leaf * 2 * math.pi / 5
+            ET.SubElement(body, 'geom', type='capsule', fromto=f'0 0 .02 {.045*math.cos(angle)} {.045*math.sin(angle)} .16', size='.008', rgba='.19 .53 .06 1')
 
 
 def build_model() -> mujoco.MjModel:
@@ -51,9 +73,9 @@ def build_model() -> mujoco.MjModel:
     for i, x in enumerate(BEDS):
         ET.SubElement(world, 'geom', name=f'bed_{i}', type='box', pos=f'{x} 0 0.12', size='0.32 0.65 0.12', rgba='0.38 0.23 0.13 1')
         ET.SubElement(world, 'geom', type='box', pos=f'{x} 0 0.245', size='0.28 0.61 0.015', rgba='0.15 0.10 0.065 1')
-        for y in (-.45, -.15, .15, .45):
-            for dx in (-.14, .14):
-                ET.SubElement(world, 'geom', type='ellipsoid', pos=f'{x+dx} {y} .30', size='.075 .075 .08', rgba='.22 .48 .12 1')
+        for row, y in enumerate((-.45, -.15, .15, .45)):
+            for column, dx in enumerate((-.14, .14)):
+                add_crop(world, i, row * 2 + column, x + dx, y)
     chassis = world.find("body[@name='frontbase']")
     assert chassis is not None
     mount = ET.SubElement(chassis, 'body', name='arm_mount', pos='0 0.10 0.39')
