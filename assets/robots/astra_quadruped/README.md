@@ -3,7 +3,7 @@
 Upstream: [fedecomi04/opensource-spinal-quadruped](https://github.com/fedecomi04/opensource-spinal-quadruped)
 Pinned upstream commit: `41dab01c906a14dd374a10fb7f234179b8c7736c`
 
-This directory contains two original MuJoCo XML descriptions and the upstream MIT LICENSE. **The full mesh geometry is downloaded reproducibly**, rather than checked into this PR, because several upstream STL files exceed the GitHub connector's binary-transfer limit. Do not attempt to simulate the complete robot until the meshes have been retrieved.
+This directory contains two original MuJoCo XML descriptions, 21 original STL meshes, and the upstream MIT LICENSE. The meshes are vendored at the pinned revision below. The fetch script can refresh them from the same revision.
 
 ## Fetch exact model geometry (WSL2 / Linux)
 
@@ -27,4 +27,4 @@ The complete upstream CAD STEP file is available at [cad/ASTRA_quadruped.step](h
 
 ## License / provenance
 
-Root upstream repository license is MIT (included as `LICENSE`). Verify any separately licensed third-party components before packaging a combined redistributable simulator. Upstream model and mesh files are preserved in their source formats. No SO-101 mount, combined URDF/MJCF or physics validation is provided in this PR.
+Root upstream repository license is MIT (included as `LICENSE`). Verify any separately licensed third-party components before packaging a combined redistributable simulator. Upstream model and mesh files are preserved in their source formats. A mounted SO-101 kinematic demonstration is now available in [the garden patrol guide](../../../docs/garden-patrol.md). Physical validation remains outstanding.
