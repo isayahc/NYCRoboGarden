@@ -1,3 +1,16 @@
+## Start the autonomous farm demo
+
+```bash
+pip install -r requirements-simulation.txt
+python -m simulation.server
+```
+
+Open **http://127.0.0.1:8080**. The ASTRA dog carries the mounted SO-101 arm,
+walks between three bed inspection stops, pauses for arm scans, and returns home.
+The server owns the mission; opening or refreshing the dashboard does not restart it.
+This is a **kinematic simulation** of inspection tasks, not physical robot control.
+See [the farm mission guide](docs/garden-patrol.md#server-driven-farm-mission).
+
 # Spooky Civic AI Hackathon
 
 **Project: NYC Robo Garden**

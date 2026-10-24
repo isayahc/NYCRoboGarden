@@ -43,3 +43,35 @@ This is a standalone demo in the garden project; it is not yet connected to the 
 The ASTRA downloader previously resolved its destination one directory too high. That path is fixed. The 21 fetched STL files are now committed so this demo runs after dependency installation without an additional model download. Source revision: `41dab01c906a14dd374a10fb7f234179b8c7736c` of `fedecomi04/opensource-spinal-quadruped`; MIT license is retained beside the model.
 
 The empty `lower_arm_link_collision.stl` is restored byte-for-byte from `viam-devrel/so-101` commit `859e510f44af6d34b767423363462120fada193c`, path `assets/urdf/meshes/lower_arm_link_collision.stl`. Other arm files remain unchanged. Existing Apache-2.0 attribution is retained.
+
+## Server-driven farm mission
+
+From the repository root, after installing `requirements-simulation.txt`:
+
+```bash
+python -m simulation.server
+```
+
+Open http://127.0.0.1:8080. On Linux/WSL2 the server defaults to EGL for offscreen
+rendering. Working EGL drivers are required; `MUJOCO_GL` can override the backend.
+The dashboard shows the farm and a close-up of the mounted arm, plus task progress.
+
+A single shared mission begins when the renderer starts. The dog follows the existing
+ellipse, stops at patrol seconds 6, 9 and 12, and scans beds 3, 2 and 1 respectively.
+Each scan lasts four seconds and moves the arm smoothly out and back within joint
+limits while the leg and base poses stay fixed. After 48 seconds it reaches home
+and holds its final pose. Refreshing or opening multiple browsers does not reset
+progress. Restart the process to replay; Ctrl-C stops the server.
+
+`GET /api/status` provides the phase, active bed, completed tasks and elapsed time.
+`GET /frame.jpg` returns the latest shared JPEG. Simulated inspection results are
+written to `data/generated/farm-mission/mission.json` after each scan. This file is
+reset on each server start. Use `--output PATH`, `--port 8081`, or `--host 0.0.0.0`
+to change the output directory, port, or expose the read-only demo on your LAN.
+
+These tasks demonstrate inspection motions, not crop diagnosis, harvesting or
+watering. The server has no sensor observations, physical locomotion controller,
+or Viam hardware execution. It runs independently of Open-Industries. The previous
+interactive patrol and video export commands remain available unchanged.
+
+Validation: `python -m unittest discover -s tests -p test_farm_mission.py -v`.
