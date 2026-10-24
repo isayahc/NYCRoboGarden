@@ -57,6 +57,10 @@ python3 -m unittest discover -s tests -v
 
 The [evidence research contract and importer](docs/garden-evidence.md) attach dated, cited claims to registry sites while keeping ambiguous matches and unknowns separate. The initial sample includes a historical bed-addition report; it does not establish current layouts or utility availability.
 
+### Mounted arm garden patrol demo
+
+[Watch the robot dog carry the SO-101 arm around three garden beds](docs/media/garden-patrol.mp4). [Run the interactive model or export a video](docs/garden-patrol.md). This uses the actual robot meshes and a fixed mount, with scripted leg motion and a closed patrol route. It is kinematic playback in a fictional garden; physical balance and payload capacity are not validated.
+
 ### Generate an Open-Industries scene
 
 The [garden scene adapter](docs/garden-scene-adapter.md) converts an explicit garden manifest into OI-native LOD0/LOD1 geometry, preserves evidence and WGS84 georeferencing, and supports OI 3D Tiles export plus MCP asset bindings. Start with the clearly fictional fixture:

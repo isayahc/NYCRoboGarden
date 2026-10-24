@@ -8,7 +8,7 @@ from typing import Final
 
 SOURCE: Final[str] = "fedecomi04/opensource-spinal-quadruped"
 REVISION: Final[str] = "41dab01c906a14dd374a10fb7f234179b8c7736c"
-ROOT: Final[Path] = Path(__file__).resolve().parents[1]
+ROOT: Final[Path] = Path(__file__).resolve().parent
 # Complete upstream manifest is available through the Git tree API; the
 # downloader below fetches the full mesh directory using git sparse checkout
 # instead of bundling a partial or misleading geometry package.
