@@ -17,7 +17,7 @@ import mujoco
 from PIL import Image
 
 from simulation.farm_mission import DURATION, STOPS, mission_pose
-from simulation.garden_patrol import build_model
+from simulation.garden_patrol import CROPS, build_model
 
 PAGE = Path(__file__).with_name('dashboard.html')
 
@@ -60,7 +60,7 @@ class MissionRuntime:
                     for bed in state.completed:
                         if any(result['bed'] == bed for result in results):
                             continue
-                        results.append({'bed': bed, 'task': 'visual inspection sweep',
+                        results.append({'bed': bed, 'crop': CROPS[bed], 'task': 'visual inspection sweep',
                                         'result': 'simulated scan completed', 'simulated': True})
                         temporary = self.output / 'mission.tmp'
                         temporary.write_text(json.dumps(results, indent=2) + '\n')
@@ -77,7 +77,8 @@ class MissionRuntime:
                     buffer = BytesIO()
                     image.save(buffer, format='JPEG', quality=85)
                     status = {**asdict(state), 'duration': DURATION, 'simulated': True,
-                              'tasks': [{'bed': bed, 'task': 'Inspect bed',
+                              'active_crop': CROPS[state.active_bed] if state.active_bed is not None else None,
+                              'tasks': [{'bed': bed, 'crop': CROPS[bed], 'task': 'Inspect crop',
                                          'status': 'complete' if bed in state.completed else
                                          'active' if bed == state.active_bed else 'pending'} for _, bed in STOPS],
                               'results': list(results)}
