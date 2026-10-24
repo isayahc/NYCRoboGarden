@@ -1,15 +1,30 @@
 <!doctype html>
-<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Robo Garden · Farm mission</title>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Robo Garden · Live 3D harvest</title>
 <style>
-body{margin:0;background:#101c17;color:#e6efdf;font:16px system-ui}main{max-width:1100px;margin:auto;padding:28px}h1{margin-bottom:8px}p{color:#bbccb8}img{width:100%;border-radius:12px;background:#203329}progress{width:100%;accent-color:#a7db75;height:18px}ul{display:flex;gap:12px;padding:0;list-style:none;flex-wrap:wrap}li{background:#263b2e;padding:16px;border-radius:8px;flex:1}small{color:#bbccb8}a{color:#b9e38e}
-</style><main><small>NYC ROBO GARDEN / ASTRA + SO-101</small><h1>Farm inspection mission</h1>
-<p>Mounted arm • walking patrol • tomatoes, lettuce and carrots • return home</p>
-<img id="view" src="/frame.jpg" alt="Live MuJoCo farm view with a close-up of the arm mounted on the quadruped">
-<h2 id="phase" aria-live="polite">Connecting…</h2><progress id="progress" max="48" value="0"></progress><ul id="tasks"></ul>
-<p>Simulated visual inspection sweeps in a fictional farm. Kinematic motion; no real sensor readings or hardware commands.</p>
-<small>The mission starts with the server and runs once. Refreshing this page preserves progress. Restart the server to replay. <a href="/api/status">Mission JSON</a></small></main>
-<script>
-const view=document.getElementById('view');
-async function refresh(){try{const response=await fetch('/api/status');if(!response.ok)throw Error('Server unavailable');const s=await response.json();document.getElementById('phase').textContent=s.phase==='complete'?'Mission complete · returned home':s.phase==='inspecting'?`Inspecting ${s.active_crop} · bed ${s.active_bed+1}`:s.phase==='error'?`Simulation error: ${s.error}`:`${s.phase} · ${Math.floor(s.elapsed||0)}s`;document.getElementById('progress').value=s.elapsed||0;document.getElementById('progress').max=s.duration||48;document.getElementById('tasks').replaceChildren(...(s.tasks||[]).map(t=>{const li=document.createElement('li');li.textContent=`Bed ${t.bed+1} · ${t.crop} · ${t.status}`;return li}));view.src='/frame.jpg?t='+Date.now();}catch(e){document.getElementById('phase').textContent='Connection lost · checking again…'}setTimeout(refresh,200)}refresh();
-</script></html>
+body{margin:0;background:#101c17;color:#e6efdf;font:16px system-ui}main{max-width:1400px;margin:auto;padding:24px}h1{margin-bottom:8px}p,small{color:#bbccb8}a{color:#b9e38e}#viewport{height:min(68vh,760px);min-height:360px;position:relative;border-radius:16px;overflow:hidden;background:#203329}canvas{display:block;width:100%;height:100%;touch-action:none}#loading{position:absolute;inset:0;display:grid;place-content:center;background:#13261ee8;text-align:center;padding:32px;z-index:2}#overlay{position:absolute;top:16px;left:16px;pointer-events:none;background:#10241be8;padding:12px 16px;border-radius:10px}#phase{font-size:20px;margin:0 0 6px}#connection{margin-top:10px;font-size:13px}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:16px 0}button{background:#2c4936;border:1px solid #557b59;color:#e6efdf;padding:10px 16px;border-radius:8px;cursor:pointer}button[aria-pressed=true]{background:#a7db75;color:#102116}#performance{margin-left:auto;font-variant-numeric:tabular-nums}progress{width:100%;accent-color:#a7db75;height:16px}ul{display:flex;gap:12px;padding:0;list-style:none;flex-wrap:wrap}li{background:#263b2e;padding:16px;border-radius:8px;flex:1;min-width:180px}#cycle{margin:8px 0}@media(max-width:600px){main{padding:12px}#viewport{height:55vh}#performance{margin-left:0}}
+</style>
+<script type="importmap">{"imports":{"three":"/vendor/three.module.min.js"}}</script>
+</head>
+<body><main>
+<small>NYC ROBO GARDEN / ASTRA + SO-101 / BROWSER-RENDERED 3D</small>
+<h1>Farm harvesting mission</h1>
+<p>Walk to bed → reach → grasp → lift → carry → release into the collection box</p>
+<div id="viewport">
+  <div id="loading" role="status">Loading robot meshes…</div>
+  <div id="overlay"><h2 id="phase" aria-live="polite">Connecting…</h2><div id="box">Collection box: 0 / 3</div><div id="connection">Waiting for mission poses</div></div>
+</div>
+<div class="toolbar">
+  <button id="follow" aria-pressed="true">Follow action</button>
+  <button id="overview" aria-pressed="false">Farm overview</button>
+  <small>Drag to orbit · scroll to zoom · right-drag to pan</small>
+  <small id="performance">WebGL rendering</small>
+</div>
+<p id="cycle">Continuous harvest</p><progress id="progress" max="72" value="0"></progress><ul id="tasks"></ul>
+<p>Simulated harvesting in a fictional farm. Arm poses use inverse kinematics; gripping and produce attachment are scripted, not contact physics. No hardware commands.</p>
+<small>The backend runs the shared mission continuously. Your browser renders the 3D scene and interpolates incoming poses. Refreshing preserves mission progress. <a href="/api/status">Mission JSON</a></small>
+</main>
+<script type="module" src="/viewer.js"></script>
+</body></html>

@@ -44,7 +44,7 @@ def add_crop(world: ET.Element, bed: int, plant: int, x: float, y: float) -> Non
             ET.SubElement(body, 'geom', type='capsule', fromto=f'0 0 .02 {.045*math.cos(angle)} {.045*math.sin(angle)} .16', size='.008', rgba='.19 .53 .06 1')
 
 
-def build_model() -> mujoco.MjModel:
+def build_model(harvest: bool = False) -> mujoco.MjModel:
     """Attach the URDF arm hierarchy rigidly to ASTRA's front chassis."""
     source = ROOT / 'assets/robots/astra_quadruped/model'
     xml = ET.parse(source / 'model.xml').getroot()
@@ -115,6 +115,31 @@ def build_model() -> mujoco.MjModel:
         origin = visual.find('origin')
         ET.SubElement(bodies[name], 'geom', type='mesh', mesh=f'arm_mesh_{name}', pos=origin.attrib['xyz'], quat=quaternion(origin.attrib.get('rpy', '0 0 0')), rgba='.95 .67 .12 1')
     ET.SubElement(bodies['tool'], 'site', name='arm_tcp', size='.012', rgba='1 .2 .1 1')
+    if harvest:
+        # Visual pick/place props are opt-in so the original patrol is unchanged.
+        bodies['tool'].find("site[@name='arm_tcp']").set('pos', '0 0 .055')
+        for name, sign in (('left', -1), ('right', 1)):
+            finger = ET.SubElement(bodies['tool'], 'body', name=f'arm_finger_{name}', pos=f'{sign*.012} 0 .025')
+            ET.SubElement(finger, 'joint', name=f'arm_finger_{name}', type='slide', axis=f'{sign} 0 0', range='0 .035', limited='true')
+            ET.SubElement(finger, 'geom', type='box', size='.007 .014 .035', rgba='.15 .18 .2 1', mass='.005')
+        crate = ET.SubElement(chassis, 'body', name='collection_box', pos='.20 -.06 .34')
+        ET.SubElement(crate, 'geom', type='box', size='.12 .10 .012', rgba='.65 .40 .17 1')
+        for x, y, sx, sy in ((-.12, 0, .008, .10), (.12, 0, .008, .10), (0, -.10, .12, .008), (0, .10, .12, .008)):
+            ET.SubElement(crate, 'geom', type='box', pos=f'{x} {y} .045', size=f'{sx} {sy} .045', rgba='.88 .65 .30 1')
+        ET.SubElement(crate, 'site', name='box_drop', pos='0 0 .14', size='.005', rgba='0 0 0 0')
+        for bed, x in enumerate(BEDS):
+            item = ET.SubElement(world, 'body', name=f'harvest_item_{bed}', mocap='true', pos=f'{x} .55 .32')
+            if bed == 0:
+                ET.SubElement(item, 'geom', type='sphere', size='.035', rgba='.95 .06 .025 1')
+                ET.SubElement(item, 'geom', type='capsule', fromto='0 0 .025 0 0 .055', size='.005', rgba='.1 .4 .05 1')
+            elif bed == 1:
+                for leaf in range(5):
+                    angle = leaf * 2 * math.pi / 5
+                    ET.SubElement(item, 'geom', type='ellipsoid', pos=f'{.018*math.cos(angle)} {.018*math.sin(angle)} 0', size='.027 .023 .026', rgba='.45 .85 .12 1')
+            else:
+                ET.SubElement(item, 'geom', type='ellipsoid', size='.023 .023 .055', rgba='1 .36 .015 1')
+                for dx in (-.015, .015):
+                    ET.SubElement(item, 'geom', type='capsule', fromto=f'0 0 .04 {dx} 0 .09', size='.006', rgba='.15 .65 .04 1')
     return mujoco.MjModel.from_xml_string(ET.tostring(xml, encoding='unicode'))
 
 

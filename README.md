@@ -6,10 +6,15 @@ python -m simulation.server
 ```
 
 Open **http://127.0.0.1:8080**. The ASTRA dog carries the mounted SO-101 arm,
-walks between three bed inspection stops, pauses for arm scans, and returns home.
+walks to three crop beds, picks a carrot, lettuce and tomato, places each in its
+collection box, and returns home. The 72-second harvesting mission repeats continuously.
 The server owns the mission; opening or refreshing the dashboard does not restart it.
-This is a **kinematic simulation** of inspection tasks, not physical robot control.
-See [the farm mission guide](docs/garden-patrol.md#server-driven-farm-mission).
+The browser renders the actual robot meshes with Three.js/WebGL, interpolating
+30 Hz pose updates at the display refresh rate. Drag to orbit, scroll to zoom,
+or use **Follow action**. The backend does not render or encode video frames.
+This is a **kinematic simulation** with scripted produce attachment/release and
+joint-limited inverse kinematics, not physical robot control or grasp-contact validation.
+See [the farm mission guide](docs/garden-patrol.md#server-driven-harvesting-mission).
 
 # Spooky Civic AI Hackathon
 
