@@ -6,6 +6,14 @@
 
 Built for the [Spooky Civic AI Hackathon: Build Weekend](https://luma.com/onzzmytl), hosted by 3percentclub in NYC and online, October 23–24, 2026, with Demo Day on October 25.
 
+## Introduction
+
+During the hackathon, we worked with **Judith “Judi” Desire, founder and executive director of Uptown & Boogie Healthy Project**, to understand a recurring task in her work as a small-scale urban grower. She described a major pain point: **manually sowing seeds into the individual cells of seedling trays can take hours**. That firsthand conversation gave our team a specific, practical problem to address.
+
+[Uptown & Boogie Healthy Project's mission](https://ubhp.org/about/) combines fair access to food with economic opportunity in Harlem and the Bronx: helping residents obtain affordable, fresh produce and preparing young adults for work in agricultural businesses, city farming, and food-related technology. Judi's growing work includes seedling production and a community greenhouse at St. Nicholas Miracle Garden. [Grower background](https://blackfarmerfund.org/rapid-response-fund-recipients/uptown-boogie-healthy-project)
+
+**Our scope for this hackathon was to understand this frequently repeated task and develop a robotic approach to automating seed placement in trays.** Working from a small-scale grower's needs keeps the project focused on an everyday bottleneck. The intended benefit is to free time for other growing and community activities while making the same workstation a practical setting for learning robotics and AI. The sections below distinguish that objective from what the prototype currently demonstrates.
+
 ## Problem statement
 
 **NYC Robo Garden aims to help small farms and community gardens automate repetitive manual tasks while giving people at every stage of life a practical way to learn robotics and AI.** Seed-tray planting is our initial physical task; the simulated mobile arm explores how the same planning concepts could extend to tending and harvesting. The goal is to lower the cost, technical knowledge, and integration effort needed for smaller growers to experiment with automation, one useful task at a time.
