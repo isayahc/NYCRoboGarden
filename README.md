@@ -61,6 +61,75 @@ For a grower, compare both **cost per successful task** and **annual use across 
 
 The SO-101's flexibility is in light manipulation. It does not make it a replacement for the tractor's soil-working power, nor establish outdoor durability, harvesting ability, or a production duty cycle. Our hypothesis is that affordable, adaptable hardware plus practical training can lower entry barriers; the comparison must measure both task performance and the effort required to adapt it.
 
+## Seed Placement: Simulation vs. Physical Execution
+
+**Current primary objective: automate seed placement into seedling trays using the Viam SO-101 robotic arm.** We are developing an engineering research platform around that task; reliable autonomous seed placement has not yet been established by the evidence below.
+
+| Scope | What exists or is intended | Evidence boundary |
+| --- | --- | --- |
+| Current tooling | SO-101/Viam connection and camera tools, scene authoring, registry and simulation code | Tool availability does not establish a completed physical planting workflow. |
+| Current simulation | Station-based seed handling; ASTRA quadruped carrying a mounted SO-101; scripted garden manipulation | Kinematic scenes and illustrative object attachment, not measured grasping or field autonomy. |
+| Near-future goal | Autonomous garden patrol with observation and validated planting, tending and harvesting skills | Navigation, perception, balance and task reliability still require integration and physical trials. |
+| Longer-term vision | Affordable, reusable embodied-AI infrastructure for community agriculture, education and local economic opportunity | Affordability, learning outcomes and economic benefits are hypotheses to evaluate. |
+
+<table>
+  <tr><th width="50%">Simulation</th><th width="50%">Physical execution</th></tr>
+  <tr>
+    <td valign="top"><a href="docs/media/seed-station-simulation.gif"><img src="docs/media/seed-station-simulation.gif" width="480" alt="Simulation: SO-101 picks illustrative seeds from a dish and places them into six colored tray compartments at a workstation"></a><br><strong>Simulation — October 24 seed station.</strong> Seed source, planting tray and scripted pick-and-place sequence.</td>
+    <td valign="top"><strong>Physical Hardware — demonstration pending</strong><br><br><strong>Pending physical validation</strong><br><br>Reserved for a real SO-101 demonstration and actual camera evidence once available. No physical seed-placement footage is supplied here.</td>
+  </tr>
+  <tr><td>Kinematic behavior; demonstrates the intended sequence.</td><td>Will evaluate real-world execution, including misses, doubles, seed damage and interventions.</td></tr>
+</table>
+
+The exact October 24 station GIF was recovered and optimized for this page, preserving the full 44-second sequence. Its illustrative seeds attach and release on a timeline; motion within joint limits is not contact validation. The right-hand cell can be replaced with a linked hardware recording without changing this comparison. [Media provenance and replacement instructions](docs/media/README.md) · [Physical validation plan](docs/embodied-ai-research.md#physical-validation-plan)
+
+## Why Embodied Automation Remains an Open Scientific and Engineering Problem
+
+Recognizing a crop is only one part of acting on it: agricultural harvesting combines perception, navigation, motion planning, end-effector design and grasping, each with unresolved deployment challenges. [Droukas et al., 2023](https://doi.org/10.1007/s10846-022-01793-z) **NYC Robo Garden exposes these engineering questions; it has not solved them.**
+
+| Research challenge | What research establishes | What we need to test here |
+| --- | --- | --- |
+| Generalization across environments, objects and tasks | Open X-Embodiment pooled data from **22 robots, 21 institutions and 527 skills**, demonstrating positive transfer across tested platforms; this is not universal task competence. [Open X-Embodiment Collaboration, 2024](https://arxiv.org/abs/2310.08864) | Hold out seed types, trays, lighting and layouts; report failures as well as successful trials. |
+| Detection versus manipulation; visual servoing | KOVIS uses repeated image feedback for fine manipulation and demonstrates selected real tasks after simulation training, including insertion with **4 mm clearance**. That result is not seed-placement accuracy. [Puang et al., 2020](https://doi.org/10.1109/IROS45743.2020.9341370) | Evaluate detection separately from pickup, transport, release and correct-cell verification; measure camera-to-arm alignment and drift. |
+| Sim-to-real transfer | A survey identifies simulation mismatch and reviews transfer methods such as domain randomization and adaptation. [Zhao et al., 2020](https://doi.org/10.1109/SSCI47803.2020.9308468) | Measure physical reach, timing, slip and contact; an animated trajectory alone cannot validate transfer. |
+| Contact, small objects and deformable material | Agricultural gripper design and deformable-object research show why manipulation depends on the interaction with the object, including shape/material estimation and control. [Droukas et al., 2023](https://doi.org/10.1007/s10846-022-01793-z) · [Arriola-Rios et al., 2020](https://doi.org/10.3389/frobt.2020.00082) | Test seed singulation, friction and damage; treat soil, seedlings and leaves separately from rigid seed props. |
+| Long-horizon planning, uncertainty and recovery | Inner Monologue reports improved instruction completion with environment feedback in three tested domains; planning depends on available skills and feedback. [Huang et al., 2023](https://proceedings.mlr.press/v205/huang23c.html) | Detect failed or uncertain placements, retry within limits, stop for assistance and record evidence instead of assuming success. |
+| Hardware reliability and unstructured agriculture | The harvesting survey treats sensing, navigation, hardware and operation planning as coupled challenges. [Droukas et al., 2023](https://doi.org/10.1007/s10846-022-01793-z) | Validate payload, mount, calibration, endurance, uneven terrain, plant occlusion and changing illumination before field deployment. |
+| Economic and operational adoption | A German sugar-beet simulation found robot capacity, efficiency and supervision important to viable purchase prices; results depend on farming system and assumptions. [Shang et al., 2023](https://doi.org/10.1007/s11119-023-10015-x) | Compare full costs and operator time with manual work and a specialized tray seeder; do not infer savings from arm price. |
+
+[Selected papers, authors, findings, limitations and experiment plan](docs/embodied-ai-research.md) document the literature found through the connected **Valency research service**. Published research motivates our tests; none of its benchmark results is a result for this prototype.
+
+## Near-Future Goal: Autonomous Garden Patrol
+
+**Concept — proposed workflow:** an autonomous quadruped navigates garden beds, observes crops and uses a mounted SO-101 for **validated** planting, tending and harvesting operations. Each skill must first pass task-specific physical trials. The current patrol below is a visualization of the mobile platform, not that complete autonomous system.
+
+<table>
+  <tr><th width="50%">Third-person view</th><th width="50%">Robot POV</th></tr>
+  <tr>
+    <td valign="top"><a href="docs/media/garden-patrol.mp4"><img src="docs/media/garden-patrol.gif" width="480" alt="Simulation: ASTRA quadruped carries the mounted SO-101 around three fictional garden beds, viewed from above"></a><br><strong>Simulation.</strong> Existing patrol animation; scripted leg motion and fixed arm mount. Click for the original video.</td>
+    <td valign="top"><a href="docs/media/garden-patrol-pov.mp4"><img src="docs/media/garden-patrol-pov.gif" width="480" alt="Simulation: garden beds seen from an illustrative front-left virtual camera moving with the quadruped chassis"></a><br><strong>Simulation.</strong> Virtual sensor viewpoint rendered from the same patrol model. No physical camera capture or perception inference. Click for video.</td>
+  </tr>
+</table>
+
+The POV is fixed to an illustrative front-left sensor location on the chassis; it is not a calibrated model of an installed camera. Both views cover the same 36-second scripted route. [Renderer, provenance and viewing details](docs/media/README.md)
+
+| Proposed step | Implemented simulation or tooling | Still required for autonomous physical operation |
+| --- | --- | --- |
+| 1. Load a garden layout or scene | Fictional three-bed scene; separate evidence-aware scene-authoring tools | Integrate an operator-approved, surveyed layout; the NYC map does not automatically become this simulation. |
+| 2. Plan a route through beds | Predefined closed route and scripted mission waypoints | Traversability, obstacle-aware planning and replanning. |
+| 3. Navigate between task locations | Assigned chassis poses and scripted leg motion | Localization, balance, collision avoidance, payload and terrain validation. |
+| 4. Observe crops with an onboard camera | Rendered virtual POV; separate camera utilities | Mount/calibrate a physical camera and integrate observations into control. |
+| 5. Identify a candidate task | Scripted crop targets and task order | Perception, task eligibility, uncertainty thresholds and human escalation. |
+| 6. Position the arm and execute a validated manipulation | Joint-limited arm IK and scripted produce attachment in the harvesting demo | Reach/collision checks, tooling, visual feedback and task-specific physical validation. |
+| 7. Verify completion and record evidence | Simulation mission log; attachment state is scripted | Independent outcome sensing, dated hardware footage, failures and recovery records. |
+| 8. Continue patrol or return home | Scripted continuation and return in the harvesting mission | Battery-aware decisions, fault recovery and validated return/docking behavior. |
+
+The downloadable patrol clip illustrates carrying the arm; the separate interactive harvesting mission demonstrates scripted manipulation. Neither establishes grasp/contact dynamics, autonomous crop recognition, real navigation, physical balance or agricultural reliability. [Simulation guide](docs/garden-patrol.md) · [Outstanding scene/pilot work: #4](https://github.com/isayahc/Spooky-Civic-AI-Hackathon/issues/4), [#9](https://github.com/isayahc/Spooky-Civic-AI-Hackathon/issues/9), [#10](https://github.com/isayahc/Spooky-Civic-AI-Hackathon/issues/10)
+
+## Longer-term Community Impact
+
+Our longer-term vision is affordable, open-source and reusable embodied-AI infrastructure that community growers can learn, adapt, maintain and share. The learning and ownership pathways below are proposed outcomes to measure alongside physical task performance.
+
 ### A practical learning pathway at every stage of life
 
 A visible task—moving a seed into the correct tray cell—connects AI predictions to a result learners can inspect. The intended learning pathway welcomes school-age learners with appropriate supervision, students, working adults, career changers, and older adults, with activities adapted to experience and accessibility needs.
@@ -81,7 +150,9 @@ The intended economic pathway is to help growers retain more value from their wo
 
 Equitable wealth generation is a design objective: involve farmworkers in task selection and training, make participation affordable, and give communities a role in ownership and decisions about productivity gains. Evaluate that objective through access costs, demonstrated skills, paid opportunities, grower net income, and who owns the equipment. These are proposed mechanisms and measures, not proven employment or income outcomes from this hackathon prototype.
 
-## Start the autonomous farm demo
+<a id="start-the-autonomous-farm-demo"></a>
+
+## Run the simulated garden demo
 
 ```bash
 pip install -r requirements-simulation.txt
@@ -89,7 +160,7 @@ python -m simulation.server
 ```
 
 Open **http://127.0.0.1:8080**. The ASTRA dog carries the mounted SO-101 arm,
-walks to three crop beds, picks a carrot, lettuce and tomato, places each in its
+moves through a simulated sequence at three crop beds, attaches a carrot, lettuce and tomato, places each in its
 collection box, and returns home. The 72-second harvesting mission repeats continuously.
 The server owns the mission; opening or refreshing the dashboard does not restart it.
 The browser renders the actual robot meshes with Three.js/WebGL, interpolating
@@ -147,6 +218,8 @@ python3 -m unittest discover -s tests -v
 The [evidence research contract and importer](docs/garden-evidence.md) attach dated, cited claims to registry sites while keeping ambiguous matches and unknowns separate. The initial sample includes a historical bed-addition report; it does not establish current layouts or utility availability.
 
 ### Mounted arm garden patrol demo
+
+See the [side-by-side simulation views and autonomy roadmap](#near-future-goal-autonomous-garden-patrol).
 
 [Watch the robot dog carry the SO-101 arm around three garden beds](docs/media/garden-patrol.mp4). [Run the interactive model or export a video](docs/garden-patrol.md). This uses the actual robot meshes and a fixed mount, with scripted leg motion and a closed patrol route. It is kinematic playback in a fictional garden; physical balance and payload capacity are not validated.
 
