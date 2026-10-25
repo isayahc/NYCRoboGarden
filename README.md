@@ -1,3 +1,78 @@
+# Spooky Civic AI Hackathon
+
+**Project: NYC Robo Garden**
+
+**Selected track: Physical AI for Good**
+
+Built for the [Spooky Civic AI Hackathon: Build Weekend](https://luma.com/onzzmytl), hosted by 3percentclub in NYC and online, October 23–24, 2026, with Demo Day on October 25.
+
+## Problem statement
+
+**NYC Robo Garden aims to help small farms and community gardens automate repetitive manual tasks while giving people at every stage of life a practical way to learn robotics and AI.** Seed-tray planting is our initial physical task; the simulated mobile arm explores how the same planning concepts could extend to tending and harvesting. The goal is to lower the cost, technical knowledge, and integration effort needed for smaller growers to experiment with automation, one useful task at a time.
+
+### Why this matters for small farms
+
+- **Small farms are the majority:** small family farms accounted for **86% of U.S. farms and 40% of agricultural land in 2024**, but 17% of production value. USDA defines this group by gross cash farm income below $350,000, not acreage. These national figures establish the broader context; they do not measure NYC community gardens. [USDA ERS](https://www.ers.usda.gov/data-products/charts-of-note/114161)
+- **Labor is a substantial production expense:** wages, salaries, and contract labor represented **42% of greenhouse and nursery production expenses and 40% for fruit and tree nuts**, compared with 12% across all farms in the 2022 Census of Agriculture. [USDA ERS — Farm Labor](https://www.ers.usda.gov/topics/farm-economy/farm-labor)
+- **Reliable agricultural robotics remains an active science and engineering problem.** USDA's 2026 research summary describes ongoing work on field sensing, robotic manipulation, mechanization, and adoption. One reported apple-harvesting system achieved approximately **70% picking success** despite reported 100% detection accuracy in its evaluation: recognizing a target and successfully manipulating it are different challenges. This is a result for that system, not an industry-wide benchmark. [USDA NIFA — Automation for Specialty Crops](https://www.nifa.usda.gov/about-nifa/impacts/automation-specialty-crops)
+
+Our research question is concrete: can a grower configure a small robot to locate seeds, place one in each tray cell, verify the result, and recover from misses with sufficiently little supervision to be useful? We start with a bounded workstation, reusable software, and simulation before extending to variable lighting, plant shapes, soil, and mobile operation. Shared equipment and training through gardens, schools, and grower cooperatives are proposed ways to spread access and fixed costs.
+
+### Manual work, mechanized tools, and our proposed approach
+
+There is a spectrum of existing options. Equipment prices below are **USD listings checked October 24, 2026**, before applicable tax, shipping, and dealer charges. Wage figures are **2024 U.S. averages**, not current NYC quotes or fully loaded employer costs.
+
+| Approach | Published cost reference | Specialization and reuse | Human work and task fit |
+| --- | --- | --- | --- |
+| Manual crop, nursery, and greenhouse work | **$18.24/hour** average wage. Ten person-hours = **$182.40 in wages**, calculated before employer overhead. [USDA ERS](https://www.ers.usda.gov/topics/farm-economy/farm-labor) | Broadly adaptable skills; new tasks may require training. | Flexible handling and judgment; a person performs the task. Family and volunteer labor also consumes time even without a wage payment. |
+| Human-powered precision field seeding: Jang JP-1 | **$495**, with the required seed roller sold separately. [Johnny's](https://www.johnnyseeds.com/tools-supplies/seeders/jang-jp-series/jang-jp-1-push-seeder-7319.html) | **Specialized field seeder.** Rollers adapt seed size and spacing within the same task. | Operator pushes and steers; seeds prepared field rows rather than plug trays. An existing option for small growers. |
+| Mechanized tray seeding: Precision Vacuum Seeder | **$727**, including a small shop vacuum; seed plates sold separately. [Johnny's](https://www.johnnyseeds.com/tools-supplies/seeders/vacuum/precision-vacuum-seeder-7335.html) | **Specialized tray seeder.** Different plates adapt tray/seed formats; it remains a seeding machine. | Operator loads, handles, and aligns the seeder. Supplier advertises up to **120 trays/hour**; this is a supplier claim, not our measured result. A direct baseline for our seed-tray task. |
+| Powered small-farm machinery: BCS 718 walk-behind tractor | **$3,200** tractor + **$890** compatible 18-inch tiller = **$4,090 MSRP** before fees. [BCS configurator](https://www.bcsamerica.com/build-your-bcs) · [718 compatibility](https://www.bcsamerica.com/product/model-718) | **Multipurpose power unit with specialized attachments.** Additional implements add cost and have model-specific compatibility. | Requires an operator, fuel, and maintenance. Illustrates the cost of powered soil preparation; it does **not** perform the seed-tray task. USDA's separate 2024 equipment-operator wage average is **$19.07/hour**. |
+| NYC Robo Garden: configurable robotic workstation, with mobile operation explored in simulation | **Arm price references: $121.94 DIY follower parts or $184.99 follower kit; see breakdown below. Full installed cost and cost per completed task remain unmeasured.** Include arm, cameras, tooling, workstation, compute, power, setup, maintenance, and any physical mobile base. | **Reprogrammable manipulation platform.** New tasks can reuse the arm but may need different tooling, fixtures, sensing, and software. | Intended to combine sensing, task planning, action, and verification, with people configuring and supervising. Current demonstrations do not establish autonomous farm reliability or labor savings. |
+
+**Affordability must be demonstrated against the appropriate existing tool.** A dedicated vacuum seeder may be faster and cheaper for repeated tray seeding. Our proposed value is adaptable tasks, observable execution, and a platform people can learn to modify and maintain. Compare the same tray and seed type using correctly seeded cells per hour, misses/doubles, seed damage, operator minutes, setup time, and total cost per successful tray. Purchase price alone cannot establish savings against an hourly wage.
+
+### What the SO-101 arm costs
+
+We use an **SO-101 leader/follower setup**: the follower performs the work, while the leader provides a physical interface for demonstrations and teleoperation. The prices below are reproduction-cost references, **not a verified invoice for the Viam-provided hardware**. Configurations differ, including servo voltage.
+
+| SO-101 configuration | USD reference price | Included scope and exclusions |
+| --- | --- | --- |
+| One follower, sourced from the upstream bill of materials | **$121.94** | Listed 7.4V-servo parts, controller, power supply, cables, clamps, and tool allowance. Printed structure, assembly labor, cameras, and computer are additional. |
+| Leader + follower, upstream bill of materials | **$229.88** | Two-arm parts list; printed structures and the rest of the workstation are additional. |
+| ForgeMotion follower-arm kit | **$184.99** | Vendor lists printed frame, compliant gripper, camera mount, and 12V electronics. A camera mount is not a camera. |
+| ForgeMotion complete teleoperation kit | **$339.99** | Vendor lists leader + follower arms and electronics as a kit; this is not a complete autonomous farm workstation. |
+
+Sources checked October 24, 2026: [upstream SO-101 bill of materials](https://github.com/TheRobotStudio/SO-ARM100#sourcing-parts) and [ForgeMotion kit listings](https://forgemotionlabs.com/products). Add applicable shipping and tax. Do not treat the two-arm teleoperation kit as two independent productive arms; the leader is the teaching/control interface.
+
+### Why specialization changes the economic comparison
+
+**A programmable arm offers the possibility of sharing one hardware investment across multiple tasks and learning activities.** Seed placement, sorting, and light pick-and-place are candidate uses within its mechanical limits. Each needs its own validated workflow; programmability alone does not supply a reliable new skill. Upstream designs include alternative mounts and grippers, supporting hardware adaptation. [SO-101 project](https://github.com/TheRobotStudio/SO-ARM100)
+
+For a grower, compare both **cost per successful task** and **annual use across validated tasks**. Include attachment/tool costs, programming or demonstration time, calibration, changeovers, supervision, maintenance, and failures. Spread the shared arm's ownership cost across its actual productive use without double-counting hours; tasks competing for the same arm cannot run simultaneously. A specialized seeder can win on speed and simplicity, while a reusable arm may become attractive when several suitable tasks keep it productively occupied. The BCS tractor also offers reuse through attachments, so versatility is not unique to robots.
+
+The SO-101's flexibility is in light manipulation. It does not make it a replacement for the tractor's soil-working power, nor establish outdoor durability, harvesting ability, or a production duty cycle. Our hypothesis is that affordable, adaptable hardware plus practical training can lower entry barriers; the comparison must measure both task performance and the effort required to adapt it.
+
+### A practical learning pathway at every stage of life
+
+A visible task—moving a seed into the correct tray cell—connects AI predictions to a result learners can inspect. The intended learning pathway welcomes school-age learners with appropriate supervision, students, working adults, career changers, and older adults, with activities adapted to experience and accessibility needs.
+
+| Learning activity | Robotics and AI concepts | Concrete learner output |
+| --- | --- | --- |
+| Describe how a person plants a tray and define success | Task decomposition, requirements, and measurement | A task checklist and manual baseline |
+| Run and change the simulated garden mission | Coordinates, joint limits, motion planning, and state machines | A modified mission with an explanation of its motion |
+| Inspect camera views and label seeds and tray cells | Data collection, computer vision, uncertainty, and evaluation | An annotated dataset and detection-error report |
+| Calibrate and test a supervised arm at a fixed station | Camera-to-robot calibration, end effectors, control, and safe stopping | A measured placement trial, including failed attempts |
+| Compare approaches and improve the workflow | Experiment design, debugging, maintenance, and unit economics | Evidence showing whether a change improves accuracy, effort, or cost |
+
+The repository already supplies simulation, scene-authoring, and camera/connection tools to support this pathway. The complete teaching program and reliable seed-placement workflow are development goals; learning outcomes have not yet been evaluated.
+
+### Economic growth and equitable wealth generation
+
+The intended economic pathway is to help growers retain more value from their work while enabling local people to **build, adapt, operate, repair, and potentially own the automation**. Practical experience could support paid installation and maintenance work, agricultural technology services, and small businesses. Shared workshops, community-owned equipment, and cooperative service models could let growers and workers participate without each buying a complete system.
+
+Equitable wealth generation is a design objective: involve farmworkers in task selection and training, make participation affordable, and give communities a role in ownership and decisions about productivity gains. Evaluate that objective through access costs, demonstrated skills, paid opportunities, grower net income, and who owns the equipment. These are proposed mechanisms and measures, not proven employment or income outcomes from this hackathon prototype.
+
 ## Start the autonomous farm demo
 
 ```bash
@@ -15,18 +90,6 @@ or use **Follow action**. The backend does not render or encode video frames.
 This is a **kinematic simulation** with scripted produce attachment/release and
 joint-limited inverse kinematics, not physical robot control or grasp-contact validation.
 See [the farm mission guide](docs/garden-patrol.md#server-driven-harvesting-mission).
-
-# Spooky Civic AI Hackathon
-
-**Project: NYC Robo Garden**
-
-**Selected track: Physical AI for Good**
-
-Built for the [Spooky Civic AI Hackathon: Build Weekend](https://luma.com/onzzmytl), hosted by 3percentclub in NYC and online, October 23–24, 2026, with Demo Day on October 25.
-
-## Problem statement
-
-<!-- Reserved for the team's problem statement. -->
 
 ## Hackathon tracks
 
