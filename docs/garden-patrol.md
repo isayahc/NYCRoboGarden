@@ -1,6 +1,8 @@
 # Mounted arm garden patrol
 
-[Watch the 36-second demonstration](media/garden-patrol.mp4).
+[Watch the 36-second demonstration — Simulation](media/garden-patrol.mp4).
+
+The README now pairs this third-person view with a [simulated robot POV](../README.md#near-future-goal-autonomous-garden-patrol). The POV comes from an illustrative chassis-mounted virtual camera, not physical hardware. See [media provenance and reproduction](media/README.md) and the [research and physical-validation plan](embodied-ai-research.md). The autonomous patrol workflow is a near-future goal; the implemented behavior below remains kinematic simulation.
 
 This standalone MuJoCo visual demo assembles the repository's actual ASTRA quadruped mesh hierarchy and SO-101 arm URDF, adds a mounting plate to the front chassis, and animates a repeating route around three fictional raised beds. A close-up inset in the video shows the assembly at its native meter scale.
 
