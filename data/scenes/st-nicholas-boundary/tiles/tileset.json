@@ -1,0 +1,124 @@
+{
+  "asset": {
+    "version": "1.1"
+  },
+  "geometricError": 25.57293646904578,
+  "schema": {
+    "id": "oi_scene_v1",
+    "classes": {
+      "equipment": {
+        "properties": {
+          "instanceId": {
+            "type": "STRING"
+          },
+          "assetId": {
+            "type": "STRING"
+          },
+          "name": {
+            "type": "STRING"
+          },
+          "sourceKind": {
+            "type": "STRING"
+          },
+          "sourceDigest": {
+            "type": "STRING"
+          }
+        }
+      }
+    }
+  },
+  "root": {
+    "boundingVolume": {
+      "box": [
+        0.4973792265659718,
+        -0.3505375330368672,
+        0.0,
+        12.78646823452289,
+        0,
+        0,
+        0,
+        8.627908084769526,
+        0,
+        0,
+        0,
+        1e-07
+      ]
+    },
+    "transform": [
+      0.9610277103265459,
+      0.2764520572983976,
+      0.0,
+      0.0,
+      -0.1806821130943044,
+      0.6281035458403436,
+      0.7568618828495489,
+      0.0,
+      0.2092360246044966,
+      -0.7273652423083404,
+      0.6535748543888723,
+      0.0,
+      1336448.2332095264,
+      -4645882.537763098,
+      4146616.854981088,
+      1.0
+    ],
+    "geometricError": 25.57293646904578,
+    "refine": "ADD",
+    "children": [
+      {
+        "boundingVolume": {
+          "box": [
+            0.0,
+            0.0,
+            0.0,
+            12.78646823452289,
+            0,
+            0,
+            0,
+            8.627908084769526,
+            0,
+            0,
+            0,
+            1e-07
+          ]
+        },
+        "transform": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.4973792265659709,
+          -0.3505375330368663,
+          0.0,
+          1.0
+        ],
+        "geometricError": 0,
+        "content": {
+          "uri": "geometry/a7068f8e7fca499d92d4cd58a36a66f364d41879226ec2d61b48f0acdbf4a51a.glb"
+        },
+        "metadata": {
+          "class": "equipment",
+          "properties": {
+            "instanceId": "site-ground",
+            "assetId": "garden-113ce05e5a925a7eb2d90608",
+            "name": "[INFERRED LOD0 flat surface] site-ground",
+            "sourceKind": "generated",
+            "sourceDigest": "abc30b79253623ea4d4d81ee464a65504867b3f30d4521f9aa0b65348d7b06a5"
+          }
+        }
+      }
+    ]
+  },
+  "extras": {
+    "provenanceUri": "provenance.json",
+    "evidence": "conceptual-static-scene"
+  }
+}

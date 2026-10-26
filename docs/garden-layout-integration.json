@@ -1,0 +1,43 @@
+{
+  "verified_at": "2026-10-26",
+  "base_repository_commit": "9845d020492b4a44975bbbe77fd52e705a40a981",
+  "oi_commit": "acfcdf7f10813639d9036ae2a00466209f32389d",
+  "python_tests": {
+    "passed": 31,
+    "failed": 0,
+    "scope": [
+      "registry",
+      "evidence",
+      "scene_adapter including native OI Tiles and SQLite MCP restart/export",
+      "author_space including MCP authoring",
+      "real garden reference"
+    ]
+  },
+  "real_site": {
+    "native_oi_import_export_reopen": "passed",
+    "source_provenance_preserved": true,
+    "sqlite_mcp_save": "passed",
+    "sqlite_scene_id": "740b5c14-c441-543d-a5cd-e413841ffa3a",
+    "sqlite_revision_id": 1,
+    "fresh_process_export_and_native_reopen": "passed",
+    "tiles_export": "passed",
+    "instances": 1
+  },
+  "field_validation": "not performed",
+  "browser": {
+    "engine": "Chromium 153 via Playwright",
+    "desktop_viewport": [
+      1440,
+      1000
+    ],
+    "mobile_viewport": [
+      390,
+      844
+    ],
+    "page_errors": 0,
+    "failed_http_requests": 0,
+    "plan_orbit_reset_and_layer_toggles": "passed",
+    "mobile_horizontal_overflow": false,
+    "visual_review": "desktop, mobile and generated source comparison figure reviewed"
+  }
+}

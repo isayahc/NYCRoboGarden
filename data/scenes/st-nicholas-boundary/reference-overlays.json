@@ -1,0 +1,53 @@
+{
+  "role": "comparison_annotations_only_not_scene_features",
+  "parcel_source": {
+    "source_url": "https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/MAPPLUTO/FeatureServer/0/query?where=BBL+IN+%281019530044%2C1016310002%2C3017890047%2C3039560051%29&outFields=%2A&outSR=4326&returnGeometry=true&f=geojson",
+    "dataset": "NYC Department of City Planning MapPLUTO",
+    "source_version": "26v2",
+    "retrieved_at": "2026-10-26T09:32:43.238068+00:00",
+    "item_url": "https://www.arcgis.com/home/item.html?id=1564ace0b4f44318ac39920737f9bd07",
+    "role": "tax_lot_comparison_only",
+    "is_verified_garden_footprint": false,
+    "limitations": [
+      "Tax lots do not establish physical occupancy, beds or access.",
+      "Agreement between municipal layers is not an independent field survey."
+    ]
+  },
+  "parcel_bbl": "1019530044",
+  "parcel_rings_local_m": [
+    [
+      [
+        -9.693692723894232,
+        -1.4719235282179e-05,
+        -9.679895449761128
+      ],
+      [
+        13.162705366468236,
+        -1.4268508434334137e-05,
+        2.9969429362194466
+      ],
+      [
+        10.349779007872096,
+        -1.3488027413854908e-05,
+        8.059212565960983
+      ],
+      [
+        -13.281673099608131,
+        -1.581052009391737e-05,
+        -5.047661732132026
+      ],
+      [
+        -9.693692723894232,
+        -1.4719235282179e-05,
+        -9.679895449761128
+      ]
+    ]
+  ],
+  "website_pin_local_m": [
+    -24.130973458494356,
+    -6.298457114928269e-05,
+    -14.880775647986573
+  ],
+  "website_pin_source": "https://stnicholasmiraclegarden.org/",
+  "website_pin_role": "published_pin_not_surveyed_entrance_or_control"
+}

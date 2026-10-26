@@ -1,0 +1,2344 @@
+{
+  "schema": "garden-reference-validation/1",
+  "site": "nyc-greenthumb:M394-GT001",
+  "checks": "passed",
+  "libraries": {
+    "pyproj": "3.8.0",
+    "shapely": "2.2.0"
+  },
+  "source_file_sha256": {
+    "mappluto-candidates.geojson": "f06f62294c737a01d60782b8944c396262b0b985a916fb737a5d6d854c64b1ec",
+    "mappluto-item.json": "1ed6a1ac9a718a28dbdae5247983573373c1d1542817cacdd1102513937f05cd",
+    "mappluto-layer.json": "309e804aff9f45648fa6c0b5e767b246e38381ed0b15760c7893e371a410c149",
+    "mappluto-provenance.json": "4ab8875fb6420c07d6111e5b9808467d10ef0980f262f431fdd164219cc5c920",
+    "snapshot.json": "1d6c7e82e2192626f12fb61b9858c743eb039351418713e8a4f12e0cb909d20b",
+    "source.metadata.json": "0ef62268a3aa6b1f673191de5f0a77be0e99c913f89413a50847c11407339b9a",
+    "source.rows.json": "0e8d400d8328780ac1757317040fda05efc1f5cab7815c12996db198fdf3c6b2"
+  },
+  "registry_snapshot_version": "f7005e3c14f4f37b52d5f67d5f24c24664bbdce8751cadeb5e152fad2aeccb41",
+  "source_vertices_unchanged": true,
+  "mesh_instances": 1,
+  "triangles": 2,
+  "unknown_categories": 9,
+  "geodesic_area_m2": 148.1580587271601,
+  "local_mesh_area_m2": 148.15805687795114,
+  "perimeter_m": 62.817005895534486,
+  "edge_lengths_m": [
+    5.859347639987329,
+    26.026480610218176,
+    5.791243170586039,
+    25.13993447474294
+  ],
+  "proj_max_difference_m": 8.881784197001252e-16,
+  "parks_published_area_sq_ft": 1595,
+  "parks_area_difference_percent": -0.015042529606945632,
+  "operator_website_point": {
+    "longitude": -73.95172,
+    "latitude": 40.81181,
+    "inside_municipal_boundary": false,
+    "distance_to_boundary_m": 16.237287464093033,
+    "source_url": "https://stnicholasmiraclegarden.org/",
+    "note": "Published website pin; not a surveyed entrance or control point."
+  },
+  "parcel_comparisons": [
+    {
+      "bbl": "1019530044",
+      "version": "26v2",
+      "registry_address": "330 Saint Nicholas Avenue",
+      "parcel_address": " ST NICHOLAS AVENUE",
+      "tax_lot_reported_area_sq_ft": 1596,
+      "intersection_over_union": 0.7157647173560375,
+      "hausdorff_distance_m": 1.7177648438038293,
+      "meaning": "layer disagreement, not measured positional error"
+    }
+  ],
+  "registry_audit": {
+    "summary": {
+      "gardens": 634,
+      "invalid_boundaries": 0,
+      "missing_locations": 56,
+      "location_outside_all_boundaries": 243,
+      "multiple_source_boundaries": 0,
+      "multipart_or_holed_boundaries": 7
+    },
+    "candidates": [
+      {
+        "id": "nyc-greenthumb:B126-GT001",
+        "name": "Red Hook Community Farm / Added Value",
+        "address": "558 Columbia Street",
+        "status": "Not GreenThumb",
+        "bbls": [
+          "3006070001"
+        ],
+        "area_geodesic_m2": 10878.111924260855,
+        "flags": [],
+        "single_ring_adapter_compatible": true,
+        "fits_existing_anchor_100m_room": false,
+        "parcel_comparisons": []
+      },
+      {
+        "id": "nyc-greenthumb:B400-GT001",
+        "name": "Hattie Carthan Community Garden",
+        "address": "719 Marcy Avenue",
+        "status": "Active",
+        "bbls": [
+          "3017890047"
+        ],
+        "area_geodesic_m2": 3668.2945768494683,
+        "flags": [
+          "location_outside_all_boundaries"
+        ],
+        "single_ring_adapter_compatible": true,
+        "fits_existing_anchor_100m_room": false,
+        "parcel_comparisons": [
+          {
+            "bbl": "3017890047",
+            "version": "26v2",
+            "registry_address": "719 Marcy Avenue",
+            "parcel_address": "700 MARCY AVENUE",
+            "tax_lot_reported_area_sq_ft": 14000,
+            "intersection_over_union": 0.3654343657201085,
+            "hausdorff_distance_m": 34.16008185282293,
+            "meaning": "layer disagreement, not measured positional error"
+          }
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B572-GT001",
+        "name": "Hattie Carthan Herban Farm",
+        "address": "49 Van Buren St",
+        "status": "Active",
+        "bbls": [
+          "3017910063"
+        ],
+        "area_geodesic_m2": 585.8485481013631,
+        "flags": [],
+        "single_ring_adapter_compatible": true,
+        "fits_existing_anchor_100m_room": true,
+        "parcel_comparisons": []
+      },
+      {
+        "id": "nyc-greenthumb:BGT025",
+        "name": "Essex Street Community Garden",
+        "address": "3030 Fulton Street",
+        "status": "Active",
+        "bbls": [
+          "3039560051"
+        ],
+        "area_geodesic_m2": 246.12397924996912,
+        "flags": [],
+        "single_ring_adapter_compatible": true,
+        "fits_existing_anchor_100m_room": true,
+        "parcel_comparisons": [
+          {
+            "bbl": "3039560051",
+            "version": "26v2",
+            "registry_address": "3030 Fulton Street",
+            "parcel_address": "3030 FULTON STREET",
+            "tax_lot_reported_area_sq_ft": 3268,
+            "intersection_over_union": 0.7032063845831562,
+            "hausdorff_distance_m": 2.039857572748034,
+            "meaning": "layer disagreement, not measured positional error"
+          }
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT036",
+        "name": "Gil Hodges (Carroll Street Garden)",
+        "address": "534 Carroll Street",
+        "status": "Active",
+        "bbls": [
+          "3004560014"
+        ],
+        "area_geodesic_m2": 313.77463246136904,
+        "flags": [],
+        "single_ring_adapter_compatible": true,
+        "fits_existing_anchor_100m_room": true,
+        "parcel_comparisons": []
+      },
+      {
+        "id": "nyc-greenthumb:M394-GT001",
+        "name": "St. Nicholas Miracle Garden",
+        "address": "330 Saint Nicholas Avenue",
+        "status": "Active",
+        "bbls": [
+          "1019530044"
+        ],
+        "area_geodesic_m2": 148.1580587271601,
+        "flags": [],
+        "single_ring_adapter_compatible": true,
+        "fits_existing_anchor_100m_room": true,
+        "parcel_comparisons": [
+          {
+            "bbl": "1019530044",
+            "version": "26v2",
+            "registry_address": "330 Saint Nicholas Avenue",
+            "parcel_address": " ST NICHOLAS AVENUE",
+            "tax_lot_reported_area_sq_ft": 1596,
+            "intersection_over_union": 0.7157647173560375,
+            "hausdorff_distance_m": 1.7177648438038293,
+            "meaning": "layer disagreement, not measured positional error"
+          }
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:MGT018",
+        "name": "103rd Street Community Garden",
+        "address": "105 East 103rd Street",
+        "status": "Active",
+        "bbls": [
+          "1016310002"
+        ],
+        "area_geodesic_m2": 367.47264420613647,
+        "flags": [
+          "location_outside_all_boundaries"
+        ],
+        "single_ring_adapter_compatible": true,
+        "fits_existing_anchor_100m_room": true,
+        "parcel_comparisons": [
+          {
+            "bbl": "1016310002",
+            "version": "26v2",
+            "registry_address": "105 East 103rd Street",
+            "parcel_address": "105 EAST 103 STREET",
+            "tax_lot_reported_area_sq_ft": 12211,
+            "intersection_over_union": 0.30842000659667757,
+            "hausdorff_distance_m": 20.401010250748527,
+            "meaning": "layer disagreement, not measured positional error"
+          }
+        ]
+      }
+    ],
+    "anomalies": [
+      {
+        "id": "nyc-greenthumb:B047A-GT001",
+        "name": "Highland Park Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B058-GT001",
+        "name": "Green Dome",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B058-GT002",
+        "name": "Nick's Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B088-GT001",
+        "name": "Von King Park and Cultural Center Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B142-GT001",
+        "name": "La Casita Verde Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B166-GT001",
+        "name": "Canarsie Neighborhood Farm and Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B223DA-GT001",
+        "name": "Willowtown Community Garden",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B223G-GT001",
+        "name": "Poplar Street Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B223U-GT001",
+        "name": "Lentol Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B245-GT001",
+        "name": "Garden Kitchen Lab at St. John's Rec.",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B389-GT001",
+        "name": "Woodruff Avenue Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B398-GT001",
+        "name": "Kosciuszko Street Garden and Learning Center",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B400-GT001",
+        "name": "Hattie Carthan Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B408-GT001",
+        "name": "Human Compass Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B411-GT001",
+        "name": "Summit Street Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B414-GT001",
+        "name": "East 4th Street Community Garden (Windsor Terrace Kensington Veterans Memorial)",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B415-GT001",
+        "name": "Georgia Avenue Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B420-GT001",
+        "name": "Umoja Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B422-GT001",
+        "name": "Brooklyn Bears/Rockwell Place Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B425-GT001",
+        "name": "Olive Street Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B428-GT001",
+        "name": "Good Life Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B438-GT001",
+        "name": "721 Decatur Street Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B441-GT001",
+        "name": "American Heart Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B442-GT001",
+        "name": "Artsy Bloom Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B445-GT001",
+        "name": "Ten Eyck Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B449-GT001",
+        "name": "Triple R (Rest, Reflection, Relaxation)",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B449-GT002",
+        "name": "Commitment Garden",
+        "flags": [
+          "multipart_or_holed_boundaries",
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B452-GT001",
+        "name": "Concerned Residents of Barbey Street",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B453-GT001",
+        "name": "Montauk Atkins Community Garden",
+        "flags": [
+          "multipart_or_holed_boundaries",
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B454-GT001",
+        "name": "Cooper Street Block Buster Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B455-GT001",
+        "name": "Crystal Wells Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B456-GT001",
+        "name": "Walt L. Shamel Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B460-GT001",
+        "name": "Elton Street Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B461-GT001",
+        "name": "Euclid 500 Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B462-GT001",
+        "name": "Family Community Garden Brooklyn",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B464-GT001",
+        "name": "Farmers Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B466-GT001",
+        "name": "Dumont Garden of Green",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B470-GT001",
+        "name": "Granite Street Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B475-GT001",
+        "name": "Herbal Garden of East New York",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B477-GT001",
+        "name": "Jerome Gardens",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B478-GT001",
+        "name": "Jerry and the Senior Gents of E.N.Y.",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B479-GT001",
+        "name": "Lefferts Place Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B481-GT001",
+        "name": "Borinquen Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B483-GT001",
+        "name": "ENY Oasis Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B487-GT001",
+        "name": "Preston Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B489-GT001",
+        "name": "Red Shed Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B493-GT001",
+        "name": "Upon This Rock Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B498-GT001",
+        "name": "Marge Matthews Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B502-GT001",
+        "name": "Shiloh Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B504-GT001",
+        "name": "Ponderosa Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B505-GT001",
+        "name": "Sterling Community Group Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B509-GT001",
+        "name": "Poppa & Momma Jones Historical Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B510-GT001",
+        "name": "Fred McLeod Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B517-GT001",
+        "name": "Phoenix Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B519-GT001",
+        "name": "Spencer Street Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B521-GT001",
+        "name": "Oriental Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B523-GT001",
+        "name": "Victory Garden B13",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B527-GT001",
+        "name": "Hands & Heart (New Lots Urban Farm)",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B535-GT001",
+        "name": "400 Montauk Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B543-GT001",
+        "name": "Fresh Farm",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B544-GT001",
+        "name": "100 Quincy Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B546-GT001",
+        "name": "Feeding Tree Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B557-GT001",
+        "name": "Living Laboratory Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B558-GT001",
+        "name": "Linwood Street Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B559-GT001",
+        "name": "South Brooklyn Children's Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B562-GT001",
+        "name": "Surfside Garden Multi-Cultural Coalition",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B566-GT001",
+        "name": "Brownsville Community Farm (James McKeather)",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B568-GT002",
+        "name": "Ashford Learning Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B574-GT001",
+        "name": "Halsey Ralph & Howard Community Garden",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B578-GT001",
+        "name": "Sunkissed Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B581-GT001",
+        "name": "Warwick Street Greenery Glow Garden",
+        "flags": [
+          "multipart_or_holed_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:B582-GT001",
+        "name": "Brooklyn's Finest Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT001",
+        "name": "Greene Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT002",
+        "name": "Central Bainbridge Street Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT004",
+        "name": "Brooklyn Bears/Pacific Street Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT009",
+        "name": "West 23rd Street Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT020",
+        "name": "Bridge Plaza Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT030",
+        "name": "Imani Community Garden (Schenectady)",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT031",
+        "name": "Contented Hart Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT032",
+        "name": "64th Street Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT034",
+        "name": "Brooklyn College Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT037",
+        "name": "Green Space at President Street",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT038",
+        "name": "Greene Acres Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT039",
+        "name": "La Finca Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT048",
+        "name": "Prospect Heights Community Farm",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT063",
+        "name": "Ying & Yang",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT066",
+        "name": "Q Gardens Community Farm",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT067",
+        "name": "BACDYS Garden (Bangladeshi American Development and Youth Services)",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT068",
+        "name": "Prospect Farm",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT099",
+        "name": "Marcus Garvey Farm",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT164",
+        "name": "Senior Retreat Garden - Tompkins Houses (NYCHA)",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT165",
+        "name": "Senior Garden - Roosevelt Houses (NYCHA )",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT166",
+        "name": "Pink's Paradise Garden of Love - Pink Houses",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT167",
+        "name": "Hylan Garden - Hylan Houses (NYCHA)",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT168",
+        "name": "Garden of Eden - Ingersoll Houses (NYCHA)",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT169",
+        "name": "Love Garden - Sumner Houses (NYCHA)",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT170",
+        "name": "The Sunlight Garden - Sheepshead Nostrand Houses (NYCHA)",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT172",
+        "name": "Los Colibries Community Garden",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT174",
+        "name": "Pulse Garden - Farragut Houses (NYCHA)",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT175",
+        "name": "Newkirk Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT176",
+        "name": "Stuyvesant Garden - Stuyvesant Houses (NYCHA)",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT177",
+        "name": "MoCADA Ubuntu Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT178",
+        "name": "Transit Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT179",
+        "name": "45 Somers Street Community Garden",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT180",
+        "name": "Bushwick Garden - Bushwick Houses (NYCHA)",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT181",
+        "name": "Bushwick City Farm",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT182",
+        "name": "Breukelen Houses Community Garden - Breukelen Houses (NYCHA)",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT183",
+        "name": "All is Well Community Garden - Wyckoff Houses (NYCHA)",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:BGT184",
+        "name": "Southside Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M025-GT001",
+        "name": "Harlem Grows P.S. 125 Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M071-GT001",
+        "name": "Garden People",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M072-GT001",
+        "name": "Jenny's Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M105-GT001",
+        "name": "M'finda Kalunga Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M113A-GT001",
+        "name": "Down to Earth Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M180-GT001",
+        "name": "RING - Riverside Inwood Neighborhood Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M268-GT001",
+        "name": "El Jardin del Paraiso",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M278-GT001",
+        "name": "Jefferson Market Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M291-GT001",
+        "name": "FishBridge Park Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M296-GT001",
+        "name": "West 132nd Street Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M299-GT001",
+        "name": "Pleasant Village Community Garden",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M306-GT001",
+        "name": "West 104th Street Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M312-GT001",
+        "name": "Francisco \u201cPancho\u201d Ramos Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M313A-GT001",
+        "name": "Fifth Street Slope Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M319A-GT001",
+        "name": "Sugar Hill Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M321-GT001",
+        "name": "East Side Outside Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M322-GT001",
+        "name": "William A. Harris Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M325-GT001",
+        "name": "La Plaza Cultural-Armando Perez",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M325-GT002",
+        "name": "Flower Door Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M325-GT003",
+        "name": "La Casita Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M330-GT001",
+        "name": "Family Community Garden Manhattan",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M333-GT001",
+        "name": "Bradhurst Community Garden of Love",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M338-GT001",
+        "name": "Neighbors of Vega Baja",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M348-GT001",
+        "name": "Morris Jumel Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M354-GT001",
+        "name": "Orchard Alley",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M364-GT001",
+        "name": "Jackie Robinson Community Garden",
+        "flags": [
+          "multipart_or_holed_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M367-GT001",
+        "name": "Peaceful Valley",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M368-GT001",
+        "name": "The Julia Gabriel People's Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M371-GT001",
+        "name": "Hope Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M374-GT001",
+        "name": "Clayton Williams Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M375-GT001",
+        "name": "Rodale Pleasant Park Community Garden",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M377-GT001",
+        "name": "Frederick Douglass Boulevard Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M380-GT001",
+        "name": "Harlem Grows 131st Street Farm",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M388-GT001",
+        "name": "El Barrio Garden of Angels",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M390-GT001",
+        "name": "Jane Street Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M398-GT001",
+        "name": "Dorothy K. McGowan Memorial Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M403-GT001",
+        "name": "Walter Miller III Memorial Garden (La Casa Frela)",
+        "flags": [
+          "multipart_or_holed_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:M408-GT001",
+        "name": "Siempre Verde Garden",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:MGT003",
+        "name": "Hope Steven Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:MGT004",
+        "name": "Albert's Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:MGT011",
+        "name": "Lucille McClarey Wicked Friendship Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:MGT014",
+        "name": "Diversity Edible Farm Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:MGT017",
+        "name": "LaGuardia Corner Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:MGT018",
+        "name": "103rd Street Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:MGT022",
+        "name": "La Casita",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:MGT031",
+        "name": "Toyota Childrens Learning Garden (Coradan Evaeden)",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:MGT033",
+        "name": "West 181st Street Beautification Project",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:MGT035",
+        "name": "Sugar Hill Hope Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:MGT037",
+        "name": "Our Neighborhood Place",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:MGT043",
+        "name": "Juan Alonso Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:MGT056",
+        "name": "Elizabeth Street Garden",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:MGT086",
+        "name": "P.S. 84 - The Dream Garden and Garden of Angels",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:MGT087",
+        "name": "Westside Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:MGT095",
+        "name": "Grant Shade Garden- Grant Houses (NYCHA)",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:MGT096",
+        "name": "Garden for Living - Carver Houses (NYCHA)",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:MGT097",
+        "name": "Love Garden - Saint Nicholas Houses (NYCHA)",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:MGT098",
+        "name": "Liberty Community Gardens (LCG)",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:MGT100",
+        "name": "Johnson Garden - Johnson Houses -(NYCHA)",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:MGT101",
+        "name": "Serenity Garden - Lexington Houses (NYCHA)",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:MGT103",
+        "name": "Raising Haven Community Garden - Alfred Smith Houses (NYCHA)",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:MGT104",
+        "name": "Riverbank State Park Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:MGT105",
+        "name": "Vladeck Houses Community Garden - Vladeck Houses (NYCHA)",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:MGT106",
+        "name": "Family Garden - Polo Grounds Towers (NYCHA)",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q045-GT001",
+        "name": "Long Island City Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q049-GT001",
+        "name": "We Rose In Together Community Garden - Hammel Houses (NYCHA)",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q121A-GT001",
+        "name": "Trees of Life Organic Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q121A-GT002",
+        "name": "Liberty Collective Learning Gardeners",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q300-GT001",
+        "name": "Evergreen Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q371-GT001",
+        "name": "Arverne Gardens",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q440-GT001",
+        "name": "Essential Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q448-GT001",
+        "name": "Water Tower - Senior Citizen Garden Club",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q448-GT002",
+        "name": "Senior Citizens Garden Club",
+        "flags": [
+          "multipart_or_holed_boundaries",
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q470-GT001",
+        "name": "Astoria Residents Reclaiming Our World (ARROW)",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q474A-GT001",
+        "name": "Corona Peachtree Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q475-GT001",
+        "name": "Project Eden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q477-GT001",
+        "name": "Two Coves Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q484-GT001",
+        "name": "Edgemere Farm",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q484-GT002",
+        "name": "Far Rock Urban Agro-Education Center",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q486-GT001",
+        "name": "South Jamaica Infinity Garden",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q487-GT001",
+        "name": "Paradise Community Garden NY",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q488-GT001",
+        "name": "George Eagle Carr Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q489-GT001",
+        "name": "George Washington Carver Botanical Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q490-GT001",
+        "name": "Phoenix Gate Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q493-GT001",
+        "name": "Discovery Community Garden 2",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q493-GT002",
+        "name": "Discovery Community Garden 1",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q495-GT001",
+        "name": "97th Street Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q503-GT001",
+        "name": "The Healing Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q512-GT001",
+        "name": "The CPT Samuel E. & Katherine Whaley Husbands Legacy of Love Permaculture Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q513-GT001",
+        "name": "12001 142nd Place Community Garden",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q514-GT001",
+        "name": "The Community Pride - Woodside Houses (NYCHA)",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:Q519-GT001",
+        "name": "Garden of Resilience",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:QGT001",
+        "name": "Cambria Heights Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:QGT003",
+        "name": "Back To Eden Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:QGT005",
+        "name": "Linden Boulevard Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:QGT006",
+        "name": "FF Michael Brennan Memorial LIC Roots Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:QGT007",
+        "name": "Malcolm X Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:QGT009",
+        "name": "Merrick-Marsden Neighborhood Association Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:QGT010",
+        "name": "Seagirt Boulevard Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:QGT012",
+        "name": "Sunnyside Park Community Garden",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:QGT013",
+        "name": "Smiling Hogshead Ranch",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:QGT015",
+        "name": "Pembroke/Van Nostrand Court Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:QGT016",
+        "name": "Beach 91 Community Garden",
+        "flags": [
+          "multipart_or_holed_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:QGT025",
+        "name": "Queens New Roots (East)",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:QGT026",
+        "name": "Queens New Roots (West)",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:QGT027",
+        "name": "Serinor Community Garden - International Towers (NYCHA)",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:QGT028",
+        "name": "Sunset Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:QGT029",
+        "name": "Mujeres en Movimento Huerto Comunitario",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:QGT030",
+        "name": "Ridgewood Community Garden",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:QGT031",
+        "name": "Moore Jackson Cemetery/Garden",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:QGT032",
+        "name": "South Center Community Garden - South Jamaica 1 Houses (NYCHA)",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:QGT033",
+        "name": "Charlotte's Way - South Jamaica II Houses (NYCHA)",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:R109-GT001",
+        "name": "West Brighton Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:R123-GT001",
+        "name": "Skyline Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:R137A-GT001",
+        "name": "Bayview Habitat",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:R146-GT001",
+        "name": "Joe Holzka Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:RGT001",
+        "name": "Moravian Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:RGT002",
+        "name": "Roots of Peace Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:RGT004",
+        "name": "Hill Street Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:RGT005",
+        "name": "Bountiful Harvest Farm",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:RGT008",
+        "name": "Broad Street Community Garden",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:RGT009",
+        "name": "Olivet Heavenly Harvest",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:RGT010",
+        "name": "South Beach Community Garden - South Beach Houses (NYCHA)",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X004-GT001",
+        "name": "Harrod Place Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X010-GT001",
+        "name": "Damiana Pizarro Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X101-GT001",
+        "name": "Edwards Avenue Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X118A-GT001",
+        "name": "Harding Park Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X145-GT001",
+        "name": "La Finca Del Sur",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X233A-GT001",
+        "name": "El Flamboyan",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X235-GT001",
+        "name": "Grove Hill Community Garden",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X241-GT001",
+        "name": "New Hoe Avenue Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X252-GT001",
+        "name": "Cook Community Farm",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X252-GT002",
+        "name": "Farm in the Bronx",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X266-GT001",
+        "name": "Krystal Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X271-GT001",
+        "name": "Dred Scott Bird Sanctuary Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X273-GT001",
+        "name": "Community Rock Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X275-GT001",
+        "name": "Mosaic Success Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X276-GT001",
+        "name": "Eagle Slope",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X285-GT001",
+        "name": "Padre Plaza",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X293-GT001",
+        "name": "Garden of Happiness",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X299-GT001",
+        "name": "Little Claremont Community Garden",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X318-GT001",
+        "name": "Franklin Memorial Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X323-GT001",
+        "name": "El Batey de Dona Provi",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X324-GT001",
+        "name": "Green Patch on Walton",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X325-GT001",
+        "name": "Randall Community Garden",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X329-GT001",
+        "name": "Miracle Garden - Bronx",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X332-GT001",
+        "name": "Schomburg Arts Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X335-GT001",
+        "name": "Risse Street Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X337-GT001",
+        "name": "Latinos Unidos",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X338-GT001",
+        "name": "Courtlandt Avenue Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X340-GT001",
+        "name": "Cordelia\u2019s Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X343-GT001",
+        "name": "New Beginnings Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X347-GT001",
+        "name": "Vogue Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X349-GT001",
+        "name": "Jardin la Roca",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X350-GT001",
+        "name": "El Coqui Liberation Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X357-GT001",
+        "name": "Rainbow Garden of Life and Health",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X361-GT001",
+        "name": "Synergi Urban Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:X364-GT001",
+        "name": "Havemeyer Garden Association",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT002",
+        "name": "Eastchester Road Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT003",
+        "name": "Clinton Avenue Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT004",
+        "name": "Garden Of Youth",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT005",
+        "name": "Bruckner Mott Haven Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT011",
+        "name": "Glover Street Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT012",
+        "name": "Drew Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT013",
+        "name": "Bette's Rose Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT019",
+        "name": "Bainbridge Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT020",
+        "name": "Mapes Avenue Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT022",
+        "name": "Carpenter Avenue Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT023",
+        "name": "Creston Jungle Playground",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT026",
+        "name": "William Hooper Garden (Jacquline Denise Davis Garden)",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT031",
+        "name": "Rivers Run Community Garden",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT032",
+        "name": "Roberto Clemente Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT033",
+        "name": "Schervier Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT035",
+        "name": "Target Bronx (Anderson Avenue Community Garden)",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT037",
+        "name": "211th Street Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT039",
+        "name": "New Roots Community Farm",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT041",
+        "name": "Kingsbridge Heights Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT044",
+        "name": "People's Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT049",
+        "name": "Linden Bushwick - Calvary Methodist Church",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT056",
+        "name": "Adlai E. Stevenson High School-Ecological Garden",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT080",
+        "name": "Pelham Organic - Pelham Parkway Houses (NYCHA)",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT081",
+        "name": "Joyful Garden - McKinley Houses (NYCHA)",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT082",
+        "name": "El Jard\u00edn de Los Amigos de Moore - Moore Houses (NYCHA)",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT083",
+        "name": "Love Community Garden - Throggs Neck Houses (NYCHA)",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT084",
+        "name": "Botanical Square Community Garden",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT085",
+        "name": "Marble Hill Garden - Marble Hill Houses (NYCHA)",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT087",
+        "name": "People Garden - Patterson Houses (NYCHA)",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT088",
+        "name": "Flower Garden - Morris II Houses (NYCHA)",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT089",
+        "name": "Union Garden - Union Houses (NYCHA)",
+        "flags": [
+          "missing_locations"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT090",
+        "name": "Karol\u2019s Urban Community Farm",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT091",
+        "name": "Ujamaa Northeast Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT092",
+        "name": "Melrose Houses Community Garden - Melrose Houses (NYCHA)",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT093",
+        "name": "Maria Sola Green Space",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT094",
+        "name": "Oliver's Place",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      },
+      {
+        "id": "nyc-greenthumb:XGT095",
+        "name": "Growing Good Community Garden",
+        "flags": [
+          "location_outside_all_boundaries"
+        ]
+      }
+    ]
+  },
+  "limits": [
+    "No survey, operator signoff, measured interiors or robot trials.",
+    "GIS layer agreement and conversion tolerance do not establish field accuracy.",
+    "Source update timestamps are not boundary capture dates."
+  ]
+}

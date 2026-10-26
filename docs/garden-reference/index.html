@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>St. Nicholas Miracle Garden | NYC Robo Garden</title>
+<style>
+:root{font-family:system-ui,sans-serif;color:#edf4ec;background:#111d1a;color-scheme:dark}*{box-sizing:border-box}body{margin:0}a{color:#a5e5cb}header{padding:28px 4vw 22px;border-bottom:1px solid #345047;display:flex;justify-content:space-between;gap:18px;align-items:end}.eyebrow{font-size:11px;letter-spacing:.16em;color:#a0bbac;font-weight:700}h1{font-size:clamp(26px,3vw,40px);font-weight:500;letter-spacing:-.04em;margin:9px 0 7px}header p{margin:0;color:#afc2b8;font-size:14px}.badge{border:1px solid #99b7a6;border-radius:20px;padding:8px 13px;font-size:12px;white-space:nowrap}main{display:grid;grid-template-columns:310px minmax(0,1fr);min-height:660px}aside{padding:26px 24px;border-right:1px solid #345047}h2{font-size:16px;margin:24px 0 12px;font-weight:600}.metric{font-size:38px;font-weight:400;letter-spacing:-.04em;margin-top:14px}.muted{color:#aac1b3;font-size:12px;line-height:1.6}.legend{display:flex;gap:10px;align-items:center;margin:10px 0;font-size:13px}.swatch{width:23px;border-top:3px solid #8bcea6}.swatch.parcel{border-top:3px dashed #e6b26a}.panel{padding:15px;background:#20342a;border:1px solid #355b44;border-radius:8px;font-size:13px;line-height:1.6;margin-top:20px}.panel strong{color:#c9efce}.unknowns{font-size:12px;color:#b7c5bd;line-height:1.7}.stage{position:relative;min-height:660px;background:#14251f}#viewport{position:absolute;inset:0}canvas{display:block}.toolbar{z-index:3;position:absolute;top:18px;left:20px;display:flex;gap:8px}button{background:#20352c;color:#e8f3eb;border:1px solid #698773;padding:9px 14px;border-radius:5px;cursor:pointer}button[aria-pressed=true]{background:#d0e6c6;color:#183121}.caption{z-index:2;position:absolute;bottom:20px;left:20px;right:20px;background:#14251fe8;padding:14px 16px;border-left:2px solid #8bcea6;font-size:13px;line-height:1.6;pointer-events:none}.caption small{color:#a8bcaf}label{display:flex;gap:8px;align-items:start;font-size:12px;margin:12px 0;line-height:1.4}input{accent-color:#9fcd9d}.links{display:flex;flex-direction:column;gap:10px;font-size:12px;margin-top:20px}footer{padding:18px 4vw;border-top:1px solid #345047;font-size:12px;color:#a9bbaf;line-height:1.7}.error{color:#ffd1a0}#selection{font-weight:500}@media(max-width:760px){header{align-items:start;flex-direction:column;padding:20px}main{display:flex;flex-direction:column}aside{border-right:0;display:grid;grid-template-columns:1fr 1fr;gap:0 18px;padding:20px}.metric{font-size:30px}.panel,.links{grid-column:1/-1}.stage{order:-1;min-height:540px}.unknowns{font-size:11px}h2{margin-top:16px}.caption{font-size:12px}.badge{font-size:10px}}
+</style>
+<script type="importmap">{"imports":{"three":"../../simulation/vendor/three.module.min.js"}}</script>
+</head>
+<body>
+<header><div><div class="eyebrow">NYC ROBO GARDEN / REAL-SITE REFERENCE</div><h1>St. Nicholas Miracle Garden</h1><p>330 Saint Nicholas Avenue, Harlem · GreenThumb M394-GT001</p></div><span class="badge">BOUNDARY ONLY · 26 OCT 2026</span></header>
+<main>
+<aside>
+<section><div class="eyebrow">MAPPED AREA</div><div class="metric" id="area">148.16 m²</div><div class="muted">Calculated from NYC Parks coordinates.<br>Field accuracy and capture date unknown.</div></section>
+<section><h2>Two distinct source layers</h2><div class="legend"><span class="swatch"></span>GreenThumb garden boundary</div><div class="legend"><span class="swatch parcel"></span>MapPLUTO tax-lot comparison</div><div class="muted">Maximum layer separation: <span id="separation">1.72</span> m.<br>This is disagreement, not an error estimate.</div><label><input id="parcel" type="checkbox" checked>Show tax-lot comparison</label><label><input id="website" type="checkbox">Show operator website pin (outside outline)</label></section>
+<section><h2>Interior geometry: unknown</h2><div class="unknowns">Beds · growing areas · paths · greenhouse · shed/buildings · water · power · crops · seasonal products</div></section>
+<div class="panel"><strong>0 field-measured features</strong><br>The operator reports a greenhouse. Its dimensions and position are still needed. The green surface is an inferred flat rendering of the city outline.</div>
+<nav class="links" aria-label="Reference files"><a href="../../data/scenes/st-nicholas-boundary/garden.oi.json" download>Download Open-Industries scene ↗</a><a href="../../data/scenes/st-nicholas-boundary/garden-georeference.json" download>Download georeference + evidence ↗</a><a href="../garden-layout-audit.md">Candidate comparison + measurement brief ↗</a><a href="../gardens-map/">Back to NYC garden explorer ↗</a></nav>
+</aside>
+<section class="stage" aria-label="Interactive municipal boundary reference">
+<div id="viewport" aria-label="Boundary scene; use Plan and Orbit buttons or drag to inspect"></div>
+<div class="toolbar"><button id="plan" aria-pressed="true">Plan</button><button id="orbit" aria-pressed="false">Orbit</button><button id="reset">Reset</button></div>
+<div class="caption" role="status"><div id="selection">Loading the retained Open-Industries scene…</div><small>Grid = 5 m · north = −Z · drag to inspect · select the surface for provenance.<br>Unmeasured interiors remain empty; no robot route or clearance is established.</small></div>
+</section>
+</main>
+<footer>Sources: <a href="https://data.cityofnewyork.us/dataset/GreenThumb-Garden-Info/p78i-pat6">NYC Parks GreenThumb</a> (rows updated Oct 21; retrieved Oct 26, 2026) · <a href="https://www.arcgis.com/home/item.html?id=1564ace0b4f44318ac39920737f9bd07">NYC DCP MapPLUTO 26v2</a> · geographic height unknown, displayed as zero.<br>Boundary/parcel records are not surveyed occupancy or deployment approval. Original source vertices are preserved. No third-party plan or photograph was traced.</footer>
+<script type="module" src="./viewer.js"></script>
+</body>
+</html>

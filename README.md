@@ -61,6 +61,10 @@ For a grower, compare both **cost per successful task** and **annual use across 
 
 The SO-101's flexibility is in light manipulation. It does not make it a replacement for the tractor's soil-working power, nor establish outdoor durability, harvesting ability, or a production duty cycle. Our hypothesis is that affordable, adaptable hardware plus practical training can lower entry barriers; the comparison must measure both task performance and the effort required to adapt it.
 
+## Real garden reference — October 26
+
+[St. Nicholas Miracle Garden](docs/garden-layout-audit.md) is the selected boundary reference: original NYC Parks geometry, a separate MapPLUTO comparison, and nine explicitly unknown interior categories. [Open the reference viewer](docs/garden-reference/index.html) or [download the native Open-Industries scene](data/scenes/st-nicholas-boundary/garden.oi.json). This is a source-backed outline with inferred flat rendering; measured beds, greenhouse placement and robot clearances are pending. The audit compares seven candidates and specifies the measurements and permissions needed for the seed-tray pilot.
+
 ## Seed Placement: Simulation vs. Physical Execution
 
 **Current primary objective: automate seed placement into seedling trays using the Viam SO-101 robotic arm.** We are developing an engineering research platform around that task; reliable autonomous seed placement has not yet been established by the evidence below.

@@ -1,0 +1,124 @@
+{
+  "format": "astra.scene",
+  "version": 1,
+  "units": "m",
+  "upAxis": "Y",
+  "room": [
+    26.567694922177722,
+    17.956891235612783,
+    1.0
+  ],
+  "assets": [
+    {
+      "id": "garden-113ce05e5a925a7eb2d90608",
+      "name": "[INFERRED LOD0 flat surface] site-ground",
+      "source": {
+        "kind": "generated",
+        "generator": "form-industries",
+        "filename": "garden-manifest.json",
+        "digest": "abc30b79253623ea4d4d81ee464a65504867b3f30d4521f9aa0b65348d7b06a5"
+      },
+      "dimensions": [
+        25.57293646904578,
+        0,
+        17.255816169539052
+      ]
+    }
+  ],
+  "instances": [
+    {
+      "id": "site-ground",
+      "assetId": "garden-113ce05e5a925a7eb2d90608",
+      "name": "[INFERRED LOD0 flat surface] site-ground",
+      "position": [
+        0.4973792265659709,
+        0,
+        0.3505375330368663
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "visible": true
+    }
+  ],
+  "bundledAssets": [
+    {
+      "schemaVersion": 1,
+      "id": "garden-113ce05e5a925a7eb2d90608",
+      "name": "[INFERRED LOD0 flat surface] site-ground",
+      "source": {
+        "kind": "generated",
+        "generator": "form-industries",
+        "filename": "garden-manifest.json",
+        "digest": "abc30b79253623ea4d4d81ee464a65504867b3f30d4521f9aa0b65348d7b06a5"
+      },
+      "units": "m",
+      "upAxis": "Y",
+      "originOffset": [
+        0.4973792265659709,
+        0,
+        0.3505375330368663
+      ],
+      "dimensions": [
+        25.57293646904578,
+        0,
+        17.255816169539052
+      ],
+      "parts": [
+        {
+          "id": "site-ground",
+          "name": "[INFERRED LOD0 flat surface] site-ground",
+          "vertices": [
+            -9.198381977670731,
+            0,
+            -8.627908084769526,
+            -12.78646823452289,
+            0,
+            -3.9956740889591247,
+            9.973647452959817,
+            0,
+            8.627908084769526,
+            12.78646823452289,
+            0,
+            3.5656421187891016
+          ],
+          "indices": [
+            0,
+            2,
+            3,
+            2,
+            0,
+            1
+          ],
+          "color": [
+            0.35,
+            0.48,
+            0.28
+          ],
+          "metadata": {
+            "gardenEvidence": "{\"adapter\":\"nyc-robo-garden/2.0\",\"anchor\":{\"height_m\":null,\"latitude\":40.811676,\"longitude\":-73.951434},\"category\":\"terrain\",\"evidence_status\":\"source_backed\",\"instance_id\":\"site-ground\",\"provenance\":{\"confidence\":\"medium\",\"note\":\"NYC Parks mapped boundary, retrieved 2026-10-26. Geometry capture date and field accuracy unknown. Polygon vertices unchanged; one-part MultiPolygon unwrapped to Polygon. MapPLUTO 26v2 tax-lot comparison differs by about 1.7 m. Flat Y=0 and null-height zero are visualization assumptions. Not a surveyed fence, usable floor or approved robot workspace.\",\"observed_at\":null,\"rights\":{\"reference\":\"NYC Open Data public reuse policy: https://www.nyc.gov/opendata/get-started/FAQs ; https://cityofnewyork.github.io/opendatatsm/publicpolicies.html . Dataset licenseId remains null; no CC license asserted.\",\"status\":\"permission\"},\"source_url\":\"https://data.cityofnewyork.us/resource/p78i-pat6.json?%24where=parksid%3D%27M394-GT001%27\"},\"record_id\":\"nyc-greenthumb:M394-GT001\",\"representation\":\"LOD0 flat surface\"}"
+          }
+        }
+      ],
+      "hierarchy": {
+        "id": "garden-113ce05e5a925a7eb2d90608",
+        "name": "[INFERRED LOD0 flat surface] site-ground",
+        "partIds": [
+          "site-ground"
+        ],
+        "children": []
+      },
+      "warnings": [
+        "Procedural inferred representation; not surveyed geometry or physical validation."
+      ]
+    }
+  ],
+  "bundledVersions": [],
+  "animation": {
+    "duration": 1,
+    "loop": false,
+    "tracks": []
+  }
+}

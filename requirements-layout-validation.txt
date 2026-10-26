@@ -1,0 +1,3 @@
+# Optional independent GIS validation; scene building remains standard-library only.
+pyproj==3.8.0
+shapely==2.2.0

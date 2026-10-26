@@ -1,0 +1,35 @@
+{
+  "schema": "oi-geospatial-export/v1",
+  "inputSha256": "20a6b70a9a5067dac51fd5273858d7c395d737c441d8e332b8d4d7bbe942bfaa",
+  "pythonVersion": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "instances": 1,
+  "uniqueGlbs": 1,
+  "verticesPerInstanceTotal": 4,
+  "rootBox": [
+    0.4973792265659718,
+    -0.3505375330368672,
+    0.0,
+    12.78646823452289,
+    0,
+    0,
+    0,
+    8.627908084769526,
+    0,
+    0,
+    0,
+    1e-07
+  ],
+  "conversionSeconds": 0.0030261160000009113,
+  "payloadBytes": 6934,
+  "checksums": {
+    "geometry/a7068f8e7fca499d92d4cd58a36a66f364d41879226ec2d61b48f0acdbf4a51a.glb": "a7068f8e7fca499d92d4cd58a36a66f364d41879226ec2d61b48f0acdbf4a51a",
+    "provenance.json": "2dd03eacca976e63715324ee763dcfb2b9175fe2fb50b778230c1b1a77670b4f",
+    "tileset.json": "65ee18fee69b3821032a12e25d6d76a35fc30ce6f55d5c0f654ffd207de54328"
+  },
+  "conformance": "not-tested; run npm run validate in tools/geospatial",
+  "limitations": [
+    "static base layout; no timeline sampling",
+    "one small site; no LOD simplification",
+    "conceptual geometry; no engineering certification"
+  ]
+}

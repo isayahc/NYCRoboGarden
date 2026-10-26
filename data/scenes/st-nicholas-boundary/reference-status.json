@@ -1,0 +1,23 @@
+{
+  "site": "St. Nicholas Miracle Garden",
+  "record_id": "nyc-greenthumb:M394-GT001",
+  "scope": "municipal_boundary_reference_only",
+  "field_measured_features": 0,
+  "interior_features_rendered": 0,
+  "boundary_capture_date": null,
+  "field_accuracy_m": null,
+  "operator_approval": null,
+  "robot_clearance_validated": false,
+  "unknown_geometry_categories": [
+    "bed",
+    "growing_area",
+    "path",
+    "greenhouse",
+    "building",
+    "water",
+    "power",
+    "crop",
+    "seasonal_product"
+  ],
+  "report": "docs/garden-layout-audit.md"
+}

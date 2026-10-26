@@ -1,0 +1,2618 @@
+{
+  "id": "p78i-pat6",
+  "name": "GreenThumb Garden Info",
+  "assetType": "dataset",
+  "attribution": "Department of Parks and Recreation (DPR)",
+  "averageRating": 0,
+  "createdAt": 1606165598,
+  "description": "GreenThumb provides programming and material support to over 550 community gardens in New York City. The data contains garden information and is part of the GreenThumb Gardens Data Collection. \r\n\r\nData Dictionary: https://docs.google.com/spreadsheets/d/1ItvGzNG8O_Yj97Tf6am4T-QyhnxP-BeIRjm7ZaUeAxs/edit#gid=33327664",
+  "diciBackend": false,
+  "displayType": "table",
+  "downloadCount": 4314,
+  "hideFromCatalog": false,
+  "hideFromDataJson": false,
+  "locked": false,
+  "newBackend": true,
+  "numberOfComments": 0,
+  "oid": 40794208,
+  "provenance": "official",
+  "publicationAppendEnabled": false,
+  "publicationDate": 1723060408,
+  "publicationGroup": 17806660,
+  "publicationStage": "published",
+  "rowClass": "",
+  "rowsUpdatedAt": 1792595170,
+  "rowsUpdatedBy": "yrqv-pmyz",
+  "tableId": 19614992,
+  "totalTimesRated": 0,
+  "viewCount": 12457,
+  "viewLastModified": 1792595167,
+  "viewType": "tabular",
+  "approvals": [
+    {
+      "reviewedAt": 1606515300,
+      "reviewedAutomatically": true,
+      "state": "approved",
+      "submissionId": 6496675,
+      "submissionObject": "public_audience_request",
+      "submissionOutcome": "change_audience",
+      "submittedAt": 1606515300,
+      "targetAudience": "public",
+      "workflowId": 2285,
+      "submissionDetails": {
+        "permissionType": "READ"
+      },
+      "submissionOutcomeApplication": {
+        "endedAt": 1606515300,
+        "failureCount": 0,
+        "startedAt": 1606515300,
+        "status": "success"
+      },
+      "submitter": {
+        "id": "yrqv-pmyz",
+        "displayName": "NYC Parks Open Data Team"
+      }
+    }
+  ],
+  "clientContext": {
+    "clientContextVariables": [],
+    "inheritedVariables": {}
+  },
+  "columns": [
+    {
+      "id": 597996178,
+      "name": "assemblydist",
+      "dataTypeName": "number",
+      "description": "Assembly District where the garden is located",
+      "fieldName": "assemblydist",
+      "position": 1,
+      "renderTypeName": "number",
+      "tableColumnId": 133345791,
+      "cachedContents": {
+        "non_null": "635",
+        "largest": "87",
+        "null": "0",
+        "top": [
+          {
+            "item": "56",
+            "count": "50"
+          },
+          {
+            "item": "55",
+            "count": "41"
+          },
+          {
+            "item": "54",
+            "count": "39"
+          },
+          {
+            "item": "68",
+            "count": "36"
+          },
+          {
+            "item": "79",
+            "count": "35"
+          },
+          {
+            "item": "60",
+            "count": "31"
+          },
+          {
+            "item": "70",
+            "count": "31"
+          },
+          {
+            "item": "74",
+            "count": "29"
+          },
+          {
+            "item": "57",
+            "count": "28"
+          },
+          {
+            "item": "65",
+            "count": "24"
+          },
+          {
+            "item": "53",
+            "count": "21"
+          },
+          {
+            "item": "71",
+            "count": "21"
+          },
+          {
+            "item": "84",
+            "count": "19"
+          },
+          {
+            "item": "77",
+            "count": "17"
+          },
+          {
+            "item": "85",
+            "count": "16"
+          },
+          {
+            "item": "52",
+            "count": "16"
+          },
+          {
+            "item": "86",
+            "count": "15"
+          },
+          {
+            "item": "32",
+            "count": "13"
+          },
+          {
+            "item": "69",
+            "count": "11"
+          },
+          {
+            "item": "51",
+            "count": "11"
+          }
+        ],
+        "smallest": "23",
+        "count": "635",
+        "cardinality": "635"
+      },
+      "format": {}
+    },
+    {
+      "id": 597996179,
+      "name": "address",
+      "dataTypeName": "text",
+      "description": "Address of the garden",
+      "fieldName": "address",
+      "position": 2,
+      "renderTypeName": "text",
+      "tableColumnId": 150745945,
+      "cachedContents": {
+        "non_null": "635",
+        "largest": "TOMPKINS CIRCLE",
+        "null": "0",
+        "top": [
+          {
+            "item": "41-38 69th St, Flushing, NY 11377",
+            "count": "2"
+          },
+          {
+            "item": "106-17 173rd Street",
+            "count": "2"
+          },
+          {
+            "item": "719 Marcy Avenue",
+            "count": "2"
+          },
+          {
+            "item": "59 Java Street",
+            "count": "1"
+          },
+          {
+            "item": "19 Hunterfly Place",
+            "count": "1"
+          },
+          {
+            "item": "150 EAST 4 STREET",
+            "count": "1"
+          },
+          {
+            "item": "1565 Park Ave, New York, NY",
+            "count": "1"
+          },
+          {
+            "item": "313 E 8th Street",
+            "count": "1"
+          },
+          {
+            "item": "330 Ashford Street",
+            "count": "1"
+          },
+          {
+            "item": "198 Avenue B",
+            "count": "1"
+          },
+          {
+            "item": "679 Riverside Drive",
+            "count": "1"
+          },
+          {
+            "item": "230 West 129 street NY NY 10027",
+            "count": "1"
+          },
+          {
+            "item": "153 Concord Street",
+            "count": "1"
+          },
+          {
+            "item": "599 Driggs Avenue",
+            "count": "1"
+          },
+          {
+            "item": "58 East 18th Street",
+            "count": "1"
+          },
+          {
+            "item": "955 Sherman Avenue",
+            "count": "1"
+          },
+          {
+            "item": "171-03 120th Avenue",
+            "count": "1"
+          },
+          {
+            "item": "208 Amboy Street",
+            "count": "1"
+          },
+          {
+            "item": "2 South Portland Avenue",
+            "count": "1"
+          },
+          {
+            "item": "90 W 164th Street",
+            "count": "1"
+          }
+        ],
+        "smallest": "1001 Anderson Avenue",
+        "count": "635",
+        "cardinality": "635"
+      },
+      "format": {}
+    },
+    {
+      "id": 597996180,
+      "name": "borough",
+      "dataTypeName": "text",
+      "description": "Borough where the garden is located",
+      "fieldName": "borough",
+      "position": 3,
+      "renderTypeName": "text",
+      "tableColumnId": 123765759,
+      "cachedContents": {
+        "non_null": "635",
+        "largest": "X",
+        "null": "0",
+        "top": [
+          {
+            "item": "B",
+            "count": "268"
+          },
+          {
+            "item": "M",
+            "count": "163"
+          },
+          {
+            "item": "X",
+            "count": "134"
+          },
+          {
+            "item": "Q",
+            "count": "58"
+          },
+          {
+            "item": "R",
+            "count": "12"
+          }
+        ],
+        "smallest": "B",
+        "count": "635",
+        "cardinality": "635"
+      },
+      "format": {}
+    },
+    {
+      "id": 597996181,
+      "name": "communityboard",
+      "dataTypeName": "number",
+      "description": "Community Board where the garden is located",
+      "fieldName": "communityboard",
+      "position": 4,
+      "renderTypeName": "number",
+      "tableColumnId": 133345790,
+      "cachedContents": {
+        "non_null": "635",
+        "largest": "503",
+        "null": "0",
+        "top": [
+          {
+            "item": "303",
+            "count": "63"
+          },
+          {
+            "item": "305",
+            "count": "59"
+          },
+          {
+            "item": "103",
+            "count": "54"
+          },
+          {
+            "item": "111",
+            "count": "37"
+          },
+          {
+            "item": "110",
+            "count": "35"
+          },
+          {
+            "item": "316",
+            "count": "33"
+          },
+          {
+            "item": "201",
+            "count": "29"
+          },
+          {
+            "item": "203",
+            "count": "24"
+          },
+          {
+            "item": "301",
+            "count": "24"
+          },
+          {
+            "item": "412",
+            "count": "22"
+          },
+          {
+            "item": "204",
+            "count": "18"
+          },
+          {
+            "item": "304",
+            "count": "18"
+          },
+          {
+            "item": "109",
+            "count": "17"
+          },
+          {
+            "item": "302",
+            "count": "17"
+          },
+          {
+            "item": "206",
+            "count": "17"
+          },
+          {
+            "item": "306",
+            "count": "17"
+          },
+          {
+            "item": "308",
+            "count": "12"
+          },
+          {
+            "item": "501",
+            "count": "10"
+          },
+          {
+            "item": "414",
+            "count": "10"
+          },
+          {
+            "item": "202",
+            "count": "9"
+          }
+        ],
+        "smallest": "101",
+        "count": "635",
+        "cardinality": "635"
+      },
+      "format": {}
+    },
+    {
+      "id": 597996182,
+      "name": "congressionaldist",
+      "dataTypeName": "number",
+      "description": "Congressional District where the garden is located",
+      "fieldName": "congressionaldist",
+      "position": 5,
+      "renderTypeName": "number",
+      "tableColumnId": 133345793,
+      "cachedContents": {
+        "non_null": "635",
+        "largest": "16",
+        "null": "0",
+        "top": [
+          {
+            "item": "8",
+            "count": "155"
+          },
+          {
+            "item": "13",
+            "count": "108"
+          },
+          {
+            "item": "15",
+            "count": "89"
+          },
+          {
+            "item": "10",
+            "count": "87"
+          },
+          {
+            "item": "7",
+            "count": "68"
+          },
+          {
+            "item": "14",
+            "count": "36"
+          },
+          {
+            "item": "5",
+            "count": "35"
+          },
+          {
+            "item": "9",
+            "count": "24"
+          },
+          {
+            "item": "11",
+            "count": "12"
+          },
+          {
+            "item": "12",
+            "count": "10"
+          },
+          {
+            "item": "6",
+            "count": "8"
+          },
+          {
+            "item": "16",
+            "count": "2"
+          },
+          {
+            "item": "3",
+            "count": "1"
+          }
+        ],
+        "smallest": "3",
+        "count": "635",
+        "cardinality": "635"
+      },
+      "format": {}
+    },
+    {
+      "id": 597996183,
+      "name": "coundist",
+      "dataTypeName": "number",
+      "description": "Council District where the garden is located",
+      "fieldName": "coundist",
+      "position": 6,
+      "renderTypeName": "number",
+      "tableColumnId": 133345794,
+      "cachedContents": {
+        "non_null": "635",
+        "largest": "51",
+        "null": "0",
+        "top": [
+          {
+            "item": "36",
+            "count": "56"
+          },
+          {
+            "item": "42",
+            "count": "53"
+          },
+          {
+            "item": "2",
+            "count": "46"
+          },
+          {
+            "item": "8",
+            "count": "46"
+          },
+          {
+            "item": "17",
+            "count": "45"
+          },
+          {
+            "item": "9",
+            "count": "42"
+          },
+          {
+            "item": "41",
+            "count": "40"
+          },
+          {
+            "item": "37",
+            "count": "29"
+          },
+          {
+            "item": "15",
+            "count": "23"
+          },
+          {
+            "item": "34",
+            "count": "22"
+          },
+          {
+            "item": "39",
+            "count": "22"
+          },
+          {
+            "item": "16",
+            "count": "19"
+          },
+          {
+            "item": "7",
+            "count": "17"
+          },
+          {
+            "item": "35",
+            "count": "14"
+          },
+          {
+            "item": "28",
+            "count": "14"
+          },
+          {
+            "item": "33",
+            "count": "13"
+          },
+          {
+            "item": "1",
+            "count": "12"
+          },
+          {
+            "item": "14",
+            "count": "11"
+          },
+          {
+            "item": "31",
+            "count": "10"
+          },
+          {
+            "item": "18",
+            "count": "9"
+          }
+        ],
+        "smallest": "1",
+        "count": "635",
+        "cardinality": "635"
+      },
+      "format": {}
+    },
+    {
+      "id": 597996184,
+      "name": "gardenname",
+      "dataTypeName": "text",
+      "description": "Name of the garden",
+      "fieldName": "gardenname",
+      "position": 7,
+      "renderTypeName": "text",
+      "tableColumnId": 123765760,
+      "cachedContents": {
+        "non_null": "635",
+        "largest": "Ying & Yang",
+        "null": "0",
+        "top": [
+          {
+            "item": "Hattie Carthan Community Garden",
+            "count": "2"
+          },
+          {
+            "item": "Grove Hill Community Garden",
+            "count": "1"
+          },
+          {
+            "item": "Edward P. Bowman Park",
+            "count": "1"
+          },
+          {
+            "item": "Hull Street Community Garden (NYRP)",
+            "count": "1"
+          },
+          {
+            "item": "Forsyth Garden Conservancy",
+            "count": "1"
+          },
+          {
+            "item": "Palmas del Caribe (Eagle Avenue Community Garden)",
+            "count": "1"
+          },
+          {
+            "item": "Abib Newborn",
+            "count": "1"
+          },
+          {
+            "item": "McLeod Community Garden",
+            "count": "1"
+          },
+          {
+            "item": "Marcus Garvey Farm",
+            "count": "1"
+          },
+          {
+            "item": "Harlem Village Green",
+            "count": "1"
+          },
+          {
+            "item": "Serinor Community Garden - International Towers (NYCHA)",
+            "count": "1"
+          },
+          {
+            "item": "Diamante Garden / Dimantis Garden",
+            "count": "1"
+          },
+          {
+            "item": "Betty's Community Garden at Hull Street",
+            "count": "1"
+          },
+          {
+            "item": "Granite Street Community Garden",
+            "count": "1"
+          },
+          {
+            "item": "Schomburg Arts Garden",
+            "count": "1"
+          },
+          {
+            "item": "Cambria Heights Community Garden",
+            "count": "1"
+          },
+          {
+            "item": "Cordelia’s Garden",
+            "count": "1"
+          },
+          {
+            "item": "El Cataño Garden",
+            "count": "1"
+          },
+          {
+            "item": "Peaceful Valley",
+            "count": "1"
+          },
+          {
+            "item": "Citizens for a Better Community Garden",
+            "count": "1"
+          }
+        ],
+        "smallest": "100 Quincy Community Garden",
+        "count": "635",
+        "cardinality": "635"
+      },
+      "format": {}
+    },
+    {
+      "id": 597996185,
+      "name": "juris",
+      "dataTypeName": "text",
+      "description": "Entity that has ownership or jurisdiction over the garden property. The property can be under the jurisdiction of more than one entity, those are identified with a slash (/).",
+      "fieldName": "juris",
+      "position": 8,
+      "renderTypeName": "text",
+      "tableColumnId": 123765761,
+      "cachedContents": {
+        "non_null": "635",
+        "largest": "USG-VA",
+        "null": "0",
+        "top": [
+          {
+            "item": "DPR",
+            "count": "395"
+          },
+          {
+            "item": "NYRP",
+            "count": "49"
+          },
+          {
+            "item": "NYCHA",
+            "count": "36"
+          },
+          {
+            "item": "BQLT",
+            "count": "36"
+          },
+          {
+            "item": "PRI",
+            "count": "32"
+          },
+          {
+            "item": "BLT",
+            "count": "18"
+          },
+          {
+            "item": "MLT",
+            "count": "12"
+          },
+          {
+            "item": "DOT",
+            "count": "10"
+          },
+          {
+            "item": "DOE",
+            "count": "6"
+          },
+          {
+            "item": "DPR/PRI",
+            "count": "5"
+          },
+          {
+            "item": "BANG",
+            "count": "5"
+          },
+          {
+            "item": "MTA",
+            "count": "4"
+          },
+          {
+            "item": "NYS DOT",
+            "count": "3"
+          },
+          {
+            "item": "DEP (DPR)",
+            "count": "2"
+          },
+          {
+            "item": "NYPD (DPR)",
+            "count": "2"
+          },
+          {
+            "item": "JOP",
+            "count": "2"
+          },
+          {
+            "item": "DEP",
+            "count": "2"
+          },
+          {
+            "item": "PRI / DOT",
+            "count": "2"
+          },
+          {
+            "item": "DPR/MLT",
+            "count": "2"
+          },
+          {
+            "item": "DCAS",
+            "count": "1"
+          }
+        ],
+        "smallest": "ACS/PRI",
+        "count": "635",
+        "cardinality": "635"
+      },
+      "format": {}
+    },
+    {
+      "id": 597996186,
+      "name": "multipolygon",
+      "dataTypeName": "multipolygon",
+      "description": "Shape of the garden.",
+      "fieldName": "multipolygon",
+      "position": 9,
+      "renderTypeName": "multipolygon",
+      "tableColumnId": 123765774,
+      "format": {}
+    },
+    {
+      "id": 597996187,
+      "name": "openhrsf",
+      "dataTypeName": "text",
+      "description": "Garden open hours on Fridays",
+      "fieldName": "openhrsf",
+      "position": 10,
+      "renderTypeName": "text",
+      "tableColumnId": 123765753,
+      "cachedContents": {
+        "non_null": "370",
+        "largest": "Whenever the gate is open",
+        "null": "265",
+        "top": [
+          {
+            "item": "CLOSED",
+            "count": "86"
+          },
+          {
+            "item": "10:00 a.m. - 2:00 p.m.",
+            "count": "10"
+          },
+          {
+            "item": "12:00 p.m. - 5:00 p.m.",
+            "count": "6"
+          },
+          {
+            "item": "10:00 a.m. - 6:00 p.m.",
+            "count": "5"
+          },
+          {
+            "item": "12:00 p.m. - 4:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "12:00 p.m. - 2:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "1:00 p.m. - 4:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "11:00 a.m. - 5:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "9:00 a.m. - 5:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "5:00 p.m. - 7:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "11:00 a.m. - 3:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "10:00 a.m. - 12:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "9:00 a.m. - 12:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "4:00 p.m. - 8:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "9:00 a.m. - 4:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "1:00 p.m. - 2:30 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "1:00 p.m. - 5:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "3:00 p.m. - 6:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "2:00 p.m. - 5:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "12:00 p.m. - 3:00 p.m.",
+            "count": "3"
+          }
+        ],
+        "smallest": "10:00a - 12:00p",
+        "count": "635",
+        "cardinality": "635"
+      },
+      "format": {}
+    },
+    {
+      "id": 597996188,
+      "name": "openhrsm",
+      "dataTypeName": "text",
+      "description": "Garden open hours on Mondays",
+      "fieldName": "openhrsm",
+      "position": 11,
+      "renderTypeName": "text",
+      "tableColumnId": 123765754,
+      "cachedContents": {
+        "non_null": "345",
+        "largest": "Whenever the gate is open",
+        "null": "290",
+        "top": [
+          {
+            "item": "CLOSED",
+            "count": "105"
+          },
+          {
+            "item": "10:00 a.m. - 12:00 p.m.",
+            "count": "7"
+          },
+          {
+            "item": "5:00 p.m. - 7:00 p.m.",
+            "count": "7"
+          },
+          {
+            "item": "10:00 a.m. - 2:00 p.m.",
+            "count": "7"
+          },
+          {
+            "item": "10:00 a.m. - 1:00 p.m.",
+            "count": "5"
+          },
+          {
+            "item": "9:00 a.m. - 5:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "9:00 a.m. - 1:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "1:00 p.m. - 2:30 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "Closed",
+            "count": "4"
+          },
+          {
+            "item": "9:00 a.m. - 12:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "12:00 p.m. - 4:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "10:00a - 12:00p",
+            "count": "3"
+          },
+          {
+            "item": "6:00 p.m. - 8:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "3:00 p.m. - 6:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "1:00 p.m. - 5:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "1:00 p.m. - 4:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "9:00 a.m. - 11:00 a.m.",
+            "count": "3"
+          },
+          {
+            "item": "6:00 p.m. - 7:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "2:00 p.m. - 5:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "2:00 p.m. - 6:00 p.m.",
+            "count": "3"
+          }
+        ],
+        "smallest": "10:00a - 12:00p",
+        "count": "635",
+        "cardinality": "635"
+      },
+      "format": {}
+    },
+    {
+      "id": 597996189,
+      "name": "openhrssa",
+      "dataTypeName": "text",
+      "description": "Garden open hours on Saturdays",
+      "fieldName": "openhrssa",
+      "position": 12,
+      "renderTypeName": "text",
+      "tableColumnId": 123765771,
+      "cachedContents": {
+        "non_null": "418",
+        "largest": "Noon to 6:00 p.m.",
+        "null": "217",
+        "top": [
+          {
+            "item": "10:00 a.m. - 3:00 p.m.",
+            "count": "20"
+          },
+          {
+            "item": "CLOSED",
+            "count": "18"
+          },
+          {
+            "item": "11:00 a.m. - 4:00 p.m.",
+            "count": "15"
+          },
+          {
+            "item": "10:00 a.m. - 2:00 p.m.",
+            "count": "13"
+          },
+          {
+            "item": "12:00 p.m. - 5:00 p.m.",
+            "count": "12"
+          },
+          {
+            "item": "10:00 a.m. - 6:00 p.m.",
+            "count": "10"
+          },
+          {
+            "item": "9:00 a.m. - 2:00 p.m.",
+            "count": "8"
+          },
+          {
+            "item": "10:00 a.m. - 4:00 p.m.",
+            "count": "8"
+          },
+          {
+            "item": "1:00 p.m. - 6:00 p.m.",
+            "count": "8"
+          },
+          {
+            "item": "12:00 p.m. - 6:00 p.m.",
+            "count": "7"
+          },
+          {
+            "item": "12:00 p.m. - 4:00 p.m.",
+            "count": "6"
+          },
+          {
+            "item": "10:00 a.m. - 1:00 p.m.",
+            "count": "5"
+          },
+          {
+            "item": "10:00 a.m. - 5:00 p.m.",
+            "count": "5"
+          },
+          {
+            "item": "11:00 a.m. - 3:00 p.m.",
+            "count": "5"
+          },
+          {
+            "item": "11:00 a.m. - 5:00 p.m.",
+            "count": "5"
+          },
+          {
+            "item": "9:00 a.m. - 3:00 p.m.",
+            "count": "5"
+          },
+          {
+            "item": "9:00 a.m. - 12:00 p.m.",
+            "count": "5"
+          },
+          {
+            "item": "8:00 a.m. - 1:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "9:00 a.m. - 7:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "11:00 a.m. - 7:00 p.m.",
+            "count": "4"
+          }
+        ],
+        "smallest": "10:00a - 1:00p",
+        "count": "635",
+        "cardinality": "635"
+      },
+      "format": {}
+    },
+    {
+      "id": 597996190,
+      "name": "openhrssu",
+      "dataTypeName": "text",
+      "description": "Garden open hours on Sundays",
+      "fieldName": "openhrssu",
+      "position": 13,
+      "renderTypeName": "text",
+      "tableColumnId": 123765758,
+      "cachedContents": {
+        "non_null": "371",
+        "largest": "TBD - when garden gate is open",
+        "null": "264",
+        "top": [
+          {
+            "item": "CLOSED",
+            "count": "46"
+          },
+          {
+            "item": "12:00 p.m. - 5:00 p.m.",
+            "count": "15"
+          },
+          {
+            "item": "10:00 a.m. - 3:00 p.m.",
+            "count": "13"
+          },
+          {
+            "item": "Closed",
+            "count": "10"
+          },
+          {
+            "item": "11:00 a.m. - 4:00 p.m.",
+            "count": "10"
+          },
+          {
+            "item": "10:00 a.m. - 2:00 p.m.",
+            "count": "8"
+          },
+          {
+            "item": "12:00 p.m. - 4:00 p.m.",
+            "count": "7"
+          },
+          {
+            "item": "1:00 p.m. - 4:00 p.m.",
+            "count": "6"
+          },
+          {
+            "item": "12:00 p.m. - 6:00 p.m.",
+            "count": "6"
+          },
+          {
+            "item": "1:00 p.m. - 6:00 p.m.",
+            "count": "6"
+          },
+          {
+            "item": "10:00 a.m. - 1:00 p.m.",
+            "count": "5"
+          },
+          {
+            "item": "10:00 a.m. - 12:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "9:00 a.m. - 5:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "10:00 a.m. - 4:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "10:00 a.m. - 7:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "10:00 a.m. - 6:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "9:00 a.m. - 7:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "11:00 a.m. - 7:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "11:00 a.m. - 2:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "2:00 p.m. - 5:00 p.m.",
+            "count": "3"
+          }
+        ],
+        "smallest": "10:00a - 1:00p",
+        "count": "635",
+        "cardinality": "635"
+      },
+      "format": {}
+    },
+    {
+      "id": 597996191,
+      "name": "openhrsth",
+      "dataTypeName": "text",
+      "description": "Garden open hours on Thursdays",
+      "fieldName": "openhrsth",
+      "position": 14,
+      "renderTypeName": "text",
+      "tableColumnId": 123765762,
+      "cachedContents": {
+        "non_null": "356",
+        "largest": "Whenever the gate is open",
+        "null": "279",
+        "top": [
+          {
+            "item": "CLOSED",
+            "count": "88"
+          },
+          {
+            "item": "10:00 a.m. - 2:00 p.m.",
+            "count": "10"
+          },
+          {
+            "item": "10:00 a.m. - 12:00 p.m.",
+            "count": "5"
+          },
+          {
+            "item": "11:00 a.m. - 5:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "4:00 p.m. - 6:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "3:00 p.m. - 7:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "9:00 a.m. - 5:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "10:00 a.m. - 1:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "5:00 p.m. - 7:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "9:00 a.m. - 12:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "9:00 a.m. - 4:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "9:00 a.m. - 1:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "1:00 p.m. - 4:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "9:00 a.m. - 2:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "10:00 a.m. - 4:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "10:00 a.m. - 6:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "12:00 p.m. - 2:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "10:00 a.m. - 7:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "6:00 p.m. - 8:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "Closed",
+            "count": "3"
+          }
+        ],
+        "smallest": "10:00a-2:00p & 2:00p-4:00p",
+        "count": "635",
+        "cardinality": "635"
+      },
+      "format": {}
+    },
+    {
+      "id": 597996192,
+      "name": "openhrstu",
+      "dataTypeName": "text",
+      "description": "Garden open hours on Tuesdays",
+      "fieldName": "openhrstu",
+      "position": 15,
+      "renderTypeName": "text",
+      "tableColumnId": 123765773,
+      "cachedContents": {
+        "non_null": "358",
+        "largest": "Whenever the gate is open",
+        "null": "277",
+        "top": [
+          {
+            "item": "CLOSED",
+            "count": "91"
+          },
+          {
+            "item": "10:00 a.m. - 2:00 p.m.",
+            "count": "11"
+          },
+          {
+            "item": "5:00 p.m. - 7:00 p.m.",
+            "count": "10"
+          },
+          {
+            "item": "10:00 a.m. - 12:00 p.m.",
+            "count": "6"
+          },
+          {
+            "item": "9:00 a.m. - 5:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "11:00 a.m. - 5:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "9:00 a.m. - 4:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "6:00 p.m. - 8:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "9:00 a.m. - 1:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "12:00 p.m. - 2:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "2:00 p.m. - 6:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "11:00 a.m. - 3:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "6:00p - 8:00p",
+            "count": "3"
+          },
+          {
+            "item": "10:00 a.m. - 1:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "11:00 a.m. - 4:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "12:00 p.m. - 5:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "3:00 p.m. - 6:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "1:00 p.m. - 5:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "1:00 p.m. - 4:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "Closed",
+            "count": "3"
+          }
+        ],
+        "smallest": "10:00a - 11:00p",
+        "count": "635",
+        "cardinality": "635"
+      },
+      "format": {}
+    },
+    {
+      "id": 597996193,
+      "name": "openhrsw",
+      "dataTypeName": "text",
+      "description": "Garden open hours on Wednesdays",
+      "fieldName": "openhrsw",
+      "position": 16,
+      "renderTypeName": "text",
+      "tableColumnId": 123765752,
+      "cachedContents": {
+        "non_null": "373",
+        "largest": "Whenever the gate is open",
+        "null": "262",
+        "top": [
+          {
+            "item": "CLOSED",
+            "count": "73"
+          },
+          {
+            "item": "10:00 a.m. - 2:00 p.m.",
+            "count": "13"
+          },
+          {
+            "item": "9:00 a.m. - 1:00 p.m.",
+            "count": "6"
+          },
+          {
+            "item": "Closed",
+            "count": "6"
+          },
+          {
+            "item": "10:00 a.m. - 1:00 p.m.",
+            "count": "5"
+          },
+          {
+            "item": "2:00 p.m. - 6:00 p.m.",
+            "count": "5"
+          },
+          {
+            "item": "12:00 p.m. - 4:00 p.m.",
+            "count": "5"
+          },
+          {
+            "item": "11:00 a.m. - 5:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "9:00 a.m. - 5:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "9:00 a.m. - 11:00 a.m.",
+            "count": "4"
+          },
+          {
+            "item": "5:00 p.m. - 8:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "1:00 p.m. - 5:00 p.m.",
+            "count": "4"
+          },
+          {
+            "item": "5:00 p.m. - 7:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "1:00 p.m. - 4:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "10:00 a.m. - 6:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "11:00 a.m. - 4:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "6:00 p.m. - 8:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "10:00 a.m. - 12:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "12:00 p.m. - 5:00 p.m.",
+            "count": "3"
+          },
+          {
+            "item": "3:00 p.m. - 6:00 p.m.",
+            "count": "3"
+          }
+        ],
+        "smallest": ".",
+        "count": "635",
+        "cardinality": "635"
+      },
+      "format": {}
+    },
+    {
+      "id": 597996194,
+      "name": "parksid",
+      "dataTypeName": "text",
+      "description": "Garden unique identification number for each park property",
+      "fieldName": "parksid",
+      "position": 17,
+      "renderTypeName": "text",
+      "tableColumnId": 123765748,
+      "cachedContents": {
+        "non_null": "635",
+        "largest": "XGT095",
+        "null": "0",
+        "top": [
+          {
+            "item": "B400-GT001",
+            "count": "2"
+          },
+          {
+            "item": "M390-GT001",
+            "count": "1"
+          },
+          {
+            "item": "BGT035",
+            "count": "1"
+          },
+          {
+            "item": "Q495-GT001",
+            "count": "1"
+          },
+          {
+            "item": "M324-GT001",
+            "count": "1"
+          },
+          {
+            "item": "Q512-GT001",
+            "count": "1"
+          },
+          {
+            "item": "Q045-GT001",
+            "count": "1"
+          },
+          {
+            "item": "B223G-GT001",
+            "count": "1"
+          },
+          {
+            "item": "BGT066",
+            "count": "1"
+          },
+          {
+            "item": "M352-GT001",
+            "count": "1"
+          },
+          {
+            "item": "X346-GT001",
+            "count": "1"
+          },
+          {
+            "item": "BGT034",
+            "count": "1"
+          },
+          {
+            "item": "X233A-GT001",
+            "count": "1"
+          },
+          {
+            "item": "Q486-GT001",
+            "count": "1"
+          },
+          {
+            "item": "XGT056",
+            "count": "1"
+          },
+          {
+            "item": "B441-GT001",
+            "count": "1"
+          },
+          {
+            "item": "M331-GT002",
+            "count": "1"
+          },
+          {
+            "item": "B582-GT001",
+            "count": "1"
+          },
+          {
+            "item": "XGT028",
+            "count": "1"
+          },
+          {
+            "item": "M329-GT001",
+            "count": "1"
+          }
+        ],
+        "smallest": "B024-GT001",
+        "count": "635",
+        "cardinality": "635"
+      },
+      "format": {}
+    },
+    {
+      "id": 597996195,
+      "name": "policeprecinct",
+      "dataTypeName": "text",
+      "description": "Police Precinct where the garden is located",
+      "fieldName": "policeprecinct",
+      "position": 18,
+      "renderTypeName": "text",
+      "tableColumnId": 133264337,
+      "cachedContents": {
+        "non_null": "635",
+        "largest": "94",
+        "null": "0",
+        "top": [
+          {
+            "item": "75",
+            "count": "59"
+          },
+          {
+            "item": "9",
+            "count": "44"
+          },
+          {
+            "item": "79",
+            "count": "36"
+          },
+          {
+            "item": "73",
+            "count": "33"
+          },
+          {
+            "item": "40",
+            "count": "29"
+          },
+          {
+            "item": "81",
+            "count": "27"
+          },
+          {
+            "item": "42",
+            "count": "24"
+          },
+          {
+            "item": "32",
+            "count": "20"
+          },
+          {
+            "item": "25",
+            "count": "19"
+          },
+          {
+            "item": "23",
+            "count": "18"
+          },
+          {
+            "item": "44",
+            "count": "18"
+          },
+          {
+            "item": "83",
+            "count": "18"
+          },
+          {
+            "item": "48",
+            "count": "17"
+          },
+          {
+            "item": "90",
+            "count": "17"
+          },
+          {
+            "item": "28",
+            "count": "15"
+          },
+          {
+            "item": "30",
+            "count": "13"
+          },
+          {
+            "item": "113",
+            "count": "11"
+          },
+          {
+            "item": "77",
+            "count": "11"
+          },
+          {
+            "item": "103",
+            "count": "11"
+          },
+          {
+            "item": "78",
+            "count": "10"
+          }
+        ],
+        "smallest": "1",
+        "count": "635",
+        "cardinality": "635"
+      },
+      "format": {}
+    },
+    {
+      "id": 597996196,
+      "name": "statesenatedist",
+      "dataTypeName": "number",
+      "description": "State Senate District  where the garden is located",
+      "fieldName": "statesenatedist",
+      "position": 19,
+      "renderTypeName": "number",
+      "tableColumnId": 133345792,
+      "cachedContents": {
+        "non_null": "635",
+        "largest": "59",
+        "null": "0",
+        "top": [
+          {
+            "item": "25",
+            "count": "93"
+          },
+          {
+            "item": "30",
+            "count": "67"
+          },
+          {
+            "item": "19",
+            "count": "66"
+          },
+          {
+            "item": "32",
+            "count": "64"
+          },
+          {
+            "item": "29",
+            "count": "61"
+          },
+          {
+            "item": "27",
+            "count": "59"
+          },
+          {
+            "item": "18",
+            "count": "37"
+          },
+          {
+            "item": "26",
+            "count": "28"
+          },
+          {
+            "item": "20",
+            "count": "22"
+          },
+          {
+            "item": "10",
+            "count": "21"
+          },
+          {
+            "item": "23",
+            "count": "16"
+          },
+          {
+            "item": "59",
+            "count": "14"
+          },
+          {
+            "item": "33",
+            "count": "14"
+          },
+          {
+            "item": "14",
+            "count": "13"
+          },
+          {
+            "item": "31",
+            "count": "10"
+          },
+          {
+            "item": "34",
+            "count": "8"
+          },
+          {
+            "item": "47",
+            "count": "8"
+          },
+          {
+            "item": "21",
+            "count": "7"
+          },
+          {
+            "item": "12",
+            "count": "7"
+          },
+          {
+            "item": "36",
+            "count": "7"
+          }
+        ],
+        "smallest": "10",
+        "count": "635",
+        "cardinality": "635"
+      },
+      "format": {}
+    },
+    {
+      "id": 597996197,
+      "name": "status",
+      "dataTypeName": "text",
+      "description": "Status of the garden in terms of its activity",
+      "fieldName": "status",
+      "position": 20,
+      "renderTypeName": "text",
+      "tableColumnId": 123765770,
+      "cachedContents": {
+        "non_null": "635",
+        "largest": "Not GreenThumb",
+        "null": "0",
+        "top": [
+          {
+            "item": "Active",
+            "count": "548"
+          },
+          {
+            "item": "Not GreenThumb",
+            "count": "67"
+          },
+          {
+            "item": "Inactive (No Group)",
+            "count": "8"
+          },
+          {
+            "item": "Closed (Construction)",
+            "count": "5"
+          },
+          {
+            "item": "Active (Unlicensed)",
+            "count": "4"
+          },
+          {
+            "item": "Inactive (Group Forming)",
+            "count": "3"
+          }
+        ],
+        "smallest": "Active",
+        "count": "635",
+        "cardinality": "635"
+      },
+      "format": {}
+    },
+    {
+      "id": 597996198,
+      "name": "zipcode",
+      "dataTypeName": "number",
+      "description": "Zip Code where the garden is located",
+      "fieldName": "zipcode",
+      "position": 21,
+      "renderTypeName": "number",
+      "tableColumnId": 133345769,
+      "cachedContents": {
+        "non_null": "635",
+        "largest": "11693",
+        "null": "0",
+        "top": [
+          {
+            "item": "11207",
+            "count": "45"
+          },
+          {
+            "item": "10009",
+            "count": "41"
+          },
+          {
+            "item": "11233",
+            "count": "28"
+          },
+          {
+            "item": "11206",
+            "count": "24"
+          },
+          {
+            "item": "10027",
+            "count": "21"
+          },
+          {
+            "item": "11221",
+            "count": "21"
+          },
+          {
+            "item": "11208",
+            "count": "21"
+          },
+          {
+            "item": "10029",
+            "count": "19"
+          },
+          {
+            "item": "11212",
+            "count": "19"
+          },
+          {
+            "item": "10035",
+            "count": "18"
+          },
+          {
+            "item": "10456",
+            "count": "18"
+          },
+          {
+            "item": "11216",
+            "count": "16"
+          },
+          {
+            "item": "10451",
+            "count": "16"
+          },
+          {
+            "item": "10459",
+            "count": "13"
+          },
+          {
+            "item": "11211",
+            "count": "13"
+          },
+          {
+            "item": "10031",
+            "count": "12"
+          },
+          {
+            "item": "11238",
+            "count": "12"
+          },
+          {
+            "item": "10457",
+            "count": "12"
+          },
+          {
+            "item": "10460",
+            "count": "11"
+          },
+          {
+            "item": "11217",
+            "count": "10"
+          }
+        ],
+        "smallest": "10002",
+        "count": "635",
+        "cardinality": "635"
+      },
+      "format": {}
+    },
+    {
+      "id": 597996200,
+      "name": "BBL",
+      "dataTypeName": "text",
+      "description": "Borough-block-lot in which garden is located\n",
+      "fieldName": "bbl",
+      "position": 22,
+      "renderTypeName": "text",
+      "tableColumnId": 154343965,
+      "cachedContents": {
+        "non_null": "629",
+        "largest": "5063510003",
+        "null": "6",
+        "top": [
+          {
+            "item": "1003910030",
+            "count": "3"
+          },
+          {
+            "item": "2030490001",
+            "count": "2"
+          },
+          {
+            "item": "3017890047",
+            "count": "2"
+          },
+          {
+            "item": "3040750107",
+            "count": "2"
+          },
+          {
+            "item": "3026960001",
+            "count": "2"
+          },
+          {
+            "item": "2029790028",
+            "count": "2"
+          },
+          {
+            "item": "4013090011",
+            "count": "2"
+          },
+          {
+            "item": "3017080035",
+            "count": "2"
+          },
+          {
+            "item": "4051560001",
+            "count": "1"
+          },
+          {
+            "item": "3040410052",
+            "count": "1"
+          },
+          {
+            "item": "2031250035",
+            "count": "1"
+          },
+          {
+            "item": "1016210030",
+            "count": "1"
+          },
+          {
+            "item": "4158370051",
+            "count": "1"
+          },
+          {
+            "item": "1004060046",
+            "count": "1"
+          },
+          {
+            "item": "3017260114",
+            "count": "1"
+          },
+          {
+            "item": "1021060003",
+            "count": "1"
+          },
+          {
+            "item": "1017840011",
+            "count": "1"
+          },
+          {
+            "item": "1021100058",
+            "count": "1"
+          },
+          {
+            "item": "5063510003",
+            "count": "1"
+          },
+          {
+            "item": "1020460035",
+            "count": "1"
+          }
+        ],
+        "smallest": "1000191905",
+        "count": "635",
+        "cardinality": "635"
+      },
+      "format": {}
+    },
+    {
+      "id": 597996199,
+      "name": "NTA",
+      "dataTypeName": "text",
+      "description": "Neighborhood tabulation area in which garden is located\n",
+      "fieldName": "nta",
+      "position": 23,
+      "renderTypeName": "text",
+      "tableColumnId": 154343964,
+      "cachedContents": {
+        "non_null": "635",
+        "largest": "SI37 /",
+        "null": "0",
+        "top": [
+          {
+            "item": "/",
+            "count": "56"
+          },
+          {
+            "item": "BK82 /",
+            "count": "41"
+          },
+          {
+            "item": "MN28 /",
+            "count": "32"
+          },
+          {
+            "item": "BK75 /",
+            "count": "26"
+          },
+          {
+            "item": "MN03 /",
+            "count": "24"
+          },
+          {
+            "item": "BK81 /",
+            "count": "19"
+          },
+          {
+            "item": "BK61 /",
+            "count": "19"
+          },
+          {
+            "item": "MN34 /",
+            "count": "18"
+          },
+          {
+            "item": "BK35 /",
+            "count": "18"
+          },
+          {
+            "item": "BK78 /",
+            "count": "17"
+          },
+          {
+            "item": "BX34 /",
+            "count": "17"
+          },
+          {
+            "item": "BX35 /",
+            "count": "16"
+          },
+          {
+            "item": "MN22 /",
+            "count": "15"
+          },
+          {
+            "item": "BK79 /",
+            "count": "14"
+          },
+          {
+            "item": "MN33 /",
+            "count": "14"
+          },
+          {
+            "item": "MN04 /",
+            "count": "13"
+          },
+          {
+            "item": "BX17 /",
+            "count": "12"
+          },
+          {
+            "item": "BK85 /",
+            "count": "12"
+          },
+          {
+            "item": "MN11 /",
+            "count": "11"
+          },
+          {
+            "item": "BK73 /",
+            "count": "11"
+          }
+        ],
+        "smallest": "/",
+        "count": "635",
+        "cardinality": "635"
+      },
+      "format": {}
+    },
+    {
+      "id": 597996201,
+      "name": "CensusTract",
+      "dataTypeName": "text",
+      "description": "Census tract in which garden is located\n",
+      "fieldName": "censustract",
+      "position": 24,
+      "renderTypeName": "text",
+      "tableColumnId": 154343966,
+      "cachedContents": {
+        "non_null": "579",
+        "largest": "992",
+        "null": "56",
+        "top": [
+          {
+            "item": "26.01",
+            "count": "11"
+          },
+          {
+            "item": "1150",
+            "count": "10"
+          },
+          {
+            "item": "26.02",
+            "count": "10"
+          },
+          {
+            "item": "51",
+            "count": "8"
+          },
+          {
+            "item": "34",
+            "count": "7"
+          },
+          {
+            "item": "363",
+            "count": "7"
+          },
+          {
+            "item": "189",
+            "count": "7"
+          },
+          {
+            "item": "69",
+            "count": "7"
+          },
+          {
+            "item": "208",
+            "count": "7"
+          },
+          {
+            "item": "395",
+            "count": "6"
+          },
+          {
+            "item": "229",
+            "count": "6"
+          },
+          {
+            "item": "371",
+            "count": "6"
+          },
+          {
+            "item": "265",
+            "count": "5"
+          },
+          {
+            "item": "403",
+            "count": "5"
+          },
+          {
+            "item": "299",
+            "count": "5"
+          },
+          {
+            "item": "178",
+            "count": "5"
+          },
+          {
+            "item": "387",
+            "count": "5"
+          },
+          {
+            "item": "233",
+            "count": "5"
+          },
+          {
+            "item": "141",
+            "count": "5"
+          },
+          {
+            "item": "28",
+            "count": "5"
+          }
+        ],
+        "smallest": "1",
+        "count": "635",
+        "cardinality": "635"
+      },
+      "format": {}
+    },
+    {
+      "id": 597996202,
+      "name": "lat",
+      "dataTypeName": "number",
+      "description": "Latitude of address of garden\n",
+      "fieldName": "lat",
+      "position": 25,
+      "renderTypeName": "number",
+      "tableColumnId": 154343967,
+      "cachedContents": {
+        "non_null": "579",
+        "largest": "40.901389",
+        "null": "56",
+        "top": [
+          {
+            "item": "40.725255",
+            "count": "2"
+          },
+          {
+            "item": "40.701593",
+            "count": "2"
+          },
+          {
+            "item": "40.852536",
+            "count": "2"
+          },
+          {
+            "item": "40.689338",
+            "count": "2"
+          },
+          {
+            "item": "40.653948",
+            "count": "1"
+          },
+          {
+            "item": "40.668718",
+            "count": "1"
+          },
+          {
+            "item": "40.676293",
+            "count": "1"
+          },
+          {
+            "item": "40.826556",
+            "count": "1"
+          },
+          {
+            "item": "40.838804",
+            "count": "1"
+          },
+          {
+            "item": "40.844078",
+            "count": "1"
+          },
+          {
+            "item": "40.827306",
+            "count": "1"
+          },
+          {
+            "item": "40.853797",
+            "count": "1"
+          },
+          {
+            "item": "40.830311",
+            "count": "1"
+          },
+          {
+            "item": "40.66517",
+            "count": "1"
+          },
+          {
+            "item": "40.81383",
+            "count": "1"
+          },
+          {
+            "item": "40.68409",
+            "count": "1"
+          },
+          {
+            "item": "40.692034",
+            "count": "1"
+          },
+          {
+            "item": "40.681031",
+            "count": "1"
+          },
+          {
+            "item": "40.828087",
+            "count": "1"
+          },
+          {
+            "item": "40.729148",
+            "count": "1"
+          }
+        ],
+        "smallest": "40.573259",
+        "count": "635",
+        "cardinality": "635"
+      },
+      "format": {}
+    },
+    {
+      "id": 597996203,
+      "name": "lon",
+      "dataTypeName": "number",
+      "description": "Longitude of address of garden\n",
+      "fieldName": "lon",
+      "position": 26,
+      "renderTypeName": "number",
+      "tableColumnId": 154343968,
+      "cachedContents": {
+        "non_null": "579",
+        "largest": "-73.734015",
+        "null": "56",
+        "top": [
+          {
+            "item": "-73.978584",
+            "count": "2"
+          },
+          {
+            "item": "-73.91054099999999",
+            "count": "2"
+          },
+          {
+            "item": "-73.947992",
+            "count": "2"
+          },
+          {
+            "item": "-73.783387",
+            "count": "2"
+          },
+          {
+            "item": "-73.925442",
+            "count": "1"
+          },
+          {
+            "item": "-73.963469",
+            "count": "1"
+          },
+          {
+            "item": "-73.948859",
+            "count": "1"
+          },
+          {
+            "item": "-73.761989",
+            "count": "1"
+          },
+          {
+            "item": "-73.967513",
+            "count": "1"
+          },
+          {
+            "item": "-73.936994",
+            "count": "1"
+          },
+          {
+            "item": "-73.999123",
+            "count": "1"
+          },
+          {
+            "item": "-73.934775",
+            "count": "1"
+          },
+          {
+            "item": "-73.957474",
+            "count": "1"
+          },
+          {
+            "item": "-73.912611",
+            "count": "1"
+          },
+          {
+            "item": "-73.94268099999999",
+            "count": "1"
+          },
+          {
+            "item": "-73.984118",
+            "count": "1"
+          },
+          {
+            "item": "-73.911208",
+            "count": "1"
+          },
+          {
+            "item": "-73.92187300000001",
+            "count": "1"
+          },
+          {
+            "item": "-73.978343",
+            "count": "1"
+          },
+          {
+            "item": "-73.857629",
+            "count": "1"
+          }
+        ],
+        "smallest": "-74.121443",
+        "count": "635",
+        "cardinality": "635"
+      },
+      "format": {}
+    },
+    {
+      "id": 597996204,
+      "name": "crossStreets",
+      "dataTypeName": "text",
+      "description": "Crossstreets of garden\n",
+      "fieldName": "crossstreets",
+      "position": 27,
+      "renderTypeName": "text",
+      "tableColumnId": 154343969,
+      "cachedContents": {
+        "non_null": "587",
+        "largest": "York Street & Hudson Ave",
+        "null": "48",
+        "top": [
+          {
+            "item": "Avenues B & C",
+            "count": "10"
+          },
+          {
+            "item": "Avenues C & D",
+            "count": "7"
+          },
+          {
+            "item": "Avenues A & B",
+            "count": "5"
+          },
+          {
+            "item": "1st & 2nd Avenues",
+            "count": "4"
+          },
+          {
+            "item": "1st Avenue & Avenue A",
+            "count": "3"
+          },
+          {
+            "item": "Blake & Dumont Avenues",
+            "count": "3"
+          },
+          {
+            "item": "At Avenue C",
+            "count": "3"
+          },
+          {
+            "item": "3rd & Lexington Avenues",
+            "count": "3"
+          },
+          {
+            "item": "Bushwick Avenue & Broadway",
+            "count": "3"
+          },
+          {
+            "item": "Classon & Franklin Avenues",
+            "count": "2"
+          },
+          {
+            "item": "Glenmore and Pitkin Ave.",
+            "count": "2"
+          },
+          {
+            "item": "Tompkins & Marcy",
+            "count": "2"
+          },
+          {
+            "item": "Belmont & Pitkin Avenues",
+            "count": "2"
+          },
+          {
+            "item": "1st & Pleasant Avenues",
+            "count": "2"
+          },
+          {
+            "item": "Blake & Dumont",
+            "count": "2"
+          },
+          {
+            "item": "Lafayette & Clifton",
+            "count": "2"
+          },
+          {
+            "item": "Hegeman & New Lots Avenues",
+            "count": "2"
+          },
+          {
+            "item": "Clifton Pl. & Greene Avenue",
+            "count": "2"
+          },
+          {
+            "item": "Elton & Melrose Avenues",
+            "count": "2"
+          },
+          {
+            "item": "Pitkin & Belmont Avenues",
+            "count": "2"
+          }
+        ],
+        "smallest": "109th Ave. and 108th Ave.",
+        "count": "635",
+        "cardinality": "635"
+      },
+      "format": {}
+    }
+  ],
+  "grants": [
+    {
+      "inherited": false,
+      "type": "viewer",
+      "flags": [
+        "public"
+      ]
+    }
+  ],
+  "metadata": {
+    "rdfSubject": "0",
+    "rdfClass": "",
+    "custom_fields": {
+      "Data Collection": {
+        "Data Collection": "GreenThumb Gardens"
+      },
+      "Update": {
+        "Automation": "Yes",
+        "Date Made Public": "12/1/2020",
+        "Update Frequency": "Monthly"
+      },
+      "Dataset Information": {
+        "Agency": "Department of Parks and Recreation (DPR)"
+      }
+    },
+    "rowLabel": "A GreenThumb garden",
+    "availableDisplayTypes": [
+      "table",
+      "fatrow",
+      "page"
+    ]
+  },
+  "owner": {
+    "id": "yrqv-pmyz",
+    "displayName": "NYC Parks Open Data Team",
+    "screenName": "NYC Parks Open Data Team",
+    "type": "interactive",
+    "flags": [
+      "acceptedEula",
+      "mayBeStoriesCoOwner"
+    ]
+  },
+  "query": {},
+  "rights": [
+    "read"
+  ],
+  "tableAuthor": {
+    "id": "yrqv-pmyz",
+    "displayName": "NYC Parks Open Data Team",
+    "screenName": "NYC Parks Open Data Team",
+    "type": "interactive",
+    "flags": [
+      "acceptedEula",
+      "mayBeStoriesCoOwner"
+    ]
+  },
+  "flags": [
+    "default",
+    "ownerMayBeContacted",
+    "restorable",
+    "restorePossibleForType"
+  ]
+}

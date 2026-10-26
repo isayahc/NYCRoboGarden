@@ -1,0 +1,65 @@
+{
+  "schema": "oi-geospatial-provenance/v1",
+  "sourceSha256": "20a6b70a9a5067dac51fd5273858d7c395d737c441d8e332b8d4d7bbe942bfaa",
+  "sourceRevision": "9845d020492b4a44975bbbe77fd52e705a40a981",
+  "sourceFilename": "garden.oi.json",
+  "anchor": {
+    "longitude": -73.951434,
+    "latitude": 40.811676,
+    "height": 0.0,
+    "heading": 0.0
+  },
+  "placement": "demonstration anchor; not surveyed or deployed",
+  "frame": "OI +X east, +Y up, -Z north at heading 0; clockwise heading from true north",
+  "normalization": "Stored vertices are normalized. Stored instance position already locates the normalized origin. originOffset is retained only as provenance.",
+  "licenseNote": "See ../garden-georeference.json for per-feature rights; procedural inferred geometry",
+  "instances": [
+    {
+      "instanceId": "site-ground",
+      "assetId": "garden-113ce05e5a925a7eb2d90608",
+      "name": "[INFERRED LOD0 flat surface] site-ground",
+      "sourceKind": "generated",
+      "sourceDigest": "abc30b79253623ea4d4d81ee464a65504867b3f30d4521f9aa0b65348d7b06a5",
+      "contentUri": "geometry/a7068f8e7fca499d92d4cd58a36a66f364d41879226ec2d61b48f0acdbf4a51a.glb",
+      "sourceFilename": "garden-manifest.json",
+      "sourceVersion": null,
+      "projectId": null,
+      "projectRevision": null,
+      "cloudVersionId": null,
+      "sourceNormalizationOffset": [
+        0.4973792265659709,
+        0,
+        0.3505375330368663
+      ],
+      "position": [
+        0.4973792265659709,
+        0,
+        0.3505375330368663
+      ],
+      "rotationDegreesXYZ": [
+        0,
+        0,
+        0
+      ],
+      "partIds": [
+        "site-ground"
+      ]
+    }
+  ],
+  "excluded": {
+    "hiddenInstances": [],
+    "animationTracks": 0,
+    "fields": [
+      "BOM, compiler findings, arbitrary source documents",
+      "room decoration, hierarchy grouping, textures, physics and animation"
+    ]
+  },
+  "capabilities": {
+    "staticGeometry": "passed",
+    "georeferencedPlacement": "passed",
+    "animation": "not-tested",
+    "physicalValidation": "not-tested",
+    "licensePermission": "not-tested",
+    "viewerInteroperability": "not-tested"
+  }
+}

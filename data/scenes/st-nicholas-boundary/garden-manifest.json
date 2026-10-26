@@ -1,0 +1,274 @@
+{
+  "schema_version": "2.0",
+  "source": {
+    "record_id": "nyc-greenthumb:M394-GT001",
+    "url": "https://data.cityofnewyork.us/resource/p78i-pat6.json?%24where=parksid%3D%27M394-GT001%27",
+    "coordinate_system": "EPSG:4326"
+  },
+  "registry_snapshot_version": "f7005e3c14f4f37b52d5f67d5f24c24664bbdce8751cadeb5e152fad2aeccb41",
+  "anchor": {
+    "longitude": -73.951434,
+    "latitude": 40.811676,
+    "height_m": null
+  },
+  "footprint": {
+    "status": "source_backed",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -73.95153712408529,
+            40.81175053710304
+          ],
+          [
+            -73.9515796499102,
+            40.811708824110674
+          ],
+          [
+            -73.95130989792118,
+            40.811595149650564
+          ],
+          [
+            -73.95127656040373,
+            40.81164073496543
+          ],
+          [
+            -73.95153712408529,
+            40.81175053710304
+          ]
+        ]
+      ]
+    },
+    "provenance": {
+      "source_url": "https://data.cityofnewyork.us/resource/p78i-pat6.json?%24where=parksid%3D%27M394-GT001%27",
+      "observed_at": null,
+      "confidence": "medium",
+      "rights": {
+        "status": "permission",
+        "reference": "NYC Open Data public reuse policy: https://www.nyc.gov/opendata/get-started/FAQs ; https://cityofnewyork.github.io/opendatatsm/publicpolicies.html . Dataset licenseId remains null; no CC license asserted."
+      },
+      "note": "NYC Parks mapped boundary, retrieved 2026-10-26. Geometry capture date and field accuracy unknown. Polygon vertices unchanged; one-part MultiPolygon unwrapped to Polygon. MapPLUTO 26v2 tax-lot comparison differs by about 1.7 m. Flat Y=0 and null-height zero are visualization assumptions. Not a surveyed fence, usable floor or approved robot workspace."
+    }
+  },
+  "features": [
+    {
+      "id": "bed-unknown",
+      "category": "bed",
+      "status": "unknown",
+      "geometry": null,
+      "reason": "Current count, corner coordinates, dimensions and heights are unmeasured."
+    },
+    {
+      "id": "growing_area-unknown",
+      "category": "growing_area",
+      "status": "unknown",
+      "geometry": null,
+      "reason": "Active growing extents and seasonal use are unmeasured."
+    },
+    {
+      "id": "path-unknown",
+      "category": "path",
+      "status": "unknown",
+      "geometry": null,
+      "reason": "Entrances, clear widths, slopes, surfaces and obstacles are unmeasured."
+    },
+    {
+      "id": "greenhouse-unknown",
+      "category": "greenhouse",
+      "status": "unknown",
+      "geometry": null,
+      "reason": "Operator reports a greenhouse; its footprint, height and interior dimensions are unmeasured."
+    },
+    {
+      "id": "building-unknown",
+      "category": "building",
+      "status": "unknown",
+      "geometry": null,
+      "reason": "Operator describes a shed/rooftop project; footprint, height and load capacity are unverified."
+    },
+    {
+      "id": "water-unknown",
+      "category": "water",
+      "status": "unknown",
+      "geometry": null,
+      "reason": "Operator describes rainwater work; current outlets, routing and readiness are unverified."
+    },
+    {
+      "id": "power-unknown",
+      "category": "power",
+      "status": "unknown",
+      "geometry": null,
+      "reason": "No measured locations or verified capacity of electrical service."
+    },
+    {
+      "id": "crop-unknown",
+      "category": "crop",
+      "status": "unknown",
+      "geometry": null,
+      "reason": "No dated current crop inventory or mapped plant positions."
+    },
+    {
+      "id": "seasonal_product-unknown",
+      "category": "seasonal_product",
+      "status": "unknown",
+      "geometry": null,
+      "reason": "Markets and CSA do not establish crops grown within this footprint."
+    }
+  ],
+  "evidence": [
+    {
+      "record": {
+        "id": "greenhouse-design-team",
+        "site_match": {
+          "status": "confirmed",
+          "garden_id": "nyc-greenthumb:M394-GT001",
+          "candidates": [
+            "nyc-greenthumb:M394-GT001"
+          ],
+          "rationale": "Named St. Nicholas Miracle Garden and UBHP greenhouse match the registry site at 330 Saint Nicholas Avenue. No interior geometry is asserted."
+        },
+        "category": "greenhouse",
+        "state": "reported",
+        "claim": "makeSHIFT identifies Uptown Good Food as client and names Design Advocates, studio for and Martos Engineering as collaborators.",
+        "value": null,
+        "unit": null,
+        "observed_at": null,
+        "time_basis": "Undated published description; retrieval date is not a field observation.",
+        "confidence": {
+          "level": "medium",
+          "rationale": "First-party operator or designer description; current as-built geometry has not been supplied."
+        },
+        "citations": [
+          {
+            "source_id": "makeshift",
+            "locator": "Project credits",
+            "support": "makeSHIFT identifies Uptown Good Food as client and names Design Advocates, studio for and Martos Engineering as collaborators."
+          }
+        ],
+        "layout": null,
+        "season": null,
+        "limitations": [
+          "No measured footprint, height, location, current condition or transferable drawing/photo permission."
+        ]
+      },
+      "sources": [
+        {
+          "id": "makeshift",
+          "url": "https://www.studio-makeshift.com/work/st-nicholas-miracle-garden-greenhouse",
+          "publisher": "makeSHIFT Architecture",
+          "title": "St Nicholas Miracle Garden Greenhouse",
+          "published_at": null,
+          "retrieved_at": "2026-10-26",
+          "rights": {
+            "status": "unknown",
+            "license_url": null,
+            "asset_use": "link_only"
+          }
+        }
+      ]
+    },
+    {
+      "record": {
+        "id": "greenhouse-reported",
+        "site_match": {
+          "status": "confirmed",
+          "garden_id": "nyc-greenthumb:M394-GT001",
+          "candidates": [
+            "nyc-greenthumb:M394-GT001"
+          ],
+          "rationale": "Named St. Nicholas Miracle Garden and UBHP greenhouse match the registry site at 330 Saint Nicholas Avenue. No interior geometry is asserted."
+        },
+        "category": "greenhouse",
+        "state": "reported",
+        "claim": "The operator reports a community greenhouse and describes seedling production, repairs and rainwater work.",
+        "value": null,
+        "unit": null,
+        "observed_at": null,
+        "time_basis": "Undated published description; retrieval date is not a field observation.",
+        "confidence": {
+          "level": "medium",
+          "rationale": "First-party operator or designer description; current as-built geometry has not been supplied."
+        },
+        "citations": [
+          {
+            "source_id": "ubhp-greenhouse",
+            "locator": "Greenhouse Journey; Repairs; Rain Barrel Build Day",
+            "support": "The operator reports a community greenhouse and describes seedling production, repairs and rainwater work."
+          }
+        ],
+        "layout": null,
+        "season": null,
+        "limitations": [
+          "No measured footprint, height, location, current condition or transferable drawing/photo permission."
+        ]
+      },
+      "sources": [
+        {
+          "id": "ubhp-greenhouse",
+          "url": "https://uptowngoodfood.com/pages/greenhouse",
+          "publisher": "Uptown Good Food / Uptown & Boogie Healthy Project",
+          "title": "Greenhouse Journey",
+          "published_at": null,
+          "retrieved_at": "2026-10-26",
+          "rights": {
+            "status": "unknown",
+            "license_url": null,
+            "asset_use": "link_only"
+          }
+        }
+      ]
+    },
+    {
+      "record": {
+        "id": "shed-rooftop-project",
+        "site_match": {
+          "status": "confirmed",
+          "garden_id": "nyc-greenthumb:M394-GT001",
+          "candidates": [
+            "nyc-greenthumb:M394-GT001"
+          ],
+          "rationale": "Named St. Nicholas Miracle Garden and UBHP greenhouse match the registry site at 330 Saint Nicholas Avenue. No interior geometry is asserted."
+        },
+        "category": "building",
+        "state": "planned",
+        "claim": "UBHP describes a shed rooftop pollinator garden project associated with St. Nicholas Miracle Garden.",
+        "value": null,
+        "unit": null,
+        "observed_at": null,
+        "time_basis": "Undated published description; retrieval date is not a field observation.",
+        "confidence": {
+          "level": "medium",
+          "rationale": "First-party operator or designer description; current as-built geometry has not been supplied."
+        },
+        "citations": [
+          {
+            "source_id": "ubhp-rooftop",
+            "locator": "Mission and Growing Careers, Strengthening Community",
+            "support": "UBHP describes a shed rooftop pollinator garden project associated with St. Nicholas Miracle Garden."
+          }
+        ],
+        "layout": null,
+        "season": null,
+        "limitations": [
+          "No measured footprint, height, location, current condition or transferable drawing/photo permission."
+        ]
+      },
+      "sources": [
+        {
+          "id": "ubhp-rooftop",
+          "url": "https://ubhealthyproject.org/harlem-rooftop-garden/",
+          "publisher": "Uptown & Boogie Healthy Project",
+          "title": "Harlem Rooftop Garden",
+          "published_at": null,
+          "retrieved_at": "2026-10-26",
+          "rights": {
+            "status": "unknown",
+            "license_url": null,
+            "asset_use": "link_only"
+          }
+        }
+      ]
+    }
+  ]
+}
