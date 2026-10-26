@@ -17,3 +17,5 @@ __pycache__/
 # Local Python environments
 /venv/
 /.venv/
+.vercel
+.env*

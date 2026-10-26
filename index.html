@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="NYC Robo Garden explores practical, open-source robotics for community growers. Start with one useful task: placing seeds in seedling trays.">
+  <meta name="theme-color" content="#102721">
+  <title>NYC Robo Garden · Small tasks. More time to grow.</title>
+  <link rel="stylesheet" href="/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header wrap">
+    <a class="brand" href="/" aria-label="NYC Robo Garden home"><span class="brand-mark" aria-hidden="true">↗</span> NYC ROBO GARDEN</a>
+    <nav aria-label="Main navigation"><a href="#project">The project</a><a href="#prototype">Prototype</a><a href="/docs/gardens-map/">Garden map ↗</a><a class="github" href="https://github.com/isayahc/Spooky-Civic-AI-Hackathon">GitHub ↗</a></nav>
+  </header>
+  <main id="main">
+    <section class="hero wrap">
+      <div class="hero-copy"><p class="eyebrow"><span class="status-dot"></span> COMMUNITY AGRICULTURE × OPEN ROBOTICS</p><h1>Small tasks.<br>More time<br><em>to grow.</em></h1><p class="intro">Practical robotics for the people growing food in our neighborhoods. Starting with one repetitive task: placing seeds into seedling trays.</p><div class="actions"><a class="button primary" href="/docs/gardens-map/">Explore NYC gardens <span>↗</span></a><a class="text-link" href="#prototype">See the prototype ↓</a></div><p class="hero-note">Built at the Spooky Civic AI Hackathon · NYC, October 2026</p></div>
+      <figure class="hero-media"><div class="media-heading"><span>01 / THE SEEDING WORKSTATION</span><span class="pill">SIMULATION</span></div><img src="/docs/media/seed-station-simulation.gif" alt="Simulated SO-101 arm moving illustrative seeds from a dish into a planting tray" width="640" height="480" fetchpriority="high"><figcaption><strong>A small arm. A specific job.</strong><span>Scripted seed handling with the SO-101. Physical seed-placement validation is still ahead.</span></figcaption></figure>
+    </section>
+    <div class="principles"><div class="wrap"><span>Grower-led problems</span><span>Open-source tools</span><span>Learning by building</span><span>Evidence before claims</span></div></div>
+    <section class="section wrap problem" id="project">
+      <div><p class="eyebrow">01 / START WITH THE GROWER</p><h2>A real bottleneck.<br>A useful place to start.</h2></div>
+      <div class="body-copy"><p>During the hackathon, <strong>Judith “Judi” Desire</strong>, founder and executive director of Uptown &amp; Boogie Healthy Project, described how manually sowing individual seedling-tray cells can take hours.</p><p>That conversation shaped our first task. We’re exploring a configurable robotic workstation that can locate seeds, place them into tray cells, check the result, and recover from misses.</p><p>The goal is to free time for growing and community work—and make the same equipment a hands-on way to learn robotics and AI.</p><a class="text-link" href="https://ubhp.org/about/">Meet Uptown &amp; Boogie Healthy Project ↗</a></div>
+    </section>
+    <section class="section wrap" id="prototype">
+      <div class="section-heading"><div><p class="eyebrow">02 / WHAT WE’RE BUILDING</p><h2>From a workstation<br>to a wider possibility.</h2></div><p>Start with a bounded task. Make execution observable. Test what actually works.</p></div>
+      <div class="cards"><article class="card"><span class="card-number">01</span><h3>Place a seed</h3><p>An SO-101 arm, camera tooling, and a seed-tray workflow. The initial research question is reliable placement with little supervision.</p><span class="tag">INITIAL PHYSICAL TASK</span></article><article class="card"><span class="card-number">02</span><h3>Explore in simulation</h3><p>Scripted seed handling and a quadruped carrying a mounted arm let us explore motion, viewpoints, and garden tasks.</p><span class="tag">WORKING VISUALIZATIONS</span></article><article class="card"><span class="card-number">03</span><h3>Measure in the real world</h3><p>Test correctly seeded cells, misses, doubles, seed damage, operator time, and total cost against manual work and a tray seeder.</p><span class="tag">VALIDATION AHEAD</span></article></div>
+      <div class="video-grid"><figure><video controls playsinline preload="none" poster="/docs/media/garden-patrol.gif" aria-label="Simulated quadruped and mounted arm garden patrol"><source src="/docs/media/garden-patrol.mp4" type="video/mp4"></video><figcaption><strong>The mobile concept</strong><span>A scripted patrol around fictional beds, with a mounted SO-101 arm.</span></figcaption></figure><figure><video controls playsinline preload="none" poster="/docs/media/garden-patrol-pov.gif" aria-label="Virtual camera view of the simulated garden patrol"><source src="/docs/media/garden-patrol-pov.mp4" type="video/mp4"></video><figcaption><strong>From the robot’s viewpoint</strong><span>A virtual camera from the same scene—not physical camera footage.</span></figcaption></figure></div>
+      <p class="evidence-note"><strong>Where the prototype stands.</strong> Simulation, scene-authoring, camera, and connection tools exist. Reliable autonomous seed placement, field navigation, and labor savings have not yet been demonstrated. <a href="https://github.com/isayahc/Spooky-Civic-AI-Hackathon#seed-placement-simulation-vs-physical-execution">Read the evidence and limitations ↗</a></p>
+    </section>
+    <section class="map-section"><div class="wrap map-callout"><div><p class="eyebrow">03 / ROOTED IN NEW YORK CITY</p><h2>A city of gardens.<br>A network to learn from.</h2><p>Explore public garden records across all five boroughs. A simple city outline, real location points, and filters to find a place by name or neighborhood.</p><a class="button primary" href="/docs/gardens/../gardens-map/">Open the garden explorer <span>↗</span></a></div><div class="map-facts"><div><strong>5</strong><span>boroughs to explore</span></div><div><strong>NYC Parks</strong><span>GreenThumb source records</span></div><p>Garden listings are discovery leads, not confirmed food-production sites or approved robot workspaces.</p><a class="text-link" href="/docs/garden-reference/">St. Nicholas boundary reference ↗</a></div></div></section>
+    <section class="section wrap community"><div><p class="eyebrow">04 / BUILD, LEARN, SHARE</p><h2>Tools communities<br>can make their own.</h2></div><div class="body-copy"><p>Our longer-term vision is affordable, reusable equipment that growers and learners can configure, maintain, and share.</p><p>Seed placement provides a tangible learning path: define a task, change a simulation, inspect camera images, calibrate an arm, and measure the outcome. Community workshops and shared equipment are possibilities we want to explore.</p><p>Affordability needs evidence, too. A specialized seeder may be the better tool. We’re asking where adaptable robotics can earn its place.</p><a class="text-link" href="https://github.com/isayahc/Spooky-Civic-AI-Hackathon#problem-statement">Read the research and cost comparisons ↗</a></div></section>
+    <section class="get-involved wrap"><div><p class="eyebrow">OPEN SOURCE / WORK IN PROGRESS</p><h2>Follow the work.<br>Help shape the next step.</h2></div><div class="actions"><a class="button primary" href="https://github.com/isayahc/Spooky-Civic-AI-Hackathon">Explore the repository ↗</a><a class="text-link" href="https://github.com/isayahc/Spooky-Civic-AI-Hackathon/issues">See open issues ↗</a></div></section>
+  </main>
+  <footer class="footer wrap"><a class="brand" href="/">NYC ROBO GARDEN</a><p>Spooky Civic AI Hackathon · Physical AI for Good · 2026</p><a href="/docs/gardens-map/">Garden map ↗</a></footer>
+</body>
+</html>
