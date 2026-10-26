@@ -2,6 +2,8 @@
 
 **Project: NYC Robo Garden**
 
+**[Project homepage](https://nyc-robo-garden.vercel.app)** · **[NYC garden map](https://nyc-robo-garden.vercel.app/docs/gardens-map/)**
+
 **Selected track: Physical AI for Good**
 
 Built for the [Spooky Civic AI Hackathon: Build Weekend](https://luma.com/onzzmytl), hosted by 3percentclub in NYC and online, October 23–24, 2026, with Demo Day on October 25.
@@ -204,9 +206,11 @@ NYC Robo Garden explores how community-oriented agricultural robotics could supp
 
 ### Interactive NYC garden map
 
-**[Open the NYC Garden Explorer](docs/gardens-map/index.html)** — Leaflet-based map using the live NYC GreenThumb dataset with borough, status, and name/address filters. The interactive page is stored at `docs/gardens-map/index.html`. To serve it publicly, enable **GitHub Pages → Deploy from branch → main → /docs** after merging. The published URL will be `https://isayahc.github.io/Spooky-Civic-AI-Hackathon/gardens-map/` once Pages is configured.
+**[Open the NYC Garden Explorer](https://nyc-robo-garden.vercel.app/docs/gardens-map/)** — a lightweight SVG map with simplified outlines of all five boroughs and public GreenThumb garden locations. Search by name, address or Parks ID; filter by borough and status; select a garden to inspect its available source footprint.
 
-The application fetches the NYC Open Data records when opened, so it requires internet access to the Socrata endpoint and OpenStreetMap tile provider. Garden markers are public dataset records, not verified greenhouse sites or deployment permissions. This first version is a **2D site-discovery map**; 3D Open-Industries generation is tracked separately in [epic #4](https://github.com/isayahc/Spooky-Civic-AI-Hackathon/issues/4).
+The map loads a bundled snapshot with 635 source records, 579 location markers, and 56 records without coordinates. It uses no street tiles, third-party scripts, or runtime NYC Open Data requests. Source rows are not deduplicated garden counts; records without coordinates remain searchable. Garden markers are public dataset records, not verified greenhouse sites or deployment permissions. Refresh the snapshot with `python scripts/build_garden_map.py`.
+
+The root `index.html` is the project homepage, with styles in `site.css`. Vercel serves the repository as a static site using `vercel.json`. For a local preview, run `python -m http.server 8000` from the repository root and open `http://localhost:8000/`.
 
 ### Versioned garden data
 
