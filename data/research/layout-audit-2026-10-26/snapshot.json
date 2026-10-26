@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "snapshot_version": "f7005e3c14f4f37b52d5f67d5f24c24664bbdce8751cadeb5e152fad2aeccb41",
+  "source": {
+    "dataset_id": "p78i-pat6",
+    "catalog_url": "https://data.cityofnewyork.us/dataset/p78i-pat6",
+    "api_url": "https://data.cityofnewyork.us/resource/p78i-pat6.json",
+    "attribution": "Department of Parks and Recreation (DPR)",
+    "retrieved_at": "2026-10-26T09:29:27.202023+00:00",
+    "source_updated_at": 1792595170,
+    "refresh_frequency": "Monthly",
+    "license_id": null,
+    "license_status": "unspecified",
+    "terms_url": "https://opendata.cityofnewyork.us/overview/#termsofuse",
+    "metadata_sha256": "bf8a602a22aa6b0f692d58ff7eadadc83cad77b6896061115d9cd20a124ffaab",
+    "raw_rows_sha256": "33db25bab786a4bc9f62f06d94964789f66378138610e144fd256e15b5df1dd1"
+  },
+  "summary": {
+    "input_rows": 635,
+    "gardens": 634,
+    "duplicate_rows_collapsed": 1,
+    "missing_locations": 56,
+    "gardens_with_boundaries": 634,
+    "gardens_with_parcels": 0,
+    "conflicting_ids": 0
+  }
+}

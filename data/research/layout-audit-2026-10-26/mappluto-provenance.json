@@ -1,0 +1,13 @@
+{
+  "source_url": "https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/MAPPLUTO/FeatureServer/0/query?where=BBL+IN+%281019530044%2C1016310002%2C3017890047%2C3039560051%29&outFields=%2A&outSR=4326&returnGeometry=true&f=geojson",
+  "dataset": "NYC Department of City Planning MapPLUTO",
+  "source_version": "26v2",
+  "retrieved_at": "2026-10-26T09:32:43.238068+00:00",
+  "item_url": "https://www.arcgis.com/home/item.html?id=1564ace0b4f44318ac39920737f9bd07",
+  "role": "tax_lot_comparison_only",
+  "is_verified_garden_footprint": false,
+  "limitations": [
+    "Tax lots do not establish physical occupancy, beds or access.",
+    "Agreement between municipal layers is not an independent field survey."
+  ]
+}
