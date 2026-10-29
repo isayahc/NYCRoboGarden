@@ -393,7 +393,9 @@ to arm movement.
 
 **How we use it in the project:**
 
-<!-- Reserved for the team's Tavily integration details. -->
+We used **[Tavily](https://www.tavily.com/)** while developing NYC Robo Garden for the Spooky Civic AI Hackathon. Thank you to Tavily for supporting the event with Search API credits.
+
+The repository includes a `TAVILY_API_KEY` placeholder in [`example.env`](example.env) for authenticated requests. Specific Tavily queries and outputs are not archived here, so this acknowledgment does not attribute individual research findings to Tavily or claim a reproducible Tavily runtime integration.
 
 ### Sources
 
