@@ -68,14 +68,19 @@ See [the farm mission guide](docs/garden-patrol.md#server-driven-harvesting-miss
 | --- | --- |
 | Explore NYC gardens without installing anything | [NYC Garden Explorer](https://nyc-robo-garden.vercel.app/docs/gardens-map/) |
 | Inspect the mobile simulation and export media | [Garden patrol guide](docs/garden-patrol.md) |
-| Connect the SO-101 through Viam | [Viam setup below](#viam) |
+| Connect the SO-101 through Viam | [Viam setup below](#sponsors-and-project-use) |
 | View the physical cameras | [Dual-camera viewer setup](pi-arm4-camera/README.md) |
 | Build a garden scene | [Scene adapter guide](docs/garden-scene-adapter.md) · [OpenCode authoring](docs/opencode-authoring.md) |
 | Review the physical experiment plan | [Physical validation plan](docs/embodied-ai-research.md#physical-validation-plan) |
 
-The sections below expand from the grower's needs and prototype evidence into the implementation, research, economics, and event background.
+**Roadmap:** validate seed placement at a fixed station, then integrate observation and recovery before extending to autonomous garden patrol.
+
+Each section below expands once to reveal its details. Subsections remain visible inside the expanded section.
 
 ## Introduction
+
+<details>
+<summary>Grower background and the seed-tray problem</summary>
 
 During the hackathon, we worked with **Judith “Judi” Desire, founder and executive director of Uptown & Boogie Healthy Project**, to understand a recurring task in her work as a small-scale urban grower. She described a major pain point: **manually sowing seeds into the individual cells of seedling trays can take hours**. That firsthand conversation gave our team a specific, practical problem to address.
 
@@ -83,7 +88,12 @@ During the hackathon, we worked with **Judith “Judi” Desire, founder and exe
 
 **Our scope for this hackathon was to understand this frequently repeated task and develop a robotic approach to automating seed placement in trays.** Working from a small-scale grower's needs keeps the project focused on an everyday bottleneck. The intended benefit is to free time for other growing and community activities while making the same workstation a practical setting for learning robotics and AI. The sections below distinguish that objective from what the prototype currently demonstrates.
 
+</details>
+
 ## Seed Placement: Simulation vs. Physical Execution
+
+<details>
+<summary>Prototype scope, evidence boundaries, and physical validation</summary>
 
 **Current primary objective: automate seed placement into seedling trays using the Viam SO-101 robotic arm.** We are developing an engineering research platform around that task; reliable autonomous seed placement has not yet been established by the evidence below.
 
@@ -98,7 +108,12 @@ During the hackathon, we worked with **Judith “Judi” Desire, founder and exe
 
 The exact October 24 station GIF was recovered and optimized for this page, preserving the full 44-second sequence. Its illustrative seeds attach and release on a timeline; motion within joint limits is not contact validation. A linked hardware recording can be added here once available. [Media provenance and replacement instructions](docs/media/README.md) · [Physical validation plan](docs/embodied-ai-research.md#physical-validation-plan)
 
+</details>
+
 ## Near-Future Goal: Autonomous Garden Patrol
+
+<details>
+<summary>Patrol videos, implementation details, and autonomy roadmap</summary>
 
 **Concept — proposed workflow:** an autonomous quadruped navigates garden beds, observes crops and uses a mounted SO-101 for **validated** planting, tending and harvesting operations. Each skill must first pass task-specific physical trials. The current patrol below is a visualization of the mobile platform, not that complete autonomous system.
 
@@ -125,7 +140,12 @@ The POV is fixed to an illustrative front-left sensor location on the chassis; i
 
 The downloadable patrol clip illustrates carrying the arm; the separate interactive harvesting mission demonstrates scripted manipulation. Neither establishes grasp/contact dynamics, autonomous crop recognition, real navigation, physical balance or agricultural reliability. [Simulation guide](docs/garden-patrol.md) · [Outstanding scene/pilot work: #4](https://github.com/isayahc/Spooky-Civic-AI-Hackathon/issues/4), [#9](https://github.com/isayahc/Spooky-Civic-AI-Hackathon/issues/9), [#10](https://github.com/isayahc/Spooky-Civic-AI-Hackathon/issues/10)
 
+</details>
+
 ## NYC Robo Garden — Urban Agriculture Network
+
+<details>
+<summary>Garden map, data pipeline, scene generation, and pilot-site criteria</summary>
 
 NYC Robo Garden explores how community-oriented agricultural robotics could support urban growers, education, and shared food-growing spaces. New York City has many community gardens, but **a listed garden is not necessarily a greenhouse, an active food-production site, or an approved robotics deployment location**.
 
@@ -197,18 +217,33 @@ Start with **Brooklyn** and expand across the five boroughs. Evaluate candidate 
 
 **Project status:** These are discovery resources and candidate evaluation criteria, not confirmed deployment partners. Site suitability, permissions, and greenhouse availability require direct verification.
 
+</details>
+
 ## Real garden reference — October 26
+
+<details>
+<summary>St. Nicholas Miracle Garden geometry and outstanding measurements</summary>
 
 [St. Nicholas Miracle Garden](docs/garden-layout-audit.md) is the selected boundary reference: original NYC Parks geometry, a separate MapPLUTO comparison, and nine explicitly unknown interior categories. [Open the reference viewer](docs/garden-reference/index.html) or [download the native Open-Industries scene](data/scenes/st-nicholas-boundary/garden.oi.json). This is a source-backed outline with inferred flat rendering; measured beds, greenhouse placement and robot clearances are pending. The audit compares seven candidates and specifies the measurements and permissions needed for the seed-tray pilot.
 
+</details>
+
 ## Author garden spaces with OpenCode
+
+<details>
+<summary>OpenCode and Open-Industries MCP authoring setup</summary>
 
 Connect OpenCode to the local Open-Industries MCP server and use `/author-space`
 to generate, validate, save and export conceptual garden layouts. Setup, the
 committed sample, and a model-free MCP replay are in
 [OpenCode space authoring](docs/opencode-authoring.md).
 
+</details>
+
 ## Why Embodied Automation Remains an Open Scientific and Engineering Problem
+
+<details>
+<summary>Research: manipulation, sim-to-real, and validation</summary>
 
 Recognizing a crop is only one part of acting on it: agricultural harvesting combines perception, navigation, motion planning, end-effector design and grasping, each with unresolved deployment challenges. [Droukas et al., 2023](https://doi.org/10.1007/s10846-022-01793-z) **NYC Robo Garden exposes these engineering questions; it has not solved them.**
 
@@ -224,7 +259,12 @@ Recognizing a crop is only one part of acting on it: agricultural harvesting com
 
 [Selected papers, authors, findings, limitations and experiment plan](docs/embodied-ai-research.md) document the literature found through the connected **Valency research service**. Published research motivates our tests; none of its benchmark results is a result for this prototype.
 
+</details>
+
 ## Problem statement
+
+<details>
+<summary>Small-farm context, equipment costs, and economic comparisons</summary>
 
 **NYC Robo Garden aims to help small farms and community gardens automate repetitive manual tasks while giving people at every stage of life a practical way to learn robotics and AI.** Seed-tray planting is our initial physical task; the simulated mobile arm explores how the same planning concepts could extend to tending and harvesting. The goal is to lower the cost, technical knowledge, and integration effort needed for smaller growers to experiment with automation, one useful task at a time.
 
@@ -271,7 +311,12 @@ For a grower, compare both **cost per successful task** and **annual use across 
 
 The SO-101's flexibility is in light manipulation. It does not make it a replacement for the tractor's soil-working power, nor establish outdoor durability, harvesting ability, or a production duty cycle. Our hypothesis is that affordable, adaptable hardware plus practical training can lower entry barriers; the comparison must measure both task performance and the effort required to adapt it.
 
+</details>
+
 ## Longer-term Community Impact
+
+<details>
+<summary>Education, shared ownership, and proposed economic outcomes</summary>
 
 Our longer-term vision is affordable, open-source and reusable embodied-AI infrastructure that community growers can learn, adapt, maintain and share. The learning and ownership pathways below are proposed outcomes to measure alongside physical task performance.
 
@@ -295,7 +340,12 @@ The intended economic pathway is to help growers retain more value from their wo
 
 Equitable wealth generation is a design objective: involve farmworkers in task selection and training, make participation affordable, and give communities a role in ownership and decisions about productivity gains. Evaluate that objective through access costs, demonstrated skills, paid opportunities, grower net income, and who owns the equipment. These are proposed mechanisms and measures, not proven employment or income outcomes from this hackathon prototype.
 
+</details>
+
 ## Sponsor configuration
+
+<details>
+<summary>Environment variables and credential setup</summary>
 
 Copy the template without overwriting an existing local configuration:
 
@@ -315,7 +365,12 @@ Keep the Vonage private key in `secrets/` and set `VONAGE_PRIVATE_KEY_PATH` to i
 
 This is configuration scaffolding. Application code must load the environment and pass these values to the sponsor SDKs; copying the file alone does not enable an integration. Keep credentials server-side. Channel-specific sender numbers, recipients and callback URLs can be added once the Vonage feature is selected.
 
+</details>
+
 ## Sponsors and project use
+
+<details>
+<summary>Viam hardware setup, sponsor contributions, and sources</summary>
 
 The event lists **Viam, Vonage and Tavily** as official partners. Their event contributions are distinct from our project's integrations.
 
@@ -424,7 +479,12 @@ to arm movement.
 
 Sponsor logos are reproduced from the sponsors' official websites for identification; their trademarks remain with their respective owners.
 
+</details>
+
 ## Hackathon tracks
+
+<details>
+<summary>Selected track and other competition tracks</summary>
 
 ### Selected — Physical AI for Good
 
@@ -438,7 +498,12 @@ Sponsor logos are reproduced from the sponsors' official websites for identifica
 
 NYC Robo Garden also relates to sustainability and food access; its selected competition track is **Physical AI for Good**.
 
+</details>
+
 ## Event logistics and submission
+
+<details>
+<summary>Schedule, venues, submission requirements, and awards</summary>
 
 All times are **Eastern (New York)**.
 
@@ -451,4 +516,6 @@ All times are **Eastern (New York)**.
 Teams have 2–5 members; robot-arm teams have 3–5. No solo projects. Arms remain onsite; remote development is allowed. Physical AI participants should create a [Viam account](https://app.viam.com/).
 
 Awards include a robot-arm kit, best overall, fellows-only cash and recruiter session, People's Choice, costume contest and Miss Congeniality. The event page does not specify the cash amount or scoring rubric.
+
+</details>
 
